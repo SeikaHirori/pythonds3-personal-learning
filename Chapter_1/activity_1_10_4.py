@@ -13,12 +13,12 @@ def comp_list():
     word_list = ["cat", "dog", "rabbit"]
     word_string = (''.join(word_list))
 
-    print(word_string)
+    # print(word_string)
 
 
-    # letter_list = [ word.join(', ', ) for word in word_list]
+    letter_list = [letter for letter in word_string]
 
-    # print(letter_list)
+    print(letter_list)
     
 comp_list()
 
