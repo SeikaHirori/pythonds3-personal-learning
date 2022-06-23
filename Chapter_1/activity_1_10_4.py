@@ -36,13 +36,24 @@ def print_list():
 def no_duplicate():
     original_list = comp_list()
 
-    # https://stackoverflow.com/a/480227
-        # - How to handle duplicates WHILE maintaining order
+    
 
-    seen = set()
-    seen_add = seen.add
+    # # Option 1:
+    #     # >> https://stackoverflow.com/a/480227
+    #         # - How to handle duplicates WHILE maintaining order
 
-    freedom_list = [letter for letter in original_list if not (letter in seen or seen_add(letter))]
+    #         # Potential better alternative that scales in larger data set:
+    #             # - https://code.activestate.com/recipes/528878/
+    # seen = set()
+    # seen_add = seen.add
+
+    # freedom_list = [letter for letter in original_list if not (letter in seen or seen_add(letter))]
+
+    # Option 2:
+        # >> https://stackoverflow.com/a/17016257
+            # Showcases various versions' method
+
+    freedom_list = list(dict.fromkeys(original_list))
 
     print (freedom_list)
 
