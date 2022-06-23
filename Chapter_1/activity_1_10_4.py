@@ -18,6 +18,8 @@ def comp_list():
     word_list = ["cat", "dog", "rabbit"]
     
     # Option 1 ; my code
+        # Example of using .join()
+        #   Link: https://stackoverflow.com/a/11178075
     word_string = (''.join(word_list))
     letter_list = [letter for letter in word_string]
 
