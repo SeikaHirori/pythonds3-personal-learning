@@ -27,7 +27,20 @@ def comp_list():
 
     return list(letter_list)
 
+def print_list():
+    print (comp_list())
+
     
 def no_duplicate():
-    
+    original_list = comp_list()
+
+    # https://stackoverflow.com/a/480227
+        # - How to handle duplicates WHILE maintaining order
+
+    seen = set()
+    seen_add = seen.add
+
+    freedom_list = [letter for letter in original_list if not (letter in seen or seen_add(letter))]
+
+    print (freedom_list)
 
