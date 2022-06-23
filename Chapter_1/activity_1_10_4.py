@@ -52,6 +52,7 @@ def no_duplicate():
     # Option 2:
         # >> https://stackoverflow.com/a/17016257
             # Showcases various versions' method
+            # Up to Python 3.7
 
     freedom_list = list(dict.fromkeys(original_list))
 
