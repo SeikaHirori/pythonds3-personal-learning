@@ -39,8 +39,7 @@ def no_duplicate():
     letter_list = [word[i] for word in word_list for i in range(len(word))]
 
 
-    seen = []
-    filter(lambda letter_list: seen.append(letter_list) is None if x not in seen else False, 1)
+    seen = list(set(letter_list))
 
 
     print (list(seen))
