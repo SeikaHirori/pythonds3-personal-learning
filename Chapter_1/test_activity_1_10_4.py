@@ -1,6 +1,6 @@
 import pytest
 
-from activity_1_10_4 import comp_list
+from activity_1_10_4 import comp_list, no_duplicate
 
 # Link: https://runestone.academy/ns/books/published/pythonds3/Introduction/ControlStructures.html
 

@@ -7,18 +7,41 @@
 #             letter_list.append(a_letter)
 #     print(letter_list)
 
+import functools
+
+
 def comp_list():
     # the answer is: ['c', 'a', 't', 'd', 'o', 'g', 'r', 'a', 'b', 'b', 'i', 't']
 
     word_list = ["cat", "dog", "rabbit"]
+    
+    # Option 1
     word_string = (''.join(word_list))
-
-    # print(word_string)
-
-
     letter_list = [letter for letter in word_string]
+
+    # Option 2
+    letter_list = [word[i] for word in word_list for i in range(len(word))]
+
 
     print(list(letter_list))
 
     
-def no_duplicate_
+def no_duplicate():
+    # the answer is: ['c', 'a', 't', 'd', 'o', 'g', 'r', 'b', 'i']
+
+    word_list = ["cat", "dog", "rabbit"]
+    
+    # Option 1
+    # word_string = (''.join(word_list))
+    # letter_list =[letter for letter in word_string]
+
+    # Option 2
+    letter_list = [word[i] for word in word_list for i in range(len(word))]
+
+
+    seen = []
+    filter(lambda letter_list: seen.append(letter_list) is None if x not in seen else False, 1)
+
+
+    print (list(seen))
+
