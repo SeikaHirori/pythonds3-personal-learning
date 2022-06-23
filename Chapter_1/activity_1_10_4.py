@@ -18,7 +18,9 @@ def comp_list():
 
     letter_list = [letter for letter in word_string]
 
-    print(letter_list)
+    print(list(letter_list))
+
+    
     
 comp_list()
 
