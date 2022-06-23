@@ -21,6 +21,4 @@ def comp_list():
     print(list(letter_list))
 
     
-    
-comp_list()
 
