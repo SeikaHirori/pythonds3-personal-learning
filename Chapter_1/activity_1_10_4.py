@@ -11,8 +11,13 @@ def comp_list():
     # the answer is: ['c', 'a', 't', 'd', 'o', 'g', 'r', 'a', 'b', 'b', 'i', 't']
 
     word_list = ["cat", "dog", "rabbit"]
-    letter_list = [word for word in word_list ]
 
-    print(letter_list)
+    def break_down_string(word):
+        
+        return [char for char in word]
+    
+    letter_list = [break_down_string(word) for word in word_list]
+
+    print(list(letter_list))
     
 
