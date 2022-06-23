@@ -7,3 +7,4 @@ def test_comp_list(capsys):
     captured = capsys.readouterr()
 
     assert captured.out == "['c', 'a', 't', 'd', 'o', 'g', 'r', 'a', 'b', 'b', 'i', 't']\n"
+    
