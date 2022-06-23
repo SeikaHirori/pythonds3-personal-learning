@@ -15,5 +15,9 @@ def test_comp_list(capsys):
 
     
 
-# def test_no_duplicate_in_list(capsys)
+def test_no_duplicate_in_list(capsys):
+    no_duplicate()
+    captured = capsys.readouterr()
+
+    assert captured.out == "['c', 'a', 't', 'd', 'o', 'g', 'r', 'b', 'i']\n", "There should be no duplicates: ['c', 'a', 't', 'd', 'o', 'g', 'r', 'b', 'i']"
 

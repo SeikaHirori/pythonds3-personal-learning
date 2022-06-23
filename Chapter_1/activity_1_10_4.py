@@ -21,4 +21,4 @@ def comp_list():
     print(list(letter_list))
 
     
-
+def no_duplicate_
