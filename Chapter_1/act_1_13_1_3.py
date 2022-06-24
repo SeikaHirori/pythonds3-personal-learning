@@ -47,4 +47,10 @@ class Fraction:
         
         return Fraction(new_num // common, new_den // common)
     
-    
+    def __truediv__(self, other_fraction):
+        new_num = self.num * other_fraction.den
+        new_den = other_fraction.num * self.den
+
+        common = self.gcd(new_num, new_den)
+
+        return Fraction(new_num // common, new_den // common)

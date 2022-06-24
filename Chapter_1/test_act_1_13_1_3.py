@@ -22,7 +22,7 @@ def test__truediv__(capsys): # Division
     print(f3)
     captured = capsys.readouterr()
 
-    assert captured == '7/10\n', 'Should return: 7/10\n'
+    assert captured.out == '7/10\n', 'Should return: 7/10\n'
 
 def test__sub__(capsys): # Subtraction
     f1 = Fraction(2, 5)
