@@ -49,4 +49,4 @@ def test__gcd(capsys):
 
     captured = capsys.readouterr()
 
-    assert captured.out == '10'
+    assert captured.out == '10\n'
