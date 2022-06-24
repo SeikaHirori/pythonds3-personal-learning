@@ -37,7 +37,7 @@ def test__add__raw(capsys):
     assert captured.out == '35/50\n', 'Should return 35/50\n'
 
 
-def test__gcd(capsys):
+def test_gcd(capsys):
     
     f1 = Fraction(35,50)
     

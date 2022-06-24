@@ -22,7 +22,6 @@ class Fraction:
     @staticmethod
         # Doc about static method and to obtain output: https://python-course.eu/oop/class-instance-attributes.php
             # Section: Static Methods
-            
     def gcd(m,n):
         while m % n != 0:
             m, n = n, m % n
