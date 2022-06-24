@@ -25,7 +25,8 @@ def test__truediv__(capsys): # Division
     assert captured.out == '7/10\n', 'Should return: 7/10\n'
 
 def test__sub__(capsys): # Subtraction
-    f1 = Fraction(2, 5)
+    # Basic
+    f1 = Fraction(3, 6)
     f2 = Fraction(2, 6)
 
     f3 = f1 - f2
@@ -34,7 +35,19 @@ def test__sub__(capsys): # Subtraction
     print(f3)
     captured = capsys.readouterr()
 
-    assert captured == '4/5\n', 'Should return: 4/5\n'
+    assert captured.out == '1/6\n', 'Should return: 1/6\n'
+    
+    #Complex
+    f1 = Fraction(2, 5)
+    f2 = Fraction(2, 6)
+
+    f3 = f1 - f2
+        # '2/30' before simplifying
+        # '1/15' afterwards
+    print(f3)
+    captured = capsys.readouterr()
+
+    assert captured.out == '1/15\n', 'Should return: 1/15\n'
 
 def test__lt__(): # Less Than | a < b
     # False result
