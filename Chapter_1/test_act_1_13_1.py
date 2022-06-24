@@ -10,19 +10,17 @@ def test_show(capsys):
 
     assert captured.out == "3/5\n"
 
-def test__str___By_printing(capsys):
+def test__str___by_printing(capsys):
     testFrac = Fraction(1,6)
 
     print(testFrac)
     captured = capsys.readouterr()
-
     assert captured.out == "1/6\n", 'Should return 1/6\n'
 
-def test__str___byDirectlyCalling():
-    testFrac = Fraction(10,11)
+    print(testFrac.__str__())
+    captured = capsys.readouterr()
+    assert captured.out == "1/6\n", 'Should return 1/6\n'
 
-
-
-    assert testFrac.__str__ == 10/11
-
-    assert str(testFrac) == '10/11'
+    print(str(testFrac))
+    captured = capsys.readouterr()
+    assert captured.out == "1/6\n", 'Should return 1/6\n'
