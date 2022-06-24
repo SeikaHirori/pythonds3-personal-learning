@@ -24,3 +24,12 @@ def test__str___by_printing(capsys):
     print(str(testFrac))
     captured = capsys.readouterr()
     assert captured.out == "1/6\n", 'Should return 1/6\n'
+
+def test__add__(capsys):
+    testFrac1 = Fraction(3,10)
+    testFrac2 = Fraction(2,5)
+
+    testFrac3 = testFrac1 + testFrac2
+    print(testFrac3)
+    captured = capsys.readouterr()
+    assert captured.out == '7/10\n', 'Should return 7/10\n'
