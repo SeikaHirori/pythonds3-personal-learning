@@ -65,3 +65,8 @@ def test___eq__():
 
     assert (f1 == f2) == True, 'Should return True'
 
+    f3 = Fraction(400, 6000)
+    f4 = Fraction(900, 9999999)
+
+    assert (f3 == f4) == False,'Should return False'
+
