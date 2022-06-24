@@ -62,3 +62,10 @@ class Fraction:
         common = self.gcd(new_num,new_den)
 
         return Fraction(new_num // common, new_den // common)
+    
+    def __lt__(self, other_fraction):
+        f1 = self.num / self.den
+        f2 = other_fraction.num / other_fraction.den
+
+        return f1 < f2
+    
