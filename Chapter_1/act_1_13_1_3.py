@@ -69,3 +69,8 @@ class Fraction:
 
         return f1 < f2
     
+    def __gt__(self, other_fraction):
+        f1 = self.num / self.den
+        f2 = other_fraction.num / other_fraction.den
+
+        return f1 > f2
