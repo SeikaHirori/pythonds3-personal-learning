@@ -38,22 +38,34 @@ def test__sub__(capsys): # Subtraction
 
 def test__lt__(): # Less Than | a < b
     # False result
-    f1 = Fraction(3,10)
-    f2 = Fraction(1,10)
+    f1 = Fraction(3, 10)
+    f2 = Fraction(1, 10)
 
     f3 = f1 < f2
 
     assert f3 == False, 'Should return: False'
 
     # True result
-    w1 = Fraction(1,19)
-    w2 = Fraction(1,2)
+    w1 = Fraction(1, 19)
+    w2 = Fraction(1, 2)
 
     w3 = w1 < w2
 
     assert w3 == True,' Should return: True'
 
 def test__gt__(): # Greater than | a > b
+    # False result
+    f1 = Fraction(1, 10)
+    f2 = Fraction(7, 10)
+    
+    f3 = f1 > f2
 
+    assert f3 == False
 
-    assert ==
+    # True result
+    w1 = Fraction(33, 34)
+    w2 = Fraction(1, 10)
+
+    w3 = w1 > w2
+
+    assert w3 == True
