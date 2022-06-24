@@ -9,3 +9,8 @@ class Fraction:
     
     def show(self):
         print (f'{self.num}/{self.den}')
+
+# if __name__ == "__main__":
+#     test = Fraction(3,5)
+#     test.show()
+    
