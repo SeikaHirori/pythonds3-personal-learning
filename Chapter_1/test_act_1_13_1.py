@@ -1,3 +1,4 @@
+from termios import FF1
 from act_1_13_1 import Fraction
 
 # Link to URL: https://runestone.academy/ns/books/published/pythonds3/Introduction/ObjectOrientedProgramminginPythonDefiningClasses.html #a-fraction-class
@@ -25,11 +26,27 @@ def test__str___by_printing(capsys):
     captured = capsys.readouterr()
     assert captured.out == "1/6\n", 'Should return 1/6\n'
 
-def test__add__(capsys):
-    testFrac1 = Fraction(3,10)
-    testFrac2 = Fraction(2,5)
+def test__add__raw(capsys):
+    
+    f1 = Fraction(3,10)
+    f2 = Fraction(2,5)
 
-    testFrac3 = testFrac1 + testFrac2
-    print(testFrac3)
+    f3 = f1 + f2
+    print(f3)
     captured = capsys.readouterr()
-    assert captured.out == '7/10\n', 'Should return 7/10\n'
+    assert captured.out == '35/50\n', 'Should return 35/50\n'
+
+
+def test__gcd(capsys):
+    
+    f1 = Fraction(35,50)
+    
+    # print(f1.gcd(20,10))
+    # captured = capsys.readouterr()
+    # assert captured.out == '10/n', 'Should return 10\n'
+
+    print(f1.gcd(20, 10))
+
+    captured = capsys.readouterr()
+
+    assert captured.out == '10'
