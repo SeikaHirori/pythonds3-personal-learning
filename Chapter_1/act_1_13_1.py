@@ -36,6 +36,12 @@ class Fraction:
         common = self.gcd(new_num, new_den)
 
         return Fraction(new_num // common, new_den // common)
+    
+    def __eq__(self, other_fraction):
+        first_num = self.num * other_fraction.den
+        second_num = other_fraction.num * self.den
+
+        return first_num == second_num
 if __name__ == "__main__":
     test = Fraction(3,5)
     # test.show()

@@ -57,5 +57,11 @@ def test_simplified_sum(capsys):
 
     print(f3)
     captured = capsys.readouterr()
-    assert captured.out == '7/10\n'
+    assert captured.out == '7/10\n', 'Should return "7/10\n"'
+
+def test___eq__():
+    f1 = Fraction(1,2)
+    f2 = Fraction(1,2)
+
+    assert (f1 == f2) == True, 'Should return True'
 
