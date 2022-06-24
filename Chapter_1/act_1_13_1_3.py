@@ -6,6 +6,8 @@ class Fraction:
     def __init__(self, top, bottom):
         self.num = top
         self.den = bottom
+    
+    # Imported code === START ===
 
     def __str__(self):
         return f"{self.num}/{self.den}"
@@ -34,3 +36,15 @@ class Fraction:
         second_num = other_fraction.num * self.den
 
         return first_num == second_num
+    
+    # Import code === ENDS ===
+
+    def __mul__(self, other_fraction):
+        new_num = self.num * other_fraction.num
+        new_den = self.den * other_fraction.den
+
+        common = self.gcd(new_num, new_den)
+        
+        return Fraction(new_num // common, new_den // common)
+    
+    
