@@ -7,4 +7,5 @@ class Fraction:
         self.den = bottom
     
     
-     
+    def show(self):
+        print (f'{self.num}/{self.den}')

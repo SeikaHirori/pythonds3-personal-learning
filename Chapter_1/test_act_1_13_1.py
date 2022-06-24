@@ -8,4 +8,4 @@ def test_show(capsys):
     testFrac.show()
     captured = capsys.readouterr()
 
-    assert captured == "3/5\n"
+    assert captured.out == "3/5\n"
