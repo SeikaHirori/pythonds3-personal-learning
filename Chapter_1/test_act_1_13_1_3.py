@@ -5,7 +5,7 @@ from act_1_13_1_3 import
 # URL: https://runestone.academy/ns/books/published/pythonds3/Introduction/ObjectOrientedProgramminginPythonDefiningClasses.html#lst-fractioncode
 
 def test__mul__(): # Multiplication
-
+    f1 = Fraction(3,5)
 
     assert == 
 
