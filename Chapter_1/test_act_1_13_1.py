@@ -16,4 +16,9 @@ def test__str___(capsys):
     str(testFrac)
     captured = capsys.readouterr()
 
-    assert captured.out == "1/6\n"
+    assert captured.out == "1/6\n", 'Should return 1/6\n'
+
+    # testFrac.__str__()
+    # captured = capsys.readouterr()
+
+    # assert captured.out == "1/6\n"
