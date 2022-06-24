@@ -12,14 +12,16 @@ class Fraction:
     def show(self):
         print(f'{self.num}/{self.den}')
 
-    def __add__(self, other_fraction):
-        new_num = (self.num * other_fraction.den)+  (self.den * other_fraction.num)
+    # def __add__(self, other_fraction): # Depreciated after making new one with gcd
+    #     new_num = (self.num * other_fraction.den)+  (self.den * other_fraction.num)
 
-        new_den = self.den * other_fraction.den
+    #     new_den = self.den * other_fraction.den
 
-        return Fraction(new_num, new_den)
+    #     return Fraction(new_num, new_den)
+
+  
     
-    @staticmethod
+    @staticmethod 
         # Doc about static method and to obtain output: https://python-course.eu/oop/class-instance-attributes.php
             # Section: Static Methods
     def gcd(m,n):
@@ -27,14 +29,17 @@ class Fraction:
             m, n = n, m % n
         return n
 
-    
+    def __add__(self, other_fraction):
+        new_num = (self.num * other_fraction.den)+  (self.den * other_fraction.num)
+        new_den = self.den * other_fraction.den
 
+        common = self.gcd(new_num, new_den)
+
+        return Fraction(new_num // common, new_den // common)
 if __name__ == "__main__":
     test = Fraction(3,5)
     # test.show()
 
-    test.__str__()
-    str(test)
     print(test.gcd(20, 10))
 
 
