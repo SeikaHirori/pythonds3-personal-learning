@@ -74,3 +74,28 @@ class Fraction:
         f2 = other_fraction.num / other_fraction.den
 
         return f1 > f2
+
+if __name__ == "__main__":
+    f1 = Fraction(1,10)
+    f2 = Fraction(7,10)
+
+    print(f1 + f2)
+    print()
+
+    print(f1 - f2)
+    print()
+    
+    print(f1 * f2)
+    print()
+
+    print(f1 / f2)
+    print()
+
+    print(f1 == f2)
+    print()
+
+    print(f1 < f2)
+    print()
+
+    print(f1 > f2)
+    print()
