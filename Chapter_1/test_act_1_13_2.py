@@ -20,7 +20,7 @@ def test_AndGate(monkeypatch, capsys):
 
         # monkeypatch.setattr('sys.stdin', io.StringIO('0'))
 
-    monkeypatch.setattr('builtins.stdin', test_inputs())
+    monkeypatch.setattr('builtins.input', test_inputs)
     output = g1.perform_gate_logic()
 
     # captured = capsys.readouterr()
