@@ -24,13 +24,13 @@ class BinaryGate(LogicGate):
         self.pin_b = None
 
     
-    def get_pin_a(self): #TODO: Modify and follow Listing 14
+    def get_pin_a(self):
         if self.pin_a == None:
             return int(input(f'Enter pin A input for gate {self.get_label()}:'))
         else:
             return self.pin_a.get_from().get_output()
     
-    def get_pin_b(self): #TODO: Modify and follow Listing 14
+    def get_pin_b(self):
         if self.pin_b == None:
             return int(input(f'Enter pin B input for gate {self.get_label()}: '))
         else: 
@@ -39,7 +39,7 @@ class BinaryGate(LogicGate):
     # Listing 13; in class 'BinaryGate'
     def set_next_pin(self, source):
         if self.pin_a == None:
-            self.pin_a == source
+            self.pin_a = source
         else:
             if self.pin_b == None:
                 self.pin_b = source
