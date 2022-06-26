@@ -35,4 +35,10 @@ def test_AndGate_PyTest_Mocker(mocker):
 
     assert outputValue == 0, 'Should return: 0'
 
+def test_OrGate(mocker): # TODO
+    pass
+
+def test_NotGate(mocker): # TODO
+    pass
+
 
