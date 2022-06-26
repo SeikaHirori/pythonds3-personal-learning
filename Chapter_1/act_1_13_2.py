@@ -22,13 +22,26 @@ class BinaryGate(LogicGate):
         self.pin_a = None
         self.pin_b = None
     
-    def get_pin_a(self): #TODO: Modify and follow Listing 14
+    # def get_pin_a(self): # ORIGINAL
         
-        return int(input(f'Enter pin A input for gate {self.get_label()}: '))
+    #     return int(input(f'Enter pin A input for gate {self.get_label()}: '))
+    
+    def get_pin_a(self): #TODO: Modify and follow Listing 14
+        if self.pin_a == None:
+            return int(input(f'Enter pin A input for gate {self.get_label()}:'))
+        else:
+            return self.pin_a.get_from().get_output()
+    
+    # def get_pin_b(self): # ORIGINAL
+        
+    #     return int(input(f'Enter pin B input for gate {self.get_label()}: '))
     
     def get_pin_b(self): #TODO: Modify and follow Listing 14
         
-        return int(input(f'Enter pin B input for gate {self.get_label()}: '))
+        if self.pin_b == None:
+            return int(input(f'Enter pin B input for gate {self.get_label()}: '))
+        else: 
+            return self.pin_b.get_from().get_output()
 
     # Listing 13; in class 'BinaryGate'
     def set_next_pin(self, source):
@@ -111,7 +124,7 @@ class Connector:
 
 
 
-def testing_runtime_code_from_lecture(): # From ActiveCode 4
+def test_runtime_code_from_lecture(): # From ActiveCode 4
     g1 = AndGate("G1")
     g2 = AndGate("G2")
     g3 = OrGate("G3")
