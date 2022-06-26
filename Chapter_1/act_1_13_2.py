@@ -19,7 +19,7 @@ class LogicGate:
 class BinaryGate(LogicGate):
     
     def __init__(self, lbl):
-        # super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
         
 
         self.pin_a = None
@@ -133,6 +133,10 @@ def main():
     c2 = Connector(g2, g3)
     c3 = Connector(g3, g4)
     print(g4.get_output())
+    
+    
+    # g1.get_pin_b() # my own test
+ 
 
 main()
 
