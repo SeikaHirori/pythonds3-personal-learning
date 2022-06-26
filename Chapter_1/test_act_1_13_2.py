@@ -14,12 +14,6 @@ def test_AndGate(monkeypatch, capsys):
         val = prompt_to_return_val[the_prompt]
         return val
 
-
-    # Non-working code; to be removed after getting a working code
-        # monkeypatch.setattr('sys.stdin', io.StringIO('1\n'))
-
-        # monkeypatch.setattr('sys.stdin', io.StringIO('0'))
-
     monkeypatch.setattr('builtins.input', test_inputs)
     output = g1.perform_gate_logic()
 
