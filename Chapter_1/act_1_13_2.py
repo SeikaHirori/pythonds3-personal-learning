@@ -63,10 +63,6 @@ class UnaryGate(LogicGate):
         else:
             raise RuntimeError("Error: NO EMPTY PINS on this gate.")
 
-    
-
-
-
 class AndGate(BinaryGate):
     def __init__(self, lbl):
         super().__init__(lbl)
@@ -80,7 +76,6 @@ class AndGate(BinaryGate):
         else:
             return 0
 
-
 class OrGate(BinaryGate):
     def __init__(self, lbl):
         super().__init__(lbl)
@@ -90,24 +85,30 @@ class OrGate(BinaryGate):
         a = self.get_pin_a()
         b = self.get_pin_b()
 
-        if a == 0 or b == 0:
-            return 0
-        else:
+        if a == 1 or b == 1:
             return 1
+        else:
+            return 0
 
-
-class NotGate(UnaryGate):
+class NotGate(UnaryGate): # TODO: Currently 
     def __init__(self, lbl):
         super().__init__(lbl)
     
     def perform_gate_logic(self):
-        
-        result_gate = self.get_pin()
+        # # Old code that's failing test:
+        # # result_gate = self.get_pin()
 
-        if result_gate == 0:
-            return 1
-        else:
+        # # 
+        # # if result_gate == 1:
+        # #     return 0
+        # # else:
+        # #     return 1
+        
+        # New code
+        if self.get_pin():
             return 0
+        else:
+            return 1
 
 
 class Connector:
