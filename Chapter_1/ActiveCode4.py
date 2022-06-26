@@ -91,7 +91,7 @@ class UnaryGate(LogicGate):
             print("Cannot Connect: NO EMPTY PINS on this gate")
 
 
-class NotGate(UnaryGate): # Stopping here before restarting VSCode; 
+class NotGate(UnaryGate): 
 
     def __init__(self, lbl):
         UnaryGate.__init__(self, lbl)
