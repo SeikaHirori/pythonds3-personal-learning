@@ -19,8 +19,8 @@ class LogicGate:
 class BinaryGate(LogicGate):
     
     def __init__(self, lbl):
-        # super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
-        super(BinaryGate, self).__init__(lbl)
+        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        # super(BinaryGate, self).__init__(lbl)
 
 
         self.pin_a = None
@@ -53,8 +53,8 @@ class BinaryGate(LogicGate):
 class UnaryGate(LogicGate):
 
     def __init__(self, lbl):
-        # super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
-        LogicGate.__init__(self, lbl)
+        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        # LogicGate.__init__(self, lbl)
 
         self.pin = None
     
