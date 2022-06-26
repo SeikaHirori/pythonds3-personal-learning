@@ -45,7 +45,7 @@ class BinaryGate(LogicGate):
             if self.pin_b == None:
                 self.pin_b = source
             else: # maybe change this to print later to see if it changes anything?
-                raise RuntimeError("Error: NO EMPTY PINS on this gate.") # TODO: replace with Print
+                raise RuntimeError("Error: NO EMPTY PINS on this gate.") # TODO: replace 'raise' with 'Print'
 
 class UnaryGate(LogicGate):
 
@@ -64,7 +64,7 @@ class UnaryGate(LogicGate):
         if self.pin == None:
             self.pin == source
         else:
-            raise RuntimeError("Error: NO EMPTY PINS on this gate.") # TODO: replace with Print
+            raise RuntimeError("Error: NO EMPTY PINS on this gate.") # TODO: replace 'raise' with 'Print'
 
 class AndGate(BinaryGate):
     def __init__(self, lbl):
