@@ -119,7 +119,7 @@ class Connector:
         return self.to_gate
 
 
-def main():
+def test_code():
     g1 = AndGate("G1")
     g2 = AndGate("G2")
     g3 = OrGate("G3")
@@ -127,7 +127,9 @@ def main():
     c1 = Connector(g1, g3)
     c2 = Connector(g2, g3)
     c3 = Connector(g3, g4)
-    print(g4.get_output())
 
-main()
+    output_value = g4.get_output()
+    print( output_value)
+
+test_code()
 

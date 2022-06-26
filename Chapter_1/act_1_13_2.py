@@ -68,7 +68,7 @@ class UnaryGate(LogicGate):
             # raise RuntimeError("Error: NO EMPTY PINS on this gate.") 
 
 
-class AndGate(BinaryGate):
+class AndGate(BinaryGate): # my code - On Deck
     def __init__(self, lbl): 
         super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
     
@@ -82,7 +82,7 @@ class AndGate(BinaryGate):
         else:
             return 0
 
-class OrGate(BinaryGate):
+class OrGate(BinaryGate): # My code - OKIE
     def __init__(self, lbl):
         super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
     
@@ -95,7 +95,20 @@ class OrGate(BinaryGate):
             return 1
         else:
             return 0
+# class OrGate(BinaryGate): # Lecture code
 
+#     def __init__(self, lbl):
+#         BinaryGate.__init__(self, lbl)
+
+#     def perform_gate_logic(self):
+
+#         a = self.get_pin_a()
+#         b = self.get_pin_b()
+#         if a == 1 or b == 1:
+#             return 1
+#         else:
+#             return 0
+ 
 class NotGate(UnaryGate): # My code - OKIE; seems fine
     
     def __init__(self, lbl):
