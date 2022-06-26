@@ -60,6 +60,11 @@ class UnaryGate(LogicGate):
     def get_pin(self):
         return int(input(f'Enter pin input for gate {self.get_label}: '))
 
+    def set_next_pin(self, source):
+        pass
+    
+
+
 
 class AndGate(BinaryGate):
     def __init__(self, lbl):
