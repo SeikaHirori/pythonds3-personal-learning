@@ -51,6 +51,7 @@ class AndGate(BinaryGate):
 
         a = self.get_pin_a()
         b = self.get_pin_b()
+
         if a == 1 and b == 1:
             return 1
         else:
@@ -90,7 +91,7 @@ class UnaryGate(LogicGate):
             print("Cannot Connect: NO EMPTY PINS on this gate")
 
 
-class NotGate(UnaryGate):
+class NotGate(UnaryGate): # Stopping here before restarting VSCode; 
 
     def __init__(self, lbl):
         UnaryGate.__init__(self, lbl)

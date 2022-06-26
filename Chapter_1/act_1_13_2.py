@@ -27,7 +27,7 @@ class BinaryGate(LogicGate):
     
     def get_pin_a(self):
         if self.pin_a == None:
-            return int(input(f'Enter pin A input for gate {self.get_label()}:'))
+            return int(input(f'Enter pin A input for gate {self.get_label()}: '))
         else:
             return self.pin_a.get_from().get_output()
     
@@ -45,9 +45,8 @@ class BinaryGate(LogicGate):
             if self.pin_b == None:
                 self.pin_b = source
             else: # maybe change this to print later to see if it changes anything?
+                print("Cannot Connect: NO EMPTY PINS on this gate.")
                 # raise RuntimeError("Error: NO EMPTY PINS on this gate.") # TODO: replace 'raise' with 'Print'
-                print("No empty pins on this gate.")
-
 class UnaryGate(LogicGate):
 
     def __init__(self, lbl):
@@ -65,8 +64,8 @@ class UnaryGate(LogicGate):
         if self.pin == None:
             self.pin == source
         else:
+            print("Cannot Connect: NO EMPTY PINS on this gate.")
             # raise RuntimeError("Error: NO EMPTY PINS on this gate.") # TODO: replace 'raise' with 'Print'
-            print("No empty pins on this gate.")
 
 
 class AndGate(BinaryGate):
@@ -97,7 +96,7 @@ class OrGate(BinaryGate):
         else:
             return 0
 
-class NotGate(UnaryGate):  
+class NotGate(UnaryGate):  # Stopping here before restarting VSCode. Test this after restart
     
     def __init__(self, lbl):
         super().__init__(lbl)
