@@ -21,20 +21,13 @@ class BinaryGate(LogicGate):
         super().__init__(lbl)
         self.pin_a = None
         self.pin_b = None
-    
-    # def get_pin_a(self): # ORIGINAL
-        
-    #     return int(input(f'Enter pin A input for gate {self.get_label()}: '))
+
     
     def get_pin_a(self): #TODO: Modify and follow Listing 14
         if self.pin_a == None:
             return int(input(f'Enter pin A input for gate {self.get_label()}:'))
         else:
             return self.pin_a.get_from().get_output()
-    
-    # def get_pin_b(self): # ORIGINAL
-        
-    #     return int(input(f'Enter pin B input for gate {self.get_label()}: '))
     
     def get_pin_b(self): #TODO: Modify and follow Listing 14
         
