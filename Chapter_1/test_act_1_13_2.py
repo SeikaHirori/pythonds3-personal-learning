@@ -1,7 +1,7 @@
 import pytest
 import io
 
-from act_1_13_2 import AndGate, LogicGate, BinaryGate, UnaryGate
+from act_1_13_2 import LogicGate, BinaryGate, UnaryGate, AndGate, NotGate, OrGate
 
 def test_AndGate_mocker_original(monkeypatch, capsys):
     g1 = AndGate('G1')
