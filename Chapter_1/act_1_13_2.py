@@ -19,6 +19,7 @@ class BinaryGate(LogicGate):
     
     def __init__(self, lbl):
         super().__init__(lbl)
+
         self.pin_a = None
         self.pin_b = None
 
@@ -30,7 +31,6 @@ class BinaryGate(LogicGate):
             return self.pin_a.get_from().get_output()
     
     def get_pin_b(self): #TODO: Modify and follow Listing 14
-        
         if self.pin_b == None:
             return int(input(f'Enter pin B input for gate {self.get_label()}: '))
         else: 
@@ -43,7 +43,7 @@ class BinaryGate(LogicGate):
         else:
             if self.pin_b == None:
                 self.pin_b = source
-            else: 
+            else: # maybe change this to print later to see if it changes anything?
                 raise RuntimeError("Error: NO EMPTY PINS on this gate.")
 
 class UnaryGate(LogicGate):
@@ -143,7 +143,16 @@ def test_runtime_code_from_lecture(): # From ActiveCode 4
 
 
 if __name__ == "__main__":
-    test_runtime_code_from_lecture()
+    # test_runtime_code_from_lecture()
+    g1 = AndGate("G1")
+    g2 = AndGate("G2")
+    g3 = OrGate("G3")
+    g4 = NotGate("G4")
+    c1 = Connector(g1, g3)
+    c2 = Connector(g2, g3)
+    c3 = Connector(g3, g4)
+    print(g4.get_output())
+
 
 
     
