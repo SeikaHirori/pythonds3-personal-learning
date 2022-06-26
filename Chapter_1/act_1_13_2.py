@@ -96,10 +96,22 @@ class OrGate(BinaryGate):
         else:
             return 0
 
-class NotGate(UnaryGate):  
+# class NotGate(UnaryGate): # My code - IP
     
+#     def __init__(self, lbl):
+#         super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+
+#     def perform_gate_logic(self):
+#         if self.get_pin():
+#             return 0
+#         else:
+#             return 1
+
+class NotGate(UnaryGate): # Lecture code
+
     def __init__(self, lbl):
-        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        UnaryGate.__init__(self, lbl)
+
 
     def perform_gate_logic(self):
         if self.get_pin():
@@ -108,23 +120,10 @@ class NotGate(UnaryGate):
             return 1
 
 
-# class Connector: # my code
 
-#     # Listing 12
-#     def __init__(self, fgate, tgate):
-#         self.from_gate = fgate
-#         self.to_gate = tgate
+class Connector: # my code - OKIE
 
-#         tgate.set_next_pin(self)
-
-#     def get_from(self):
-#         return self.from_gate
-
-#     def get_to(self):
-#         return self.to_gate
-
-class Connector:
-
+    # Listing 12
     def __init__(self, fgate, tgate):
         self.from_gate = fgate
         self.to_gate = tgate
@@ -136,6 +135,7 @@ class Connector:
 
     def get_to(self):
         return self.to_gate
+
 
 
 def main():
