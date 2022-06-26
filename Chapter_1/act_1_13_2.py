@@ -19,8 +19,9 @@ class LogicGate:
 class BinaryGate(LogicGate):
     
     def __init__(self, lbl):
-        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
-        
+        # super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        super(BinaryGate, self).__init__(lbl)
+
 
         self.pin_a = None
         self.pin_b = None
@@ -29,7 +30,6 @@ class BinaryGate(LogicGate):
     def get_pin_a(self):
         if self.pin_a == None:
             output_pin_a = int(input(f'Enter pin A input for gate {self.get_label()}: '))
-            
             return output_pin_a
         else:
             return self.pin_a.get_from().get_output()
@@ -53,7 +53,8 @@ class BinaryGate(LogicGate):
 class UnaryGate(LogicGate):
 
     def __init__(self, lbl):
-        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        # super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        LogicGate.__init__(self, lbl)
 
         self.pin = None
     
@@ -65,7 +66,7 @@ class UnaryGate(LogicGate):
 
     def set_next_pin(self, source):
         if self.pin == None:
-            self.pin == source
+            self.pin = source
         else:
             print("Cannot Connect: NO EMPTY PINS on this gate.")
             # raise RuntimeError("Error: NO EMPTY PINS on this gate.") 

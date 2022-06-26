@@ -1,7 +1,7 @@
 import pytest
 import io
 
-from act_1_13_2 import LogicGate, BinaryGate, UnaryGate, AndGate, NotGate, OrGate, Connector
+from act_1_13_2 import AndGate, NotGate, OrGate, Connector
 
 # def test_AndGate_mocker_original(monkeypatch, capsys): # Use function test 'test_AndGate_PyTest_Mocker(mocker); it's more streamlined for writing and reading... but PyTest-mocker needs to be installed.
 #     g1 = AndGate('G1')
@@ -62,7 +62,7 @@ def test_NotGate(mocker):
     assert output_notGate == 1
 
 
-def test_runtime_code_from_lecture(capsys, mocker): # From ActiveCode 4
+def test_runtime_code_from_lecture(mocker): # From ActiveCode 4
     g1 = AndGate("G1")
     g2 = AndGate("G2")
     g3 = OrGate("G3")
