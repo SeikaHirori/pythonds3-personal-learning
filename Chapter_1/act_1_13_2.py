@@ -85,18 +85,27 @@ class NotGate(UnaryGate):
 class Connector:
 
     # Listing 12
-    def __init__(self): # todo
-        pass
+    def __init__(self, fgate, tgate):
+        self.from_gate = fgate
+        self.to_gate = tgate
 
-    def get_from(self): # todo
-        pass
+        tgate.set_next_pin(self)
 
-    def get_to(self): # todo
-        pass
+    def get_from(self):
+        return self.from_gate
 
-    # Listing 13
-    def set_next_pin(self, source): # todo
-        pass
+    def get_to(self):
+        return self.to_gate
+
+    # Listing 13; in class 'BinaryGate'
+    def set_next_pin(self, source): # TODO
+        if self.pin_a == None:
+            self.pin_a == source
+        else:
+            if self.pin_b == None:
+                self.pin_b = source
+            else: raise RuntimeError("Error: NO EMPTY PINS")
+
 
 
 
