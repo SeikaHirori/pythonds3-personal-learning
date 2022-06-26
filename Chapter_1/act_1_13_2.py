@@ -59,7 +59,10 @@ class UnaryGate(LogicGate):
         self.pin = None
     
     def get_pin(self):
-        return int(input(f'Enter pin input for gate {self.get_label}: '))
+        if self.pin == None:
+            return int(input(f'Enter pin input for gate {self.get_label}: '))
+        else:
+            return self.pin.get_from().get_output()
 
     def set_next_pin(self, source):
         if self.pin == None:
