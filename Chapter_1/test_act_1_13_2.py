@@ -39,20 +39,25 @@ def test_OrGate_equals_0(mocker): # TODO
     
     or_gate_0 = OrGate("Or Gate 0")
 
+    mocker.patch('builtins.input', side_effect=['0', '0'])
+    output_OrGate_0 = or_gate_0.perform_gate_logic()
 
-    output_or_gate_0 = or_gate_0.get_output()
-    assert output_or_gate_0 == 0
+    assert output_OrGate_0 == 0, "Should return: 0"
 
 def test_OrGate_equals_1(mocker):
     or_gate_1 = OrGate("Or Gate 1")
 
+    mocker.patch('builtins.input', side_effect=['1','1'])
+    output_OrGate_1= or_gate_1.perform_gate_logic()
 
-    output_or_gate_1= or_gate_1.get_output()
-    assert or_gate_1 == 1
+    assert output_OrGate_1 == 1,"Should return: 1"
 
 def test_NotGate(mocker): # TODO
     not_gate = NotGate('Not Gate')
 
-    assert not_gate == 1
+    mocker.patch('builtins.input', side_effect=['0'])
+    output_notGate = not_gate.perform_gate_logic()
+
+    assert output_notGate == 1
 
 
