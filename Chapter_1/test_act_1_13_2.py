@@ -6,6 +6,8 @@ from act_1_13_2 import AndGate, LogicGate, BinaryGate, UnaryGate
 def test_AndGate(monkeypatch, capsys):
     g1 = AndGate('G1')
 
+    # Try to use mock WITH and WITHOUT pytest-mock:
+        # SFO: https://stackoverflow.com/a/56498519
 
     # Non-working code; to be removed after getting a working code
         # monkeypatch.setattr('sys.stdin', io.StringIO('1\n'))
