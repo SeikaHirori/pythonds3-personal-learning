@@ -19,7 +19,7 @@ class LogicGate:
 class BinaryGate(LogicGate):
     
     def __init__(self, lbl):
-        super().__init__(lbl)
+        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
 
         self.pin_a = None
         self.pin_b = None
@@ -46,11 +46,10 @@ class BinaryGate(LogicGate):
                 self.pin_b = source
             else: # maybe change this to print later to see if it changes anything?
                 print("Cannot Connect: NO EMPTY PINS on this gate.")
-                # raise RuntimeError("Error: NO EMPTY PINS on this gate.") # TODO: replace 'raise' with 'Print'
 class UnaryGate(LogicGate):
 
     def __init__(self, lbl):
-        super().__init__(lbl)
+        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
 
         self.pin = None
     
@@ -65,12 +64,12 @@ class UnaryGate(LogicGate):
             self.pin == source
         else:
             print("Cannot Connect: NO EMPTY PINS on this gate.")
-            # raise RuntimeError("Error: NO EMPTY PINS on this gate.") # TODO: replace 'raise' with 'Print'
+            # raise RuntimeError("Error: NO EMPTY PINS on this gate.") 
 
 
 class AndGate(BinaryGate):
-    def __init__(self, lbl):
-        super().__init__(lbl)
+    def __init__(self, lbl): 
+        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
     
     def perform_gate_logic(self):
 
@@ -84,7 +83,7 @@ class AndGate(BinaryGate):
 
 class OrGate(BinaryGate):
     def __init__(self, lbl):
-        super().__init__(lbl)
+        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
     
     def perform_gate_logic(self):
 
@@ -96,11 +95,11 @@ class OrGate(BinaryGate):
         else:
             return 0
 
-class NotGate(UnaryGate):  # Stopping here before restarting VSCode. Test this after restart
+class NotGate(UnaryGate):  
     
     def __init__(self, lbl):
-        super().__init__(lbl)
-    
+        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+
     def perform_gate_logic(self):
         if self.get_pin():
             return 0
@@ -124,7 +123,7 @@ class Connector:
         return self.to_gate
 
 
-def demo_code():
+def main():
     g1 = AndGate("G1")
     g2 = AndGate("G2")
     g3 = OrGate("G3")
@@ -134,7 +133,7 @@ def demo_code():
     c3 = Connector(g3, g4)
     print(g4.get_output())
 
-demo_code()
+main()
 
 # # Current log output:
 #     >> Enter pin input for gate <bound method LogicGate.get_label of <__main__.NotGate object at 0x101273760>>: 0

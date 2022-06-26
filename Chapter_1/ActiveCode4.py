@@ -96,6 +96,7 @@ class NotGate(UnaryGate): # Stopping here before restarting VSCode;
     def __init__(self, lbl):
         UnaryGate.__init__(self, lbl)
 
+
     def perform_gate_logic(self):
         if self.get_pin():
             return 0
