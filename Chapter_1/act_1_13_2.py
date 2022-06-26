@@ -50,7 +50,8 @@ class BinaryGate(LogicGate):
         else:
             if self.pin_b == None:
                 self.pin_b = source
-            else: raise RuntimeError("Error: NO EMPTY PINS")
+            else: 
+                raise RuntimeError("Error: NO EMPTY PINS on this gate.")
 
 class UnaryGate(LogicGate):
     def __init__(self, lbl):
@@ -61,7 +62,11 @@ class UnaryGate(LogicGate):
         return int(input(f'Enter pin input for gate {self.get_label}: '))
 
     def set_next_pin(self, source):
-        pass
+        if self.pin == None:
+            self.pin == source
+        else:
+            raise RuntimeError("Error: NO EMPTY PINS on this gate.")
+
     
 
 
