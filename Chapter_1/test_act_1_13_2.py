@@ -62,7 +62,11 @@ def test_NotGate(mocker):
     assert output_notGate == 1
 
 
-def test_runtime_code_from_lecture(mocker): # From ActiveCode 4
+def test_runtime_code_from_lecture(mocker, monkeypatch): # From ActiveCode 4
+    
+    mocker.patch("builtins.input", side_effect=["0","1","1","1"])
+
+    
     g1 = AndGate("G1")
     g2 = AndGate("G2")
     g3 = OrGate("G3")
@@ -70,8 +74,20 @@ def test_runtime_code_from_lecture(mocker): # From ActiveCode 4
     c1 = Connector(g1, g3)
     c2 = Connector(g2, g3)
     c3 = Connector(g3, g4)
+
     
-    mocker.patch("builtins.input", side_effect=["0","1","1","1"])
+    # # def test_inputs(the_prompt):
+    # #     prompt_to_return_val = {
+    # #         'Enter pin A input for gate G1: ': 0,
+    # #         'Enter pin B input for gate G1: ': '1',
+    # #         'Enter pin A input for gate G2: ': '1',
+    # #         'Enter pin B input for Gate G2: ': '1'
+    # #     }
+        
+    # #     val = prompt_to_return_val[the_prompt]
+    # #     return val
+
+    # # monkeypatch.setattr('builtins.input', test_inputs)
 
     output_value = g4.get_output()
 

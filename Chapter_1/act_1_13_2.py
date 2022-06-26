@@ -145,7 +145,7 @@ class Connector: # my code - OKIE
 
 
 
-def main():
+if __name__ == "__main__":
     g1 = AndGate("G1")
     g2 = AndGate("G2")
     g3 = OrGate("G3")
@@ -154,17 +154,4 @@ def main():
     c2 = Connector(g2, g3)
     c3 = Connector(g3, g4)
     print(g4.get_output())
-    
-    
-    # g1.get_pin_b() # my own test
- 
-
-main()
-
-# # Current log output:
-#     >> Enter pin input for gate <bound method LogicGate.get_label of <__main__.NotGate object at 0x101273760>>: 0
-#     >> 1
-
-
-
     
