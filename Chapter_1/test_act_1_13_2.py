@@ -35,10 +35,24 @@ def test_AndGate_PyTest_Mocker(mocker):
 
     assert outputValue == 0, 'Should return: 0'
 
-def test_OrGate(mocker): # TODO
-    pass
+def test_OrGate_equals_0(mocker): # TODO
+    
+    or_gate_0 = OrGate("Or Gate 0")
+
+
+    output_or_gate_0 = or_gate_0.get_output()
+    assert output_or_gate_0 == 0
+
+def test_OrGate_equals_1(mocker):
+    or_gate_1 = OrGate("Or Gate 1")
+
+
+    output_or_gate_1= or_gate_1.get_output()
+    assert or_gate_1 == 1
 
 def test_NotGate(mocker): # TODO
-    pass
+    not_gate = NotGate('Not Gate')
+
+    assert not_gate == 1
 
 
