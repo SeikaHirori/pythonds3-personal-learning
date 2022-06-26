@@ -22,11 +22,11 @@ class BinaryGate(LogicGate):
         self.pin_a = None
         self.pin_b = None
     
-    def get_pin_a(self):
+    def get_pin_a(self): #TODO: Modify and follow Listing 14
         
         return int(input(f'Enter pin A input for gate {self.get_label()}: '))
     
-    def get_pin_b(self):
+    def get_pin_b(self): #TODO: Modify and follow Listing 14
         
         return int(input(f'Enter pin B input for gate {self.get_label()}: '))
 
@@ -123,7 +123,7 @@ def testing_runtime_code_from_lecture(): # From ActiveCode 4
 
 
 if __name__ == "__main__":
-    runtime_code_from_lecture()
+    testing_runtime_code_from_lecture()
 
 
     
