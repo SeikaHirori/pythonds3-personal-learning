@@ -7,7 +7,7 @@
         - input() is a function
         - sys.stdin is an object (file object)
 
-        - For my needs, 
+        - For my needs, using input() and Pytest works for needing to put multiple inputs.
 
 - Mocker | using builtin AND Pytest-mocker
     - https://stackoverflow.com/questions/56498487/how-can-i-test-a-loop-with-multiple-input-calls/56498519#56498519
