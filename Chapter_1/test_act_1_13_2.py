@@ -35,7 +35,7 @@ def test_AndGate_PyTest_Mocker(mocker):
 
     assert outputValue == 0, 'Should return: 0'
 
-def test_OrGate_equals_0(mocker): # TODO
+def test_OrGate_equals_0(mocker): 
     
     or_gate_0 = OrGate("Or Gate 0")
 
@@ -52,7 +52,7 @@ def test_OrGate_equals_1(mocker):
 
     assert output_OrGate_1 == 1,"Should return: 1"
 
-def test_NotGate(mocker): # TODO
+def test_NotGate(mocker): 
     not_gate = NotGate('Not Gate')
 
     mocker.patch('builtins.input', side_effect=['0'])

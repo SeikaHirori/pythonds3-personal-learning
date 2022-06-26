@@ -81,7 +81,28 @@ class NotGate(UnaryGate):
         else:
             return 0
 
-            
+
+class Connector:
+
+    # Listing 12
+    def __init__(self): # todo
+        pass
+
+    def get_from(self): # todo
+        pass
+
+    def get_to(self): # todo
+        pass
+
+    # Listing 13
+    def set_next_pin(self, source): # todo
+        pass
+
+
+
+
+
+
 if __name__ == "__main__":
     g1 = AndGate("G1")
     print(g1.get_output())
