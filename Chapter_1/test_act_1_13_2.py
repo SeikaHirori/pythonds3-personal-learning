@@ -62,7 +62,7 @@ def test_NotGate(mocker):
     assert output_notGate == 1
 
 
-def test_runtime_code_from_lecture(): # From ActiveCode 4
+def test_runtime_code_from_lecture(mocker): # From ActiveCode 4
     g1 = AndGate("G1")
     g2 = AndGate("G2")
     g3 = OrGate("G3")
@@ -71,6 +71,8 @@ def test_runtime_code_from_lecture(): # From ActiveCode 4
     c2 = Connector(g2, g3)
     c3 = Connector(g3, g4)
     
+    mocker.patch('builtins.input', side_effect=['0','1','1','1'])
+
     output_value = g4.get_output()
 
     assert output_value == 0, "Should return: 0"

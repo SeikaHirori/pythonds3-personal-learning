@@ -136,7 +136,7 @@ def test_runtime_code_from_lecture(): # From ActiveCode 4
 
 
 if __name__ == "__main__":
-    testing_runtime_code_from_lecture()
+    test_runtime_code_from_lecture()
 
 
     
