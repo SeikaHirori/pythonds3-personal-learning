@@ -1,4 +1,5 @@
-
+import pytest
+import pytest_mock
 
 # Lesson URL: https://runestone.academy/ns/books/published/pythonds3/Introduction/ObjectOrientedProgramminginPythonDefiningClasses.html?lastPosition=13421
 
@@ -110,18 +111,28 @@ class NotGate(UnaryGate): # My code - OKIE; seems fine
             return 1
 
 class NorGate(OrGate): #TODO: write out code
-    def __init__(self, lbl):
-        super().__init__(lbl)
+    # # My original code; NOT-well optimized inheritance
+    # def __init__(self, lbl):
+    #     super().__init__(lbl)
     
-    def perform_gate_logic(self):
+    # def perform_gate_logic(self):
         
-        a = self.get_pin_a()
-        b = self.get_pin_b()
+    #     a = self.get_pin_a()
+    #     b = self.get_pin_b()
 
-        if a == 0 and b == 0:
-            return 1
-        else:
+    #     if a == 0 and b == 0:
+    #         return 1
+    #     else:
+    #         return 0
+
+    #F ollowing lecture
+    def perform_gate_logic(self):
+        if super().perform_gate_logic() == 1:
             return 0
+        else:
+            return 1
+
+
 
     
 class NandGate(AndGate): #TODO: write out code
@@ -154,15 +165,26 @@ class Connector: # my code - OKIE
     def get_to(self):
         return self.to_gate
 
+class Demo:
+    
+    def set_one(mocker):
+        
+        
+        g1 = NorGate("G1")
+        g2 = NorGate("G2")
+        g3 = NandGate("G3")
+        g4 = NotGate("G4")
+        c1 = Connector(g1, g3)
+        c2 = Connector(g2, g3)
+        c3 = Connector(g3, g4)
+
+        mocker.patch(__name__ + 'builtins.input', side_effect = ['0','0','0','0'] )
+
+        print(g4.get_output())
+
+
 
 if __name__ == "__main__":
-    # g1 = AndGate("G1")
-    # g2 = AndGate("G2")
-    # g3 = OrGate("G3")
-    # g4 = NotGate("G4")
-    # c1 = Connector(g1, g3)
-    # c2 = Connector(g2, g3)
-    # c3 = Connector(g3, g4)
-    # print(g4.get_output())
-    pass
-    
+    demo_class = Demo  
+
+    demo_class.set_one()
