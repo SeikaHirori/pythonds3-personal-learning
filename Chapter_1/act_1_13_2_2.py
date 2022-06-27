@@ -113,15 +113,16 @@ class NorGate(BinaryGate): #TODO: write out code
     def __init__(self, lbl):
         super().__init__(lbl)
     
-    def perform_gate_logic():
+    def perform_gate_logic(self):
         return -1
+
 
     
 class NandGate(BinaryGate): #TODO: write out code
     def __init__(self, lbl):
         super().__init__(lbl)
 
-    def perform_gate_logic():
+    def perform_gate_logic(self):
         return -1
 
 class Connector: # my code - OKIE
