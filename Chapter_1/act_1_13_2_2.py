@@ -3,7 +3,6 @@
 # Lesson URL: https://runestone.academy/ns/books/published/pythonds3/Introduction/ObjectOrientedProgramminginPythonDefiningClasses.html?lastPosition=13421
 
 
-
 class LogicGate: 
 
     def __init__(self, lbl):
@@ -16,7 +15,6 @@ class LogicGate:
     def get_output(self):
         self.output = self.perform_gate_logic()
         return self.output
-
 
 class BinaryGate(LogicGate):
     
@@ -72,7 +70,6 @@ class UnaryGate(LogicGate):
             print("Cannot Connect: NO EMPTY PINS on this gate.")
             # raise RuntimeError("Error: NO EMPTY PINS on this gate.") 
 
-
 class AndGate(BinaryGate): # my code - On Deck
     def __init__(self, lbl): 
         super().__init__(lbl)
@@ -112,9 +109,15 @@ class NotGate(UnaryGate): # My code - OKIE; seems fine
         else:
             return 1
 
-class NorGate(): #TODO: write out code
+class NorGate(BinaryGate): #TODO: write out code
+    def __init__(self, lbl):
+        super().__init__(lbl)
+
     pass
-class NandGate(): #TODO: write out code
+class NandGate(BinaryGate): #TODO: write out code
+    def __init__(self, lbl):
+        super().__init__(lbl)
+
     pass
 
 class Connector: # my code - OKIE
@@ -131,8 +134,6 @@ class Connector: # my code - OKIE
 
     def get_to(self):
         return self.to_gate
-
-
 
 
 if __name__ == "__main__":
