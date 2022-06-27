@@ -114,8 +114,14 @@ class NorGate(BinaryGate): #TODO: write out code
         super().__init__(lbl)
     
     def perform_gate_logic(self):
-        return -1
+        
+        a = self.get_pin_a()
+        b = self.get_pin_b()
 
+        if a == 0 and b == 0:
+            return 1
+        else:
+            return 0
 
     
 class NandGate(BinaryGate): #TODO: write out code
