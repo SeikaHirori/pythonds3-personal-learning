@@ -19,7 +19,7 @@ class LogicGate:
 class BinaryGate(LogicGate):
     
     def __init__(self, lbl):
-        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        super().__init__(lbl)
         # super(BinaryGate, self).__init__(lbl)
 
 
@@ -53,7 +53,7 @@ class BinaryGate(LogicGate):
 class UnaryGate(LogicGate):
 
     def __init__(self, lbl):
-        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        super().__init__(lbl)
         # LogicGate.__init__(self, lbl)
 
         self.pin = None
@@ -74,7 +74,7 @@ class UnaryGate(LogicGate):
 
 class AndGate(BinaryGate): # my code - On Deck
     def __init__(self, lbl): 
-        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        super().__init__(lbl)
     
     def perform_gate_logic(self):
 
@@ -88,7 +88,7 @@ class AndGate(BinaryGate): # my code - On Deck
 
 class OrGate(BinaryGate): # My code - OKIE
     def __init__(self, lbl):
-        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        super().__init__(lbl)
     
     def perform_gate_logic(self):
 
@@ -116,7 +116,7 @@ class OrGate(BinaryGate): # My code - OKIE
 class NotGate(UnaryGate): # My code - OKIE; seems fine
     
     def __init__(self, lbl):
-        super().__init__(lbl) # TODO: Replace superclass from "super().__init.__" to "super(BinaryGate, self).__init__(lbl)"
+        super().__init__(lbl)
 
     def perform_gate_logic(self):
         if self.get_pin():
