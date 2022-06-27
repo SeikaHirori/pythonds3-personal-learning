@@ -2,6 +2,9 @@
 
 # Lesson URL: https://runestone.academy/ns/books/published/pythonds3/Introduction/ObjectOrientedProgramminginPythonDefiningClasses.html?lastPosition=13421
 
+from msilib.schema import Binary
+
+
 class LogicGate: 
 
     def __init__(self, lbl):
@@ -114,6 +117,7 @@ class NorGate(): #TODO: write out code
     pass
 class NandGate(): #TODO: write out code
     pass
+
 class Connector: # my code - OKIE
 
     # Listing 12
