@@ -2,7 +2,6 @@
 
 # Lesson URL: https://runestone.academy/ns/books/published/pythonds3/Introduction/ObjectOrientedProgramminginPythonDefiningClasses.html?lastPosition=13421
 
-from msilib.schema import Binary
 
 
 class LogicGate: 
