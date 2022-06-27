@@ -112,13 +112,17 @@ class NotGate(UnaryGate): # My code - OKIE; seems fine
 class NorGate(BinaryGate): #TODO: write out code
     def __init__(self, lbl):
         super().__init__(lbl)
+    
+    def perform_gate_logic():
+        return -1
 
-    pass
+    
 class NandGate(BinaryGate): #TODO: write out code
     def __init__(self, lbl):
         super().__init__(lbl)
 
-    pass
+    def perform_gate_logic():
+        return -1
 
 class Connector: # my code - OKIE
 
