@@ -162,6 +162,11 @@ def test_constructor_check_den_valid():
 
     with pytest.raises(Exception) as e_info:
         f1 = Fraction(2, "meeeeeep")
+    
+    f2 = Fraction(1,2)
+
+    assert f2.getNum() == 1, "Should return Num: 1"
+    assert f2.getDen() == 2, "Should return Den: 2"
 
 
     

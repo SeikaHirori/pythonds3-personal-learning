@@ -11,20 +11,21 @@ from multiprocessing.sharedctypes import Value
 class Fraction:
     def __init__(self, top, bottom):
         
-        try:
-            int_top = int(top)
-        except ValueError:
-            print(f'{top} is not an integer')
+        # try:
+        #     int_top = int(top)
+        # except ValueError:
+        #     print(f'{top} is not an integer')
         
-        try:
-            int_bottom = int(bottom)
-        except ValueError:
-            print(f'{bottom} value is not an integer')
+        # try:
+        #     int_bottom = int(bottom)
+        # except ValueError:
+        #     print(f'{bottom} value is not an integer')
             
 
-        
-        common = self.gcd(top, bottom)
-        
+        try: # doesn't work as intended
+            common = self.gcd(top, bottom)
+        except ValueError:
+            print(f'Either {top} or {bottom} is not an integer')
         self.num = top / common
         self.den = bottom / common
     
@@ -40,6 +41,8 @@ class Fraction:
         # Doc about static method and to obtain output: https://python-course.eu/oop/class-instance-attributes.php
             # Section: Static Methods
     def gcd(m,n):
+        
+        
         while m % n != 0:
             m, n = n, m % n
         return n
