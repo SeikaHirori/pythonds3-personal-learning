@@ -26,7 +26,6 @@ def test_getDen():
 
     assert output_den == 3, "Should return denominator: 3"
 
-#TODO
 #3
 def test__ge__():
     f1 = Fraction(1,4)
@@ -54,7 +53,25 @@ def test__ge__():
 #TODO
 #3
 def test__le__(): 
-    pass
+    f1 = Fraction(1,5)
+    f2 = Fraction(1,3)
+    output_true_less = (f1 <= f2)
+
+    assert output_true_less == True, "Should return: True"
+
+
+    f3 = Fraction(1,5)
+    f4 = Fraction(1,5)
+    output_true_equals = (f3 <= f4)
+
+    assert output_true_equals == True, "Should return: True"
+
+
+    f5 = Fraction(1,2)
+    f6 = Fraction(1,5)
+    output_false = (f5 <= f6)
+    
+    assert output_false == False, "Should return: False"
 
 #TODO
 #3

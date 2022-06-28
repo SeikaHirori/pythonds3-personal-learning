@@ -84,12 +84,16 @@ class Fraction:
     def getDen(self):
         return self.den
 
-    #2
+    #3
     def __ge__(self, other_fraction):
         f1 = self.num/ self.den
         f2 = other_fraction.num/ other_fraction.den
 
         return f1 >= f2
+    
+    
+    
+
 
 
 
