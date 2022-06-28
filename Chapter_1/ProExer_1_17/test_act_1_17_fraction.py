@@ -50,7 +50,15 @@ def test_GCD_is_used_immediately():
 # TODO
 #2
 def test_GCD_with_addition():
-    pass
+
+    f1 = Fraction(1,4)
+    f2 = Fraction(1,4)
+
+    output_gcd_a = f1 + f2
+
+    assert output_gcd_a.getNum() == 1, "Should return: 1"
+    assert output_gcd_a.getDen() == 2, "Should return: 2"
+
 
 #TODO
 #2
