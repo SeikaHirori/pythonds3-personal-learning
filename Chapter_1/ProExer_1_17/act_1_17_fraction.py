@@ -102,13 +102,13 @@ class Fraction:
 
         return f1 >= f2
     
-    #TODO
     #3
     def __le__(self, other_fraction):
-        f1 = self.num / self.den
+        f1 = self.getDecimalVersion()
+        f2 = other_fraction.getDecimalVersion()
 
 
-        return f1
+        return f1 <= f2 
     
 
 
