@@ -153,15 +153,22 @@ def test__ne__():
 #5
 def test_constructor_check_num_valid_integers():
     
-    with pytest.raises(Exception) as e_info:
+    # with pytest.raises(Exception) as e_info: # Now checking for 
+    #     f1 = Fraction("beep", 2)
+
+    with pytest.raises(SystemExit) as e_info:
         f1 = Fraction("beep", 2)
+            
+    
     
 #TODO
 #5
 def test_constructor_check_den_valid():
 
-    with pytest.raises(Exception) as e_info:
-        f1 = Fraction(2, "meeeeeep")
+    # with pytest.raises(Exception) as e_info: # Now checking for 
+    #     f1 = Fraction(2, "meeeeeep")
+
+    
     
     f2 = Fraction(1,2)
 

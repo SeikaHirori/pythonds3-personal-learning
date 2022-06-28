@@ -11,13 +11,23 @@ from multiprocessing.sharedctypes import Value
 class Fraction:
     def __init__(self, top, bottom):
 
-        common = self.gcd(top,bottom,sys)
+        try:
+            top = int(top)
+        except ValueError:
+            print(f"{top} is not an integer!")
+            sys.exit()
 
         try:
-            self.num = top / common
-            self.den = bottom / common
-        except:
-            print("One of the constructors was not an integer.")
+            bottom = int(bottom)
+        except ValueError:
+            print(f"{bottom} is not an integer!")
+            sys.exit()
+
+        common = self.gcd(top,bottom)
+
+        self.num = top / common
+        self.den = bottom / common
+    
     
     # Imported code === START ===
 
@@ -30,26 +40,12 @@ class Fraction:
     @staticmethod 
         # Doc about static method and to obtain output: https://python-course.eu/oop/class-instance-attributes.php
             # Section: Static Methods
-    def gcd(top,bottom,sys):
-        try:
-            int_top = int(top)
-        except ValueError:
-            print(f"{top} is not an integer!")
-            sys.exit()
+    def gcd(top,bottom):
         
-        try:
-            int_bottom = int(bottom)
-        except ValueError:
-            print(f"{bottom} is not an integer!")
-            sys.exit()
-            
+        while top % bottom != 0:
+            top, bottom = bottom, top % bottom
+        return bottom
         
-        try:
-            while int_top % int_bottom != 0:
-                int_top, int_bottom = int_bottom, int_top % int_bottom
-            return int_bottom
-        except UnboundLocalError:
-            print('One of the values was not an integer')
 
     def __add__(self, other_fraction):
         new_num = (self.num * other_fraction.den)+  (self.den * other_fraction.num)
