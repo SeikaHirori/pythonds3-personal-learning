@@ -68,8 +68,11 @@ class Fraction:
     
     
     def __gt__(self, other_fraction):
-        f1 = self.num / self.den
-        f2 = other_fraction.num / other_fraction.den
+        # f1 = self.num / self.den
+        # f2 = other_fraction.num / other_fraction.den
+
+        f1 = self.getDecimalVersion()
+        f2 = other_fraction.getDecimalVersion()
 
         return f1 > f2
 
@@ -89,13 +92,11 @@ class Fraction:
         return self.den
         
     def getDecimalVersion(self):
-            converted = self.getNum()/self.getDen()
-            return converted
+        converted = self.getNum()/self.getDen()
+        return converted
 
     #3
     def __ge__(self, other_fraction): 
-        # f1 = self.num/ self.den
-        # f2 = other_fraction.num/ other_fraction.den
 
         f1 = self.getDecimalVersion()
         f2 = other_fraction.getDecimalVersion()
@@ -147,5 +148,10 @@ class demo_fraction(Fraction):
         print()
 
 if __name__ == "__main__":
-    test1 = demo_fraction
-    test1.demo_set1()
+    # test1 = demo_fraction
+    # test1.demo_set1()
+
+    f1 = Fraction(1,2) #0.5
+    f2 = Fraction(1,100) #0.01
+
+    print(f1 > f2)

@@ -4,6 +4,19 @@ from ProExer_1_17.act_1_17_fraction import Fraction
     # Importing a file/class from another folder: https://stackoverflow.com/a/456491
         # Create a blank "__init__.py" file to do this.
 
+#misc
+def test__gt__with_refactored_function():
+    f1 = Fraction(1,2)
+    f2 = Fraction(1,100)
+
+    output = (f1 > f2)
+    assert output == True
+
+def test_getDecimalVersion():
+    frac = Fraction(1,2)
+
+    assert frac.getDecimalVersion() == .5, "Should return: .5"
+
 #1
 def test_getNum(): 
     #pass
