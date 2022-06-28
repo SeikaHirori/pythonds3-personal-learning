@@ -16,7 +16,6 @@ def test_getNum():
 
 
 
-#TODO - WPC
 #1
 def test_getDen():
     #pass
@@ -30,8 +29,8 @@ def test_getDen():
 #TODO
 #3
 def test__ge__():
-    f1 = Fraction(1,5)
-    f2 = Fraction(1,4)
+    f1 = Fraction(1,4)
+    f2 = Fraction(1,5)
 
     result_ge_true_f1 = (f1 >= f2)
 
@@ -43,6 +42,13 @@ def test__ge__():
     result_ge_true_equals = (f3 >= f4)
 
     assert result_ge_true_equals == True
+
+    f5 = Fraction(1,6)
+    f6 = Fraction(1,5)
+
+    result__ge__false = (f5 >= f6)
+
+    assert result__ge__false == False, "Should return: False"
 
 
 #TODO

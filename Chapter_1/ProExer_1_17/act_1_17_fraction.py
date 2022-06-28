@@ -76,11 +76,21 @@ class Fraction:
         return f1 < f2
     # Import code === ENDS ===
 
+    #1
     def getNum(self):
         return self.num
     
+    #1
     def getDen(self):
         return self.den
+
+    #2
+    def __ge__(self, other_fraction):
+        f1 = self.num/ self.den
+        f2 = other_fraction.num/ other_fraction.den
+
+        return f1 >= f2
+
 
 
 
