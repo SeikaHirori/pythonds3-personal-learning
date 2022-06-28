@@ -39,9 +39,22 @@ def test_getDen():
 
     assert output_den == 3, "Should return denominator: 3"
 
-#TODO
 #2
 def test_GCD_is_used_immediately():
+    f1 = Fraction(2,4)
+
+    assert f1.getNum() == 1
+
+    assert f1.getDen() == 2
+
+# TODO
+#2
+def test_GCD_with_addition():
+    pass
+
+#TODO
+#2
+def test_GCD_with_subtraction():
     pass
 
 #4

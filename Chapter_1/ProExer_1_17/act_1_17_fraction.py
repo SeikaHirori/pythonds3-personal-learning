@@ -9,8 +9,10 @@ import fractions
 
 class Fraction:
     def __init__(self, top, bottom):
-        self.num = top
-        self.den = bottom
+        common = self.gcd(top, bottom)
+        
+        self.num = top / common
+        self.den = bottom / common
     
     # Imported code === START ===
 
