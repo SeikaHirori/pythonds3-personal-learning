@@ -151,19 +151,19 @@ def test__ne__():
 
 #5
 def test_constructor_check_num_valid_integers(capsys):
-    
-    # with pytest.raises(Exception) as e_info: # Now checking for 
-    #     f1 = Fraction("beep", 2)
+
     with pytest.raises(SystemExit):
         f1 = Fraction("beep",2)
-        captured = capsys.readouterr()
-        assert captured.out == 'beep is not an integer!'
+    captured = capsys.readouterr()
+    assert captured.out == 'beep is not an integer!\n'
     
 #5
-def test_constructor_check_den_valid():
+def test_constructor_check_den_valid(capsys):
 
-    # with pytest.raises(Exception) as e_info: # Now checking for 
-    #     f1 = Fraction(2, "meeeeeep")
+    with pytest.raises(SystemExit) as e_info: # Now checking for 
+        f1 = Fraction(2, "meeeeeep")
+    captured = capsys.readouterr()
+    assert captured.out == 'meeeeeep is not an integer!\n'
 
     f2 = Fraction(1,2)
 
