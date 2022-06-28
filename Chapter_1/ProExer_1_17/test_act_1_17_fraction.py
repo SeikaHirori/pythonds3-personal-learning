@@ -73,18 +73,24 @@ def test_GCD_with_subtraction():
 
 #2
 def test_GCD_with_mul():
-    # pass
     f1 = Fraction(1,2)
     f2 = Fraction(1,4)
 
     output = f1 * f2
     assert output.getNum() == 1, "Should return Numerator: 1"
-    assert output.getDen() == 8, "Should return Numerator: 8"
+    assert output.getDen() == 8, "Should return Den: 8"
 
 #TODO
 #2
 def test_GCD_with_trueDiv():
-    pass
+    # pass
+    f1 = Fraction(1,3)
+    f2 = Fraction(1,2)
+
+    output = f1 / f2
+
+    assert output.getNum() == 2, "Should return Numerator: 2"
+    assert output.getDen() == 3, "Should return Den: 3"
 
 #4
 def test__ge__():
