@@ -39,7 +39,6 @@ class Fraction:
 
         return first_num == second_num
     
-    # Import code === ENDS ===
 
     def __mul__(self, other_fraction):
         new_num = self.num * other_fraction.num
@@ -76,6 +75,9 @@ class Fraction:
         f2 = other_fraction.num / other_fraction.den
 
         return f1 > f2
+
+    # Import code === ENDS ===
+
 
 class demo_fraction(Fraction):
 
