@@ -78,6 +78,9 @@ class Fraction:
 
     def getNum(self):
         return self.num
+    
+    def getDen(self):
+        return self.den
 
 
 
