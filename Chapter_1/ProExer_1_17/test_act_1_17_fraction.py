@@ -63,7 +63,6 @@ def test__ge__():
     assert result__ge__false == False, "Should return: False"
 
 
-#TODO
 #3
 def test__le__(): 
     f1 = Fraction(1,5)
