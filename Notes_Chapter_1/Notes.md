@@ -28,3 +28,5 @@
                 output = 0
             else:
                 output = 1
+- Importing a file/class from another folder: https://stackoverflow.com/a/456491
+    - Create a blank "__init__.py" file to do this.
