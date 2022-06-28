@@ -37,8 +37,8 @@ class Fraction:
         return Fraction(new_num // common, new_den // common)
     
     def __eq__(self, other_fraction):
-        first_num = self.num * other_fraction.den
-        second_num = other_fraction.num * self.den
+        first_num = self.getDecimalVersion()
+        second_num = self.getDecimalVersion()
 
         return first_num == second_num
     
@@ -119,11 +119,6 @@ class Fraction:
         return f1 != f2
     
 
-
-
-
-
-
 class demo_fraction(Fraction):
 
     def __init__(self, top, bottom):
@@ -155,10 +150,9 @@ class demo_fraction(Fraction):
         print()
 
 if __name__ == "__main__":
+
     # test1 = demo_fraction
     # test1.demo_set1()
 
-    f1 = Fraction(1,2) #0.5
-    f2 = Fraction(1,100) #0.01
-
-    print(f1 > f2)
+    f1 = Fraction("tep","tep")
+    print(f1.getNum())

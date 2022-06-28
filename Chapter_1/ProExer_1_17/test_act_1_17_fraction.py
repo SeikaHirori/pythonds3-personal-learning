@@ -39,7 +39,12 @@ def test_getDen():
 
     assert output_den == 3, "Should return denominator: 3"
 
-#3
+#TODO
+#2
+def test_GCD_is_used_immediately():
+    pass
+
+#4
 def test__ge__():
     f1 = Fraction(1,4)
     f2 = Fraction(1,5)
@@ -63,7 +68,7 @@ def test__ge__():
     assert result__ge__false == False, "Should return: False"
 
 
-#3
+#4
 def test__le__(): 
     f1 = Fraction(1,5)
     f2 = Fraction(1,3)
@@ -85,7 +90,7 @@ def test__le__():
     
     assert output_false == False, "Should return: False"
 
-#3
+#4
 def test__ne__(): 
     f1 = Fraction(1,2)
     f2 = Fraction(2,3)
@@ -99,6 +104,21 @@ def test__ne__():
     assert (f3 != f4) == False, "Should return: False"
 
 #TODO
-#4
-def test_constructor_checks_valid_integers():
-    pass
+#5
+def test_constructor_check_num_valid_integers():
+    
+    with pytest.raises(Exception) as e_info:
+        f1 = Fraction("beep", 2)
+    
+#TODO
+#5
+def test_constructor_check_den_valid():
+
+    with pytest.raises(Exception) as e_info:
+        f1 = Fraction(2, "meeeeeep")
+
+
+    
+
+    
+
