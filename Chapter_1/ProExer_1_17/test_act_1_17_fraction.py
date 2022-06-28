@@ -176,5 +176,3 @@ def test_constructor_check_den_valid(capsys):
 def test_negative_denominator():
     pass
 
-    
-
