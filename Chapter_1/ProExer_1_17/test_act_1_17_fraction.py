@@ -7,14 +7,26 @@ from ProExer_1_17.act_1_17_fraction import Fraction
 #TODO
 #1
 def test_getNum(): 
-    pass
+    #pass
+
+    frac_getNum = Fraction(1,2)
+
+    output_num = frac_getNum.getNum()
+
+    assert output_num == 1, "Should return numerator: 1"
+
 
 
 #TODO
 #1
 def test_getDen():
-    pass
+    #pass
 
+    frac_getDen = Fraction(2,3)
+
+    output_den = frac_getDen.getDen()
+
+    assert output_den == 3, "Should return denominator: 3"
 
 #TODO
 #3
