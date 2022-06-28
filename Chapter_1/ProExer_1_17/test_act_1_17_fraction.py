@@ -56,14 +56,23 @@ def test_GCD_with_addition():
 
     output_gcd_a = f1 + f2
 
-    assert output_gcd_a.getNum() == 1, "Should return: 1"
-    assert output_gcd_a.getDen() == 2, "Should return: 2"
+    assert output_gcd_a.getNum() == 1, "Should return Numerator: 1"
+    assert output_gcd_a.getDen() == 2, "Should return Den: 2"
 
 
 #TODO
 #2
 def test_GCD_with_subtraction():
-    pass
+    # pass
+
+    f1 = Fraction(3,4)
+    f2 = Fraction(1,4)
+
+    output_gcd_sub = f1 - f2
+
+    assert output_gcd_sub.getNum() == 1, "Should return numerator: 1"
+    assert output_gcd_sub.getDen() == 2, "Should return Den: 2"
+
 
 #4
 def test__ge__():
