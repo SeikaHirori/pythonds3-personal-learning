@@ -4,6 +4,20 @@ from ProExer_1_17.act_1_17_fraction import Fraction
     # Importing a file/class from another folder: https://stackoverflow.com/a/456491
         # Create a blank "__init__.py" file to do this.
 
+#TODO
+#1
+def test_getNum(): 
+    pass
+
+
+#TODO
+#1
+def test_getDen():
+    pass
+
+
+#TODO
+#3
 def test__ge__():
     f1 = Fraction(1,5)
     f2 = Fraction(1,4)
@@ -18,3 +32,19 @@ def test__ge__():
     result_ge_true_equals = (f3 >= f4)
 
     assert result_ge_true_equals == True
+
+
+#TODO
+#3
+def test__le__(): 
+    pass
+
+#TODO
+#3
+def test__ne__(): 
+    pass
+
+#TODO
+#4
+def test_constructor_checks_valid_integers():
+    pass
