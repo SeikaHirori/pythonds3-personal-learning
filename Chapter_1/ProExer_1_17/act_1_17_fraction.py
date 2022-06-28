@@ -1,6 +1,6 @@
 
 
-
+import sys
 
 # URL: https://runestone.academy/ns/books/published/pythonds3/Introduction/Exercises.html
 
@@ -10,27 +10,14 @@ from multiprocessing.sharedctypes import Value
 
 class Fraction:
     def __init__(self, top, bottom):
-        
-        # try:
-        #     int_top = int(top)
-        # except ValueError:
-        #     print(f'{top} is not an integer')
-        
-        # try:
-        #     int_bottom = int(bottom)
-        # except ValueError:
-        #     print(f'{bottom} value is not an integer')
-            
 
-        # try: # doesn't work as intended
-        #     common = self.gcd(top, bottom)
-        # except ValueError:
-        #     print(f'Either {top} or {bottom} is not an integer')
+        common = self.gcd(top,bottom,sys)
 
-        common = self.gcd(top,bottom)
-        
-        self.num = top / common
-        self.den = bottom / common
+        try:
+            self.num = top / common
+            self.den = bottom / common
+        except:
+            print("One of the constructors was not an integer.")
     
     # Imported code === START ===
 
@@ -43,16 +30,19 @@ class Fraction:
     @staticmethod 
         # Doc about static method and to obtain output: https://python-course.eu/oop/class-instance-attributes.php
             # Section: Static Methods
-    def gcd(top,bottom):
+    def gcd(top,bottom,sys):
         try:
             int_top = int(top)
         except ValueError:
             print(f"{top} is not an integer!")
+            sys.exit()
         
         try:
             int_bottom = int(bottom)
         except ValueError:
             print(f"{bottom} is not an integer!")
+            sys.exit()
+            
         
         try:
             while int_top % int_bottom != 0:
