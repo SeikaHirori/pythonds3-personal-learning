@@ -22,10 +22,13 @@ class Fraction:
         #     print(f'{bottom} value is not an integer')
             
 
-        try: # doesn't work as intended
-            common = self.gcd(top, bottom)
-        except ValueError:
-            print(f'Either {top} or {bottom} is not an integer')
+        # try: # doesn't work as intended
+        #     common = self.gcd(top, bottom)
+        # except ValueError:
+        #     print(f'Either {top} or {bottom} is not an integer')
+
+        common = self.gcd(top,bottom)
+        
         self.num = top / common
         self.den = bottom / common
     
@@ -40,12 +43,23 @@ class Fraction:
     @staticmethod 
         # Doc about static method and to obtain output: https://python-course.eu/oop/class-instance-attributes.php
             # Section: Static Methods
-    def gcd(m,n):
+    def gcd(top,bottom):
+        try:
+            int_top = int(top)
+        except ValueError:
+            print(f"{top} is not an integer!")
         
+        try:
+            int_bottom = int(bottom)
+        except ValueError:
+            print(f"{bottom} is not an integer!")
         
-        while m % n != 0:
-            m, n = n, m % n
-        return n
+        try:
+            while int_top % int_bottom != 0:
+                int_top, int_bottom = int_bottom, int_top % int_bottom
+            return int_bottom
+        except UnboundLocalError:
+            print('One of the values was not an integer')
 
     def __add__(self, other_fraction):
         new_num = (self.num * other_fraction.den)+  (self.den * other_fraction.num)
@@ -173,5 +187,5 @@ if __name__ == "__main__":
     # test1 = demo_fraction
     # test1.demo_set1()
 
-    f1 = Fraction("tep","tep")
+    f1 = Fraction("tep","bottom")
     print(f1.getNum())
