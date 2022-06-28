@@ -171,6 +171,7 @@ def test_constructor_check_den_valid():
     assert f2.getDen() == 2, "Should return Den: 2"
 
 
+#TODO
 #6
 def test_negative_denominator():
     pass
