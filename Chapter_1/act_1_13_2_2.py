@@ -136,18 +136,25 @@ class NorGate(OrGate): #TODO: write out code
 
     
 class NandGate(AndGate): #TODO: write out code
-    def __init__(self, lbl):
-        super().__init__(lbl)
+    # # My original code before optimizing
+    # def __init__(self, lbl):
+    #     super().__init__(lbl)
+
+    # def perform_gate_logic(self):
+        
+    #     a = self.get_pin_a()
+    #     b = self.get_pin_b()
+
+    #     if a == 1 and b == 1:
+    #         return 0
+    #     else:
+    #         return 1
 
     def perform_gate_logic(self):
-        
-        a = self.get_pin_a()
-        b = self.get_pin_b()
-
-        if a == 1 and b == 1:
-            return 0
-        else:
+        if super().perform_gate_logic() == 0:
             return 1
+        else: 
+            return 0
 
 
 class Connector: # my code - OKIE
