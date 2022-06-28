@@ -76,7 +76,10 @@ class Fraction:
         return f1 < f2
     # Import code === ENDS ===
 
-    
+    def getNum(self):
+        return self.num
+
+
 
 
 class demo_fraction(Fraction):
