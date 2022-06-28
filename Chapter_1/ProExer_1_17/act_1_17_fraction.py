@@ -39,7 +39,14 @@ class Fraction:
 
         return first_num == second_num
     
+    def __sub__(self, other_fraction):
+        new_num = (self.num * other_fraction.den) - (other_fraction.num * self.den)
+        new_den = self.den * other_fraction.den
 
+        common = self.gcd(new_num,new_den)
+
+        return Fraction(new_num // common, new_den // common)
+    
     def __mul__(self, other_fraction):
         new_num = self.num * other_fraction.num
         new_den = self.den * other_fraction.den
@@ -56,27 +63,20 @@ class Fraction:
 
         return Fraction(new_num // common, new_den // common)
     
-    def __sub__(self, other_fraction):
-        new_num = (self.num * other_fraction.den) - (other_fraction.num * self.den)
-        new_den = self.den * other_fraction.den
-
-        common = self.gcd(new_num,new_den)
-
-        return Fraction(new_num // common, new_den // common)
-    
-    def __lt__(self, other_fraction):
-        f1 = self.num / self.den
-        f2 = other_fraction.num / other_fraction.den
-
-        return f1 < f2
-    
     def __gt__(self, other_fraction):
         f1 = self.num / self.den
         f2 = other_fraction.num / other_fraction.den
 
         return f1 > f2
 
+    def __lt__(self, other_fraction):
+        f1 = self.num / self.den
+        f2 = other_fraction.num / other_fraction.den
+
+        return f1 < f2
     # Import code === ENDS ===
+
+    
 
 
 class demo_fraction(Fraction):
