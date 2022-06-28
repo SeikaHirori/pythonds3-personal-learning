@@ -95,7 +95,7 @@ class Fraction:
         converted = self.getNum()/self.getDen()
         return converted
 
-    #3
+    #4
     def __ge__(self, other_fraction): 
 
         f1 = self.getDecimalVersion()
@@ -103,7 +103,7 @@ class Fraction:
 
         return f1 >= f2
     
-    #3
+    #4
     def __le__(self, other_fraction):
         f1 = self.getDecimalVersion()
         f2 = other_fraction.getDecimalVersion()
@@ -111,7 +111,7 @@ class Fraction:
 
         return f1 <= f2 
     
-    #3
+    #4
     def __ne__(self, other_fraction):
         f1 = self.getDecimalVersion()
         f2 = other_fraction.getDecimalVersion()
