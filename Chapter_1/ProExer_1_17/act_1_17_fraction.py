@@ -5,10 +5,24 @@
 # URL: https://runestone.academy/ns/books/published/pythonds3/Introduction/Exercises.html
 
 import fractions
+from multiprocessing.sharedctypes import Value
 
 
 class Fraction:
     def __init__(self, top, bottom):
+        
+        try:
+            int_top = int(top)
+        except ValueError:
+            print(f'{top} is not an integer')
+        
+        try:
+            int_bottom = int(bottom)
+        except ValueError:
+            print(f'{bottom} value is not an integer')
+            
+
+        
         common = self.gcd(top, bottom)
         
         self.num = top / common
