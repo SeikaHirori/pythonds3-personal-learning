@@ -111,6 +111,13 @@ class Fraction:
 
         return f1 <= f2 
     
+    #3
+    def __ne__(self, other_fraction):
+        f1 = self.getDecimalVersion()
+        f2 = other_fraction.getDecimalVersion()
+
+        return f1 != f2
+    
 
 
 

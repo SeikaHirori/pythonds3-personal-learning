@@ -85,10 +85,18 @@ def test__le__():
     
     assert output_false == False, "Should return: False"
 
-#TODO
 #3
 def test__ne__(): 
-    pass
+    f1 = Fraction(1,2)
+    f2 = Fraction(2,3)
+
+    assert (f1 != f2) == True, "Should return: True"
+
+
+    f3 = Fraction(1,2)
+    f4 = Fraction(1,2)
+
+    assert (f3 != f4) == False, "Should return: False"
 
 #TODO
 #4
