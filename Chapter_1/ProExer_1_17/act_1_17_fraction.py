@@ -4,6 +4,9 @@
 
 # URL: https://runestone.academy/ns/books/published/pythonds3/Introduction/Exercises.html
 
+import fractions
+
+
 class Fraction:
     def __init__(self, top, bottom):
         self.num = top
@@ -63,6 +66,7 @@ class Fraction:
 
         return Fraction(new_num // common, new_den // common)
     
+    
     def __gt__(self, other_fraction):
         f1 = self.num / self.den
         f2 = other_fraction.num / other_fraction.den
@@ -83,15 +87,28 @@ class Fraction:
     #1
     def getDen(self):
         return self.den
+        
+    def getDecimalVersion(self):
+            converted = self.getNum()/self.getDen()
+            return converted
 
     #3
-    def __ge__(self, other_fraction):
-        f1 = self.num/ self.den
-        f2 = other_fraction.num/ other_fraction.den
+    def __ge__(self, other_fraction): 
+        # f1 = self.num/ self.den
+        # f2 = other_fraction.num/ other_fraction.den
+
+        f1 = self.getDecimalVersion()
+        f2 = other_fraction.getDecimalVersion()
 
         return f1 >= f2
     
-    
+    #TODO
+    #3
+    def __le__(self, other_fraction):
+        f1 = self.num / self.den
+
+
+        return f1
     
 
 
