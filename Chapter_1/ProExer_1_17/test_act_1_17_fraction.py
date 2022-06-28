@@ -80,10 +80,8 @@ def test_GCD_with_mul():
     assert output.getNum() == 1, "Should return Numerator: 1"
     assert output.getDen() == 8, "Should return Den: 8"
 
-#TODO
 #2
 def test_GCD_with_trueDiv():
-    # pass
     f1 = Fraction(1,3)
     f2 = Fraction(1,2)
 
