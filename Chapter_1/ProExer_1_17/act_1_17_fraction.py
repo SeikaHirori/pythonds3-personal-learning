@@ -46,9 +46,6 @@ class Fraction:
         new_num = (self.num * other_fraction.den) - (other_fraction.num * self.den)
         new_den = self.den * other_fraction.den
 
-        # common = self.gcd(new_num,new_den)
-        # return Fraction(new_num // common, new_den // common)
-
         return Fraction(new_num, new_den)
     
     def __mul__(self, other_fraction):
