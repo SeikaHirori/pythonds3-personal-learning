@@ -1,6 +1,6 @@
 import pytest
 
-from ProExer_1_17.act_1_17_fraction import Fraction
+from ProExer_1_17.act_1_17_fraction import Fraction, testRaddFraction
     # Importing a file/class from another folder: https://stackoverflow.com/a/456491
         # Create a blank "__init__.py" file to do this.
 
@@ -181,8 +181,9 @@ def test_negative_denominator():
 #TODO
 #p7
 def test__radd__(): # this test... doesn't fail. Not sure how to test for __radd__.
+        #UPDATE: made a separate class that only had num and den; no other functions were there.
     f1 = Fraction(1,2)
-    f2 = Fraction(1,4)
+    f2 = testRaddFraction(1,4)
     
     sum_f1_first = f1 + f2
     sum_f1_second = f2 + f1

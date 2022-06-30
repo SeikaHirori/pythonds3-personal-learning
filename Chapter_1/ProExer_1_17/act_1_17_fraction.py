@@ -143,8 +143,19 @@ class Fraction:
         f2 = other_fraction.getDecimalVersion()
 
         return f1 != f2
-    
 
+    #p7
+    def __radd__(self, other_obj):
+        sum_num = (self.num * other_obj.den) + (other_obj.num * self.den)
+        sum_den = self.den * other_obj.den
+
+        return Fraction(sum_num, sum_den)
+        
+class testRaddFraction: # TESTING ONLY FOR #p7
+        # reference: https://stackoverflow.com/a/38196153
+    def __init__(self, top, bottom) -> None:
+        self.num = top
+        self.den = bottom
 class demo_fraction(Fraction):
 
     def __init__(self, top, bottom):
