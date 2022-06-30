@@ -17,7 +17,7 @@ def test_getDecimalVersion():
 
     assert frac.getDecimalVersion() == .5, "Should return: .5"
 
-#1
+#p1
 def test_getNum(): 
     #pass
 
@@ -29,7 +29,7 @@ def test_getNum():
 
 
 
-#1
+#p1
 def test_getDen():
     #pass
 
@@ -39,7 +39,7 @@ def test_getDen():
 
     assert output_den == 3, "Should return denominator: 3"
 
-#2
+#p2
 def test_GCD_is_used_immediately():
     f1 = Fraction(2,4)
 
@@ -47,7 +47,7 @@ def test_GCD_is_used_immediately():
 
     assert f1.getDen() == 2
 
-#2
+#p2
 def test_GCD_with_addition():
 
     f1 = Fraction(1,4)
@@ -59,7 +59,7 @@ def test_GCD_with_addition():
     assert output_gcd_a.getDen() == 2, "Should return Den: 2"
 
 
-#2
+#p2
 def test_GCD_with_subtraction():
     # pass
 
@@ -71,7 +71,7 @@ def test_GCD_with_subtraction():
     assert output_gcd_sub.getNum() == 1, "Should return numerator: 1"
     assert output_gcd_sub.getDen() == 2, "Should return Den: 2"
 
-#2
+#p2
 def test_GCD_with_mul():
     f1 = Fraction(1,2)
     f2 = Fraction(1,4)
@@ -80,7 +80,7 @@ def test_GCD_with_mul():
     assert output.getNum() == 1, "Should return Numerator: 1"
     assert output.getDen() == 8, "Should return Den: 8"
 
-#2
+#p2
 def test_GCD_with_trueDiv():
     f1 = Fraction(1,3)
     f2 = Fraction(1,2)
@@ -90,7 +90,7 @@ def test_GCD_with_trueDiv():
     assert output.getNum() == 2, "Should return Numerator: 2"
     assert output.getDen() == 3, "Should return Den: 3"
 
-#4
+#p4
 def test__ge__():
     f1 = Fraction(1,4)
     f2 = Fraction(1,5)
@@ -114,7 +114,7 @@ def test__ge__():
     assert result__ge__false == False, "Should return: False"
 
 
-#4
+#p4
 def test__le__(): 
     f1 = Fraction(1,5)
     f2 = Fraction(1,3)
@@ -136,7 +136,7 @@ def test__le__():
     
     assert output_false == False, "Should return: False"
 
-#4
+#p4
 def test__ne__(): 
     f1 = Fraction(1,2)
     f2 = Fraction(2,3)
@@ -149,7 +149,7 @@ def test__ne__():
 
     assert (f3 != f4) == False, "Should return: False"
 
-#5
+#p5
 def test_constructor_check_num_valid_integers(capsys):
 
     with pytest.raises(SystemExit):
@@ -157,7 +157,7 @@ def test_constructor_check_num_valid_integers(capsys):
     captured = capsys.readouterr()
     assert captured.out == 'beep is not an integer!\n'
     
-#5
+#p5
 def test_constructor_check_den_valid(capsys):
 
     with pytest.raises(SystemExit) as e_info: # Now checking for 
@@ -172,7 +172,10 @@ def test_constructor_check_den_valid(capsys):
 
 
 #TODO
-#6
+#p6
 def test_negative_denominator():
-    pass
+    f1 = Fraction(1,5)
+
+    assert f1.getDen() == 5, "Den should return 5"
+    assert f1.getNum() == -1, "Num should return -1"
 

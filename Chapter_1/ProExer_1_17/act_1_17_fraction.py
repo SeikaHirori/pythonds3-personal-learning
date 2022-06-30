@@ -11,13 +11,13 @@ from multiprocessing.sharedctypes import Value
 class Fraction:
     def __init__(self, top, bottom):
 
-        try: #5
+        try: #p5
             top = int(top)
         except ValueError:
             print(f"{top} is not an integer!")
             sys.exit()
 
-        try: #5
+        try: #p5
             bottom = int(bottom)
         except ValueError:
             print(f"{bottom} is not an integer!")
@@ -102,11 +102,11 @@ class Fraction:
         return f1 < f2
     # Import code === ENDS ===
 
-    #1
+    #p1
     def getNum(self):
         return self.num
     
-    #1
+    #p1
     def getDen(self):
         return self.den
         
@@ -114,7 +114,7 @@ class Fraction:
         converted = self.getNum()/self.getDen()
         return converted
 
-    #4
+    #p4
     def __ge__(self, other_fraction): 
 
         f1 = self.getDecimalVersion()
@@ -122,7 +122,7 @@ class Fraction:
 
         return f1 >= f2
     
-    #4
+    #p4
     def __le__(self, other_fraction):
         f1 = self.getDecimalVersion()
         f2 = other_fraction.getDecimalVersion()
@@ -130,7 +130,7 @@ class Fraction:
 
         return f1 <= f2 
     
-    #4
+    #p4
     def __ne__(self, other_fraction):
         f1 = self.getDecimalVersion()
         f2 = other_fraction.getDecimalVersion()
