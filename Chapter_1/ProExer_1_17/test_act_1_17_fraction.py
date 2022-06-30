@@ -180,6 +180,16 @@ def test_negative_denominator():
 
 #TODO
 #p7
-def test__radd__():
-    assert test == 9e99
+def test__radd__(): # this test... doesn't fail. Not sure how to test for __radd__.
+    f1 = Fraction(1,2)
+    f2 = Fraction(1,4)
+    
+    sum_f1_first = f1 + f2
+    sum_f1_second = f2 + f1
+
+    assert sum_f1_first.getNum() == 3
+    assert sum_f1_first.getDen() == 4
+
+    assert sum_f1_second.getNum() == 3
+    assert sum_f1_second.getDen() == 4
 

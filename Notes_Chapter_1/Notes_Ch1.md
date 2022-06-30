@@ -30,3 +30,6 @@
                 output = 1
 - Importing a file/class from another folder: https://stackoverflow.com/a/456491
     - Create a blank "__init__.py" file to do this.
+
+- Rand gate:
+    - https://www.reddit.com/r/learnpython/comments/3cvgpi/comment/cszdiml/?utm_source=reddit&utm_medium=web2x&context=3
