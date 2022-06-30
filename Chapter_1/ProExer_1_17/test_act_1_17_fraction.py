@@ -210,4 +210,7 @@ def test__iadd__(): # wrote this test, and it did not fail. Not sure how to test
     assert foo.getNum() == 3
     assert foo.getDen() == 4
 
-    
+
+#p9
+def test__repr__():
+    assert test_repr == "foobar"
