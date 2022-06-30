@@ -11,13 +11,13 @@ from multiprocessing.sharedctypes import Value
 class Fraction:
     def __init__(self, top, bottom):
 
-        try:
+        try: #5
             top = int(top)
         except ValueError:
             print(f"{top} is not an integer!")
             sys.exit()
 
-        try:
+        try: #5
             bottom = int(bottom)
         except ValueError:
             print(f"{bottom} is not an integer!")
