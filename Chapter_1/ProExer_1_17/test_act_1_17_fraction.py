@@ -195,7 +195,6 @@ def test__radd__(): # this test... doesn't fail. Not sure how to test for __radd
     assert sum_f1_second.getNum() == 3
     assert sum_f1_second.getDen() == 4
 
-#TODO
 #p8
 def test__iadd__(): # wrote this test, and it did not fail. Not sure how to test for "+="/__iadd__
     foo = Fraction(1,2)
@@ -205,3 +204,10 @@ def test__iadd__(): # wrote this test, and it did not fail. Not sure how to test
 
     assert combined.getNum() == 3
     assert combined.getDen() == 4
+
+    foo += bar
+
+    assert foo.getNum() == 3
+    assert foo.getDen() == 4
+
+    
