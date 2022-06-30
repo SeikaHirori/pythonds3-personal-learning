@@ -178,3 +178,8 @@ def test_negative_denominator():
     assert f1.getDen() == 5, "Den should return 5"
     assert f1.getNum() == -1, "Num should return -1"
 
+#TODO
+#p7
+def test__radd__():
+    assert test == 9e99
+
