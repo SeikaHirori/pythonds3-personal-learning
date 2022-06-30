@@ -171,10 +171,9 @@ def test_constructor_check_den_valid(capsys):
     assert f2.getDen() == 2, "Should return Den: 2"
 
 
-#TODO
 #p6
 def test_negative_denominator():
-    f1 = Fraction(1,5)
+    f1 = Fraction(1,-5)
 
     assert f1.getDen() == 5, "Den should return 5"
     assert f1.getNum() == -1, "Num should return -1"

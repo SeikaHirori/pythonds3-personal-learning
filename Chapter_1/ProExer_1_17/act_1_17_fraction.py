@@ -27,8 +27,15 @@ class Fraction:
 
         self.num = top / common
         self.den = bottom / common
+
+        self.check_negative_denominator()
     
     
+    def check_negative_denominator(self): #6
+        if self.den < 0:
+            self.num *= -1
+            self.den *= -1            
+
     # Imported code === START ===
 
     def __str__(self):
@@ -173,5 +180,7 @@ if __name__ == "__main__":
     # test1 = demo_fraction
     # test1.demo_set1()
 
-    f1 = Fraction("tep","bottom")
+    f1 = Fraction(1,-5)
+
     print(f1.getNum())
+    print(f1.getDen())
