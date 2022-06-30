@@ -1,3 +1,4 @@
+from operator import iadd
 import pytest
 
 from ProExer_1_17.act_1_17_fraction import Fraction, testRaddFraction
@@ -196,5 +197,11 @@ def test__radd__(): # this test... doesn't fail. Not sure how to test for __radd
 
 #TODO
 #p8
-def test__iadd__():
-    assert newTest == -1
+def test__iadd__(): # wrote this test, and it did not fail. Not sure how to test for "+="/__iadd__
+    foo = Fraction(1,2)
+    bar = Fraction(1,4)
+
+    combined = iadd(foo,bar)
+
+    assert combined.getNum() == 3
+    assert combined.getDen() == 4

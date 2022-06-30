@@ -150,6 +150,13 @@ class Fraction:
         sum_den = self.den * other_obj.den
 
         return Fraction(sum_num, sum_den)
+    
+    #p8:
+    def __iadd__(self, other_obj):
+        sum_num = sum_num = (self.num * other_obj.den) + (other_obj.num * self.den)
+        sum_den = self.den * other_obj.den
+
+        return Fraction(sum_num, sum_den)
         
 class testRaddFraction: # TESTING ONLY FOR #p7
         # reference: https://stackoverflow.com/a/38196153
