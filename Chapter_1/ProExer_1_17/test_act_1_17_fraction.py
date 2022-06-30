@@ -178,10 +178,10 @@ def test_negative_denominator():
     assert f1.getDen() == 5, "Den should return 5"
     assert f1.getNum() == -1, "Num should return -1"
 
-#TODO
 #p7
 def test__radd__(): # this test... doesn't fail. Not sure how to test for __radd__.
         #UPDATE: made a separate class that only had num and den; no other functions were there.
+            #Reference SOF: https://stackoverflow.com/a/38196153
     f1 = Fraction(1,2)
     f2 = testRaddFraction(1,4)
     
@@ -194,3 +194,7 @@ def test__radd__(): # this test... doesn't fail. Not sure how to test for __radd
     assert sum_f1_second.getNum() == 3
     assert sum_f1_second.getDen() == 4
 
+#TODO
+#p8
+def test__iadd__():
+    assert newTest == -1
