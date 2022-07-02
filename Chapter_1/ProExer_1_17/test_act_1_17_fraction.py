@@ -210,7 +210,9 @@ def test__iadd__(): # wrote this test, and it did not fail. Not sure how to test
     assert foo.getNum() == 3
     assert foo.getDen() == 4
 
-
+#TODO
 #p9
 def test__repr__():
-    assert test_repr == "foobar"
+    test_repr = Fraction(1,20)
+
+    assert test_repr == 1

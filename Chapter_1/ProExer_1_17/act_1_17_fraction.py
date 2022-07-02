@@ -157,6 +157,11 @@ class Fraction:
         sum_den = self.den * other_obj.den
 
         return Fraction(sum_num, sum_den)
+
+    #TODO
+    #p9
+    def __repr__(self):
+        return 'Hello'
         
 class testRaddFraction: # TESTING ONLY FOR #p7
         # reference: https://stackoverflow.com/a/38196153
@@ -200,5 +205,4 @@ if __name__ == "__main__":
 
     f1 = Fraction(1,-5)
 
-    print(f1.getNum())
-    print(f1.getDen())
+    repr(f1)
