@@ -34,3 +34,6 @@
 - Rand gate:
     - https://www.reddit.com/r/learnpython/comments/3cvgpi/comment/cszdiml/?utm_source=reddit&utm_medium=web2x&context=3
     - #Reference SOF: https://stackoverflow.com/a/38196153
+
+- __repr__ info:
+    - https://programming-22.mooc.fi/part-10/3-oo-programming-techniques

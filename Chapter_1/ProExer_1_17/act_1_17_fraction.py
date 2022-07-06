@@ -158,10 +158,9 @@ class Fraction:
 
         return Fraction(sum_num, sum_den)
 
-    #TODO
     #p9
     def __repr__(self):
-        return 'Hello'
+        return f'Fraction({(self.num)}, {self.den})'
         
 class testRaddFraction: # TESTING ONLY FOR #p7
         # reference: https://stackoverflow.com/a/38196153
@@ -203,6 +202,8 @@ if __name__ == "__main__":
     # test1 = demo_fraction
     # test1.demo_set1()
 
-    f1 = Fraction(1,-5)
+    f1 = Fraction(-1,5)
 
-    repr(f1)
+    print(f1)
+    print()
+    print(repr(f1))
