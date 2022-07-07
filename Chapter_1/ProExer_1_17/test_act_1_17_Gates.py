@@ -23,3 +23,10 @@ def test__XOR__(): # TODO
     output = None
 
     assert output == "write later"
+
+#p10
+def test__XNOR__(): #TODO
+
+    output = None
+
+    assert output == "write later"
