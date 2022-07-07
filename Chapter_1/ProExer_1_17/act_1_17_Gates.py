@@ -188,6 +188,4 @@ class Demo:
 
 
 if __name__ == "__main__":
-    demo_class = Demo  
-
-    demo_class.set_one()
+    pass
