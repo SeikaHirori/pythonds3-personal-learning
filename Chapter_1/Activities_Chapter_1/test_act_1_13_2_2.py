@@ -21,6 +21,7 @@ def test_NorGate_Either_Are_One(mocker): #TODO: NorGate Test not passed
 
     ng2 = NorGate("Nor Gate with both ones")
 
+
     mocker.patch('builtins.input', side_effect=['1',
     '1'])
     output_ng2 = ng2.perform_gate_logic()

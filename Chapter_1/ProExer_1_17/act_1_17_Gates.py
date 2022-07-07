@@ -126,6 +126,7 @@ class NandGate(AndGate):
             return 1
         else: 
             return 0
+
 #p10
 class XORGate(BinaryGate):
     
