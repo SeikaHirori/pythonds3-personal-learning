@@ -118,9 +118,6 @@ class NorGate(OrGate):
             return 0
         else:
             return 1
-
-
-
     
 class NandGate(AndGate): 
 
@@ -130,11 +127,29 @@ class NandGate(AndGate):
         else: 
             return 0
 #p10
-class XORGate():
-    pass
+class XORGate(BinaryGate):
+    
+    def __init__(self, lbl):
+        super().__init__(lbl)
 
-class XNORGate():
-    pass
+    def perform_gate_logic(self):
+        a = self.get_pin_a()
+        b = self.get_pin_b()
+
+        if (a == 0 and b == 1) or (a == 1 and b == 0):
+            return 1
+        else:
+            return 0
+
+
+class XNORGate(XORGate):
+
+    def perform_gate_logic(self):
+        if super().perform_gate_logic() == 1:
+            return 0
+        else:
+            return 1
+    
 
 class Connector: # my code - OKIE
 
