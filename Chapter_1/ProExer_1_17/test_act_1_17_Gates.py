@@ -1,6 +1,7 @@
 import pytest
 
-from act_1_17_gates import XorGate
+
+from act_1_17_gates import XorGate, XnorGate
 
 #p10
 def test__XOR__return_0(mocker): # TODO
@@ -40,22 +41,39 @@ def test__XOR__return_1(mocker): # TODO
     assert output_2 == 1, 'If A and B are 1 and 0, it should return 1'
 
 
-# #p10
-# def test__XNOR__return_0(mocker): #TODO
+#p10
+def test__XNOR__return_0(mocker): #TODO
 
-#     output_0_and_0 = None
-#     assert output_0_and_0 == 0, "A and B are 0 and 1, should result in 0"
+    xnor_1 = XnorGate('XNOR #1')
 
-
-#     output_1_and_1 = None
-#     assert output_1_and_1 == 0, "If A and B 1 and 0, it should result in 0"
-
-
-# #p10
-# def test__XNOR__return_1(mocker):
+    mocker.patch('builtins.input', side_effect=['0', '1'])
+    output_0_and_1 = xnor_1.perform_gate_logic()
     
-#     output_1 = None
-#     assert output_1 == 1, "If both A and B are 0 and 0, it should result in 1"
+    assert output_0_and_1 == 0, "A and B are 0 and 1, should result in 0"
 
-#     output_2 = None
-#     assert output_2 == 1, "If both A and B are 1 and 1, it should result in 1"
+
+    xnor_2 = XnorGate('XNOR #2')
+
+    mocker.patch('builtins.input', side_effect=['1','0'])
+    output_1_and_0 = xnor_2.perform_gate_logic()
+    
+    assert output_1_and_0 == 0, "If A and B 1 and 0, it should result in 0"
+
+
+#p10
+def test__XNOR__return_1(mocker):
+    
+    xnor_3 = XnorGate('XNOR #3')
+
+    mocker.patch('builtins.input', side_effect=['0', '0'])
+    output_1 = xnor_3.perform_gate_logic()
+
+    assert output_1 == 1, "If both A and B are 0 and 0, it should result in 1"
+
+
+    xnor_4 = XnorGate('XNOR #4')
+
+    mocker.patch('builtins.input', side_effect=['1','1'])
+    output_2 = xnor_4.perform_gate_logic()
+
+    assert output_2 == 1, "If both A and B are 1 and 1, it should result in 1"
