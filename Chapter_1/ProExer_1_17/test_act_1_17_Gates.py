@@ -1,6 +1,6 @@
 import pytest
 
-from act_1_17_gates import XorGate, XnorGate
+from act_1_17_gates import XorGate
 
 #p10
 def test__XOR__return_0(mocker): # TODO
