@@ -4,7 +4,7 @@ import pytest
 from act_1_17_gates import XorGate, XnorGate
 
 #p10
-def test__XOR__return_0(mocker): # TODO
+def test__XOR__return_0(mocker): 
 
     xor_1 = XorGate('XOR gate #1')
     
@@ -23,7 +23,7 @@ def test__XOR__return_0(mocker): # TODO
     assert output_2 == 0, 'If both A and B are 1, it should return 0'
 
 #p10
-def test__XOR__return_1(mocker): # TODO
+def test__XOR__return_1(mocker): 
 
     xor_1 = XorGate('XOR gate #1')
     
@@ -42,7 +42,7 @@ def test__XOR__return_1(mocker): # TODO
 
 
 #p10
-def test__XNOR__return_0(mocker): #TODO
+def test__XNOR__return_0(mocker):
 
     xnor_1 = XnorGate('XNOR #1')
 
