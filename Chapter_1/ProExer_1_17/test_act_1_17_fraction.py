@@ -1,7 +1,7 @@
 from operator import iadd
 import pytest
 
-from ProExer_1_17.act_1_17_fraction import Fraction, testRaddFraction
+from act_1_17_fraction import Fraction, testRaddFraction
     # Importing a file/class from another folder: https://stackoverflow.com/a/456491
         # Create a blank "__init__.py" file to do this.
 

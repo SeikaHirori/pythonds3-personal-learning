@@ -21,7 +21,7 @@ def test__XOR__return_0(mocker): # TODO
     assert output_2 == 0, 'If both A and B are 1, it should return 0'
 
 #p10
-def test__XOR__return_1(mocket): # TODO
+def test__XOR__return_1(mocker): # TODO
 
 
     output = None

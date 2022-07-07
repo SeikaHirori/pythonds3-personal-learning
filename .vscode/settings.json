@@ -3,5 +3,8 @@
         "Chapter_1"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "python.analysis.extraPaths": [
+        "./Chapter_1/proexer_1_17/code"
+    ]
 }
