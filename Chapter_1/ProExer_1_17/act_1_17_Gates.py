@@ -128,7 +128,7 @@ class NandGate(AndGate):
             return 0
 
 #p10
-class XORGate(BinaryGate):
+class XorGate(BinaryGate):
     
     def __init__(self, lbl):
         super().__init__(lbl)
@@ -143,7 +143,7 @@ class XORGate(BinaryGate):
             return 0
 
 
-class XNORGate(XORGate):
+class XnorGate(XorGate):
 
     def perform_gate_logic(self):
         if super().perform_gate_logic() == 1:
