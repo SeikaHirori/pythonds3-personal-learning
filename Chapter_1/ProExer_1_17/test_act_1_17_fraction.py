@@ -218,23 +218,3 @@ def test__repr__():
 
     assert output_repr == "Fraction(1.0, 20.0)"
 
-#p10
-def test__NAND__(): # TODO
-
-    output = None
-
-    assert output == "write later"
-
-#p10
-def test__NOR__(): # TODO
-
-    output = None
-
-    assert output == "write later"
-
-#p10
-def test__XOR__(): # TODO
-
-    output = None
-
-    assert output == "write later"
