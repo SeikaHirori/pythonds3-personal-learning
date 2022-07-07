@@ -77,3 +77,16 @@ def test__XNOR__return_1(mocker):
     output_2 = xnor_4.perform_gate_logic()
 
     assert output_2 == 1, "If both A and B are 1 and 1, it should result in 1"
+
+#p11 #TODO - Write proper tests
+def test__HalfAdderXOR(mocker):
+    output = None
+
+    assert output == "temp"
+
+
+#p11 #TODO - Write proper tests
+def test__HalfAdderAND(mocker):
+    output = None
+
+    assert output == "temp"

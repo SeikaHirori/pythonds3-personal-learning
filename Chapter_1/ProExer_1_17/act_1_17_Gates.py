@@ -142,7 +142,7 @@ class XorGate(BinaryGate):
         else:
             return 0
 
-
+#p10
 class XnorGate(XorGate):
 
     def perform_gate_logic(self):
@@ -150,6 +150,15 @@ class XnorGate(XorGate):
             return 0
         else:
             return 1
+
+#p11
+class HalfAdderXOR(XorGate): #TODO
+    pass
+
+
+#p11
+class HalfAdderAND(AndGate): #TODO
+    pass
     
 
 class Connector: # my code - OKIE
