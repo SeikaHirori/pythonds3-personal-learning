@@ -148,7 +148,7 @@ def test__HalfAdder_carry_bit_0(mocker):
     assert output_3 == 0, 'If the a != 1 and b != 1, the carry bit should be 0'
 
 
-#p11 #TODO - Write proper tests
+#p11 
 def test__HalfAdder_carry_bit_1(mocker):
     
     ha_cb_4 = HalfAdder('1 and 1')

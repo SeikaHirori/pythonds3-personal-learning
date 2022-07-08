@@ -152,7 +152,7 @@ class XnorGate(XorGate):
             return 1
 
 #p11
-class HalfAdder(BinaryGate): #TODO
+class HalfAdder(BinaryGate): #v1
         # Explaination of HalfAdder: https://www.circuitstoday.com/half-adder#:~:text=Half%20adder%20is%20a%20combinational,AND%20of%20A%20and%20B.
     def __init__(self,lbl):
         super().__init__(lbl)
@@ -174,7 +174,7 @@ class HalfAdder(BinaryGate): #TODO
             self.carry_bit = 0
         
 
-        
+
 
 
 class Connector: # my code - OKIE
