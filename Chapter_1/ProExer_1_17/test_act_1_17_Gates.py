@@ -79,7 +79,7 @@ def test__XNOR__return_1(mocker):
 
     assert output_1 == 1, "If both A and B are 1 and 1, it should result in 1"
 
-#p11 #TODO - Write proper tests
+#p11 
 def test__HalfAdder_Sum_bit_0(mocker):
     has_1 = HalfAdder('0 and 0')
 
@@ -120,10 +120,17 @@ def test_HalfAdder_sum_bit_1(mocker):
     assert output_4 == 1, '"a = 0" and "b = 1" should return 1'
     
 
+def test__HalfAdder_carry_bit_0(mocker):
+
+    ha_cb_1 = HalfAdder('0 and 0')
+
+    output_1 = ha_cb_1.carry_bit
+
+    assert output_1 == 0,
 
 
 #p11 #TODO - Write proper tests
-def test__HalfAdderCarry(mocker):
+def test__HalfAdder_carry_bit_1(mocker):
     
     output = None
 

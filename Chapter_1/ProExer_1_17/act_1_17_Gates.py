@@ -156,8 +156,8 @@ class HalfAdder(BinaryGate): #TODO
         # Explaination of HalfAdder: https://www.circuitstoday.com/half-adder#:~:text=Half%20adder%20is%20a%20combinational,AND%20of%20A%20and%20B.
     def __init__(self,lbl):
         super().__init__(lbl)
-        self.sum_bit = 0
-        self.carry_bit = 0
+        self.sum_bit = None
+        self.carry_bit = None
 
     def perform_gate_logic(self):
         a = self.get_pin_a()
