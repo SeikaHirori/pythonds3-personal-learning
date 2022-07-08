@@ -157,3 +157,5 @@ def test__HalfAdder_carry_bit_1(mocker):
     ha_cb_4.perform_gate_logic()
     output_4 = ha_cb_4.carry_bit
     assert output_4 == 1, 'If A and B are both 1, the carry should be one.'
+
+#p11 - using classes

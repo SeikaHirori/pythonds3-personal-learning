@@ -182,18 +182,25 @@ class HalfAdder(BinaryGate): #v2 #TODO - Use classes 'XOR' and 'AND' to simplify
         self.carry_bit = None
 
     def perform_gate_logic(self):
-        a = self.get_pin_a()
-        b = self.get_pin_b()
+        # a = self.get_pin_a()
+        # b = self.get_pin_b()
 
-        if (a == 0 and b == 0) or (a == 1 and b == 1): # XOR gate
-            self.sum_bit = 0
-        else:
-            self.sum_bit = 1
+        # if (a == 0 and b == 0) or (a == 1 and b == 1): # XOR gate - MANUAL
+        #     self.sum_bit = 0
+        # else:
+        #     self.sum_bit = 1
 
-        if a == 1 and b == 1: # AND logic
-            self.carry_bit = 1
-        else:
-            self.carry_bit = 0
+        # if a == 1 and b == 1: # AND logic
+        #     self.carry_bit = 1
+        # else:
+        #     self.carry_bit = 0
+        temp_XorGate = XorGate('temp1')
+
+        self.sum_bit = temp_XorGate.perform_gate_logic()  # XOR gate - using class
+        temp_AndGate = AndGate('temp2')
+        self.carry_bit = temp_AndGate.perform_gate_logic()
+
+        
 
 
 
