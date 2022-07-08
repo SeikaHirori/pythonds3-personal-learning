@@ -158,17 +158,7 @@ class HalfAdder(BinaryGate): #TODO
         super().__init__(lbl)
         self.sum = 0
         self.carry = 0
-    
-    # Not needed since attributes are public
-        # - Doc: https://www.freecodecamp.org/news/python-property-decorator/
-    # # @property
-    # # def sum(self):
-    # #     return self.sum
-    
-    # # @property
-    # # def carry(self):
-    # #     return self.carry
-    
+
     def perform_gate_logic(self):
         a = self.get_pin_a
         b = self.get_pin_b
