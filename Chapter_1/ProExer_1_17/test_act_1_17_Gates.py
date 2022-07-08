@@ -79,14 +79,14 @@ def test__XNOR__return_1(mocker):
     assert output_2 == 1, "If both A and B are 1 and 1, it should result in 1"
 
 #p11 #TODO - Write proper tests
-def test__HalfAdderXOR(mocker):
+def test__HalfAdderSum(mocker):
     output = None
 
     assert output == "temp"
 
 
 #p11 #TODO - Write proper tests
-def test__HalfAdderAND(mocker):
+def test__HalfAdderCarry(mocker):
     output = None
 
-    assert output == "temp"
+    assert output == "temp", 'If A and B are both 1, the carry should be one.'

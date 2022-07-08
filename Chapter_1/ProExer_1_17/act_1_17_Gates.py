@@ -152,14 +152,39 @@ class XnorGate(XorGate):
             return 1
 
 #p11
-class HalfAdderXOR(XorGate): #TODO
-    pass
-
-
-#p11
-class HalfAdderAND(AndGate): #TODO
-    pass
+class HalfAdder(BinaryGate): #TODO
+    def __init__(self,lbl):
+        super().__init__(lbl)
+        self.sum = 0
+        self.carry = 0
     
+    # Not needed since attributes are public
+        # - Doc: https://www.freecodecamp.org/news/python-property-decorator/
+    # # @property
+    # # def sum(self):
+    # #     return self.sum
+    
+    # # @property
+    # # def carry(self):
+    # #     return self.carry
+    
+    def perform_gate_logic(self):
+        a = self.get_pin_a
+        b = self.get_pin_b
+
+        if (a == 0 and b == 0) or (a == 1 and b ==1):
+            self.sum = 0
+        else:
+            self.sum = 1
+
+        if a == 1 and b == 1:
+            self.carry = 1
+        else:
+            self.carry = 0
+        
+
+        
+
 
 class Connector: # my code - OKIE
 
