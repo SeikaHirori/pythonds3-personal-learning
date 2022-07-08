@@ -151,6 +151,9 @@ def test__HalfAdder_carry_bit_0(mocker):
 #p11 #TODO - Write proper tests
 def test__HalfAdder_carry_bit_1(mocker):
     
-    output = None
+    ha_cb_4 = HalfAdder('1 and 1')
+    mocker.patch('builtins.input', side_effect=['1','1'])
 
-    assert output == "temp", 'If A and B are both 1, the carry should be one.'
+    ha_cb_4.perform_gate_logic()
+    output_4 = ha_cb_4.carry_bit
+    assert output_4 == 1, 'If A and B are both 1, the carry should be one.'
