@@ -121,12 +121,31 @@ def test_HalfAdder_sum_bit_1(mocker):
     
 
 def test__HalfAdder_carry_bit_0(mocker):
+    
+    mocker.patch('builtins.input', side_effect=['0', '1'])
+
 
     ha_cb_1 = HalfAdder('0 and 0')
 
+    ha_cb_1.perform_gate_logic()
     output_1 = ha_cb_1.carry_bit
+    assert output_1 == 0, 'If the a != 1 and b != 1, the carry bit should be 0'
 
-    assert output_1 == 0,
+
+    ha_cb_2 = HalfAdder('1 and 0')
+    mocker.patch('builtins.input', side_effect=['1', '0']) 
+
+    ha_cb_2.perform_gate_logic()
+    output_2 = ha_cb_2.carry_bit
+    assert output_2 == 0, 'If the a != 1 and b != 1, the carry bit should be 0'
+
+
+    ha_cb_3 = HalfAdder('0 and 1')
+    mocker.patch('builtins.input', side_effect=['0', '0'])
+
+    ha_cb_3.perform_gate_logic()
+    output_3 = ha_cb_3.carry_bit
+    assert output_3 == 0, 'If the a != 1 and b != 1, the carry bit should be 0'
 
 
 #p11 #TODO - Write proper tests
