@@ -153,6 +153,7 @@ class XnorGate(XorGate):
 
 #p11
 class HalfAdder(BinaryGate): #TODO
+        # Explaination of HalfAdder: https://www.circuitstoday.com/half-adder#:~:text=Half%20adder%20is%20a%20combinational,AND%20of%20A%20and%20B.
     def __init__(self,lbl):
         super().__init__(lbl)
         self.sum = 0
