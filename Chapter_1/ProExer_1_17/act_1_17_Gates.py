@@ -158,6 +158,8 @@ class HalfAdder(BinaryGate): #v1
         super().__init__(lbl)
         self.sum_bit = None
         self.carry_bit = None
+        self.xor_gate = XorGate
+        self.and_gate = AndGate
 
     def perform_gate_logic(self):
         a = self.get_pin_a()
