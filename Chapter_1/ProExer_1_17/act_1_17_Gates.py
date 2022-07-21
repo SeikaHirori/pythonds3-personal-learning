@@ -178,7 +178,9 @@ class HalfAdder(BinaryGate): #v1
         return self.sum_bit # Do this for now???
         
 
-
+#p12 - #TODO
+class EightBitAdder():
+    pass
 
 
 class Connector: # my code - OKIE
