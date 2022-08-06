@@ -174,13 +174,11 @@ class HalfAdder(BinaryGate): #v1
             self.carry_bit = 1
         else:
             self.carry_bit = 0
-        
-        return self.sum_bit # Do this for now???
-        
+                
 
 #p12 - #TODO
-class EightBitAdder():
-    pass
+class FullAdder():
+    
 
 
 class Connector: # my code - OKIE

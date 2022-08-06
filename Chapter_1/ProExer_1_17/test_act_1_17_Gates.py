@@ -2,7 +2,7 @@ import pytest
 
 
 
-from act_1_17_Gates import XorGate, XnorGate, HalfAdder
+from act_1_17_Gates import FullAdder, XorGate, XnorGate, HalfAdder
 
 #p10
 def test__XOR__return_0(mocker): 
@@ -159,5 +159,11 @@ def test__HalfAdder_carry_bit_1(mocker):
     assert output_4 == 1, 'If A and B are both 1, the carry should be one.'
 
 #p12 #TODO
-def test__EightBitAdder(mocker):
+def test__FullAdder_carry_out_0(mocker):
     pass
+
+def test_FullAdder_carry_out_1(mocker):
+    fa_co1 = FullAdder("1, 1, 1")
+
+
+
