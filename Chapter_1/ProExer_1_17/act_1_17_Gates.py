@@ -177,9 +177,13 @@ class HalfAdder(BinaryGate): #v1
                 
 
 #p12 - #TODO
-class FullAdder():
-    
+class FullAdder(BinaryGate):
+    def __init__(self, lbl):
+        super().__init__(lbl)
+        self.cout = None
+        self.sum = None
 
+    
 
 class Connector: # my code - OKIE
 
