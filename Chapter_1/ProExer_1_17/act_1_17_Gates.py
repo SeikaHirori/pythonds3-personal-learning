@@ -182,6 +182,41 @@ class FullAdder(BinaryGate):
         super().__init__(lbl)
         self.cout = None
         self.sum = None
+    
+    def perform_gate_logic(self):
+        half1 = HalfAdder()
+        half1.perform_gate_logic()
+
+        sum_half1 = half1.sum_bit
+        cout1_half1 = half1.carry_bit
+        carry_in_half2 = self.get_pin_a()
+
+        sum_output = None
+        cout2_half2 = None
+        # HalfAdder2
+        if (sum_half1 == 0 and carry_in_half2 == 0) or (sum_half1 == 1 and carry_in_half2 == 1): # XOR gate
+            sum_output = 0
+        else:
+            sum_output = 1
+        if sum_half1 == 1 and carry_in_half2 == 1: # AND logic
+            cout2_half2 = 1
+        else:
+            cout2_half2 = 0
+        
+        cout_output = None
+        if cout1_half1 == 1 or cout2_half2 == 1:
+            cout_output = 1
+        else:
+            cout_output = 0
+
+
+
+        self.sum = sum_output
+        self.cout = cout_output
+
+
+
+
 
 
 
