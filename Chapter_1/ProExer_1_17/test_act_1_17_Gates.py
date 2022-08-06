@@ -161,11 +161,42 @@ def test__HalfAdder_carry_bit_1(mocker):
 
 #p12 #TODO
 def test__FullAdder_carry_out_0(mocker):
-    fa_co0 = FullAdder()
+    fa_co0 = FullAdder('"0","0","0"')
+    mocker.patch('builtins.input', side_effect=["0","0","0"])
+    fa_co0.perform_gate_logic()
+    output_s0 = fa_co0.sum
+    output_c0 = fa_co0.cout
+    assert output_s0 == 0
+    assert output_c0 == 0
+
+    fa_co0 = FullAdder('"0","0","1"')
+    mocker.patch('builtins.input', side_effect=["0","0","1"])
+    fa_co0.perform_gate_logic()
+    output_s0 = fa_co0.sum
+    output_c0 = fa_co0.cout
+    assert output_s0 == 1
+    assert output_c0 == 0
+
+    fa_co0 = FullAdder('"0","1","0"')
+    mocker.patch('builtins.input', side_effect=["0","1","0"])
+    fa_co0.perform_gate_logic()
+    output_s0 = fa_co0.sum
+    output_c0 = fa_co0.cout
+    assert output_s0 == 1
+    assert output_c0 == 0
+
+    fa_co0 = FullAdder('"1","0","0"')
+    mocker.patch('builtins.input', side_effect=["1","0","0"])
+    fa_co0.perform_gate_logic()
+    output_s0 = fa_co0.sum
+    output_c0 = fa_co0.cout
+    assert output_s0 == 1
+    assert output_c0 == 0
     
 
 def test_FullAdder_carry_out_1(mocker):
     fa_co1 = FullAdder("0, 1, 1")
+    mocker.patch('builtins.input', side_effect=["0", "1", "1"])
     fa_co1.perform_gate_logic()
     output_sum = fa_co1.sum
     output_count = fa_co1.cout
@@ -174,6 +205,7 @@ def test_FullAdder_carry_out_1(mocker):
 
 
     fa_co1 = FullAdder("1, 0, 1")
+    mocker.patch('builtins.input', side_effect=['1',' 0', '1'])
     fa_co1.perform_gate_logic()
     output_sum = fa_co1.sum
     output_count = fa_co1.cout
@@ -181,6 +213,7 @@ def test_FullAdder_carry_out_1(mocker):
     assert output_count == 1
 
     fa_co1 = FullAdder("1, 1, 0")
+    mocker.patch('builtins.input', side_effect=["1", "1", "0"])
     fa_co1.perform_gate_logic()
     output_sum = fa_co1.sum
     output_count = fa_co1.cout
@@ -189,6 +222,7 @@ def test_FullAdder_carry_out_1(mocker):
 
 
     fa_co1 = FullAdder("1, 1, 1")
+    mocker.patch('builtins.input', side_effect=["1", "1", "1"])
     fa_co1.perform_gate_logic()
     output_sum = fa_co1.sum
     output_count = fa_co1.cout
