@@ -176,7 +176,7 @@ class HalfAdder(BinaryGate): #v1
             self.carry_bit = 0
                 
 
-#p12 - #TODO
+#p12
 class FullAdder(BinaryGate):
     def __init__(self, lbl:str=None):
         super().__init__(lbl)

@@ -159,7 +159,7 @@ def test__HalfAdder_carry_bit_1(mocker):
     output_4 = ha_cb_4.carry_bit
     assert output_4 == 1, 'If A and B are both 1, the carry should be one.'
 
-#p12 #TODO
+#p12
 def test__FullAdder_carry_out_0(mocker):
     fa_co0 = FullAdder('"0","0","0"')
     mocker.patch('builtins.input', side_effect=["0","0","0"])
