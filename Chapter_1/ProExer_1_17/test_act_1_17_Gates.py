@@ -1,3 +1,4 @@
+from queue import Full
 import pytest
 
 
@@ -160,37 +161,37 @@ def test__HalfAdder_carry_bit_1(mocker):
 
 #p12 #TODO
 def test__FullAdder_carry_out_0(mocker):
+    fa_co0 = FullAdder()
     
-    pass
 
 def test_FullAdder_carry_out_1(mocker):
-    fa_co = FullAdder("0, 1, 1")
-    fa_co.perform_gate_logic()
-    output_sum = fa_co.sum
-    output_count = fa_co.cout
+    fa_co1 = FullAdder("0, 1, 1")
+    fa_co1.perform_gate_logic()
+    output_sum = fa_co1.sum
+    output_count = fa_co1.cout
     assert output_sum == 0
     assert output_count == 1
 
 
-    fa_co = FullAdder("1, 0, 1")
-    fa_co.perform_gate_logic()
-    output_sum = fa_co.sum
-    output_count = fa_co.cout
+    fa_co1 = FullAdder("1, 0, 1")
+    fa_co1.perform_gate_logic()
+    output_sum = fa_co1.sum
+    output_count = fa_co1.cout
     assert output_sum == 0
     assert output_count == 1
 
-    fa_co = FullAdder("1, 1, 0")
-    fa_co.perform_gate_logic()
-    output_sum = fa_co.sum
-    output_count = fa_co.cout
+    fa_co1 = FullAdder("1, 1, 0")
+    fa_co1.perform_gate_logic()
+    output_sum = fa_co1.sum
+    output_count = fa_co1.cout
     assert output_sum == 0
     assert output_count == 1
 
 
-    fa_co = FullAdder("1, 1, 1")
-    fa_co.perform_gate_logic()
-    output_sum = fa_co.sum
-    output_count = fa_co.cout
+    fa_co1 = FullAdder("1, 1, 1")
+    fa_co1.perform_gate_logic()
+    output_sum = fa_co1.sum
+    output_count = fa_co1.cout
     assert output_sum == 1
     assert output_count == 1
 

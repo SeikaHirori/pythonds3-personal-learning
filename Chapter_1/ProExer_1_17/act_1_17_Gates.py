@@ -7,7 +7,7 @@ import pytest_mock
 
 class LogicGate: 
 
-    def __init__(self, lbl):
+    def __init__(self, lbl:str=None):
         self.label = lbl
         self.output = None
     
@@ -20,7 +20,7 @@ class LogicGate:
 
 class BinaryGate(LogicGate):
     
-    def __init__(self, lbl):
+    def __init__(self, lbl:str=None):
         super().__init__(lbl)
         # super(BinaryGate, self).__init__(lbl)
 
@@ -53,7 +53,7 @@ class BinaryGate(LogicGate):
 
 class UnaryGate(LogicGate):
 
-    def __init__(self, lbl):
+    def __init__(self, lbl:str=None):
         super().__init__(lbl)
         # LogicGate.__init__(self, lbl)
 
@@ -87,7 +87,7 @@ class AndGate(BinaryGate): # my code - On Deck
             return 0
 
 class OrGate(BinaryGate): # My code - OKIE
-    def __init__(self, lbl):
+    def __init__(self, lbl:str=None):
         super().__init__(lbl)
     
     def perform_gate_logic(self):
@@ -102,7 +102,7 @@ class OrGate(BinaryGate): # My code - OKIE
  
 class NotGate(UnaryGate): # My code - OKIE; seems fine
     
-    def __init__(self, lbl):
+    def __init__(self, lbl:str=None):
         super().__init__(lbl)
 
     def perform_gate_logic(self):
@@ -130,7 +130,7 @@ class NandGate(AndGate):
 #p10
 class XorGate(BinaryGate):
     
-    def __init__(self, lbl):
+    def __init__(self, lbl:str=None):
         super().__init__(lbl)
 
     def perform_gate_logic(self):
@@ -178,12 +178,12 @@ class HalfAdder(BinaryGate): #v1
 
 #p12 - #TODO
 class FullAdder(BinaryGate):
-    def __init__(self, lbl):
+    def __init__(self, lbl:str=None):
         super().__init__(lbl)
         self.cout = None
         self.sum = None
 
-    
+
 
 class Connector: # my code - OKIE
 
