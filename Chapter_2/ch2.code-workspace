@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "exercises_ch2"
+		},
+		{
+			"path": ".."
 		}
 	],
 	"settings": {}
