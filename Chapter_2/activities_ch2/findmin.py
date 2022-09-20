@@ -1,5 +1,7 @@
+""" Link: https://runestone.academy/ns/books/published/pythonds3/AlgorithmAnalysis/BigONotation.html
 
-
+Video: https://www.youtube.com/watch?v=p0COF_m6H1c
+"""
 from re import I
 import time
 from random import randrange
