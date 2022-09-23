@@ -2,6 +2,7 @@
     Link: https://runestone.academy/ns/books/published/pythonds3/AlgorithmAnalysis/Lists.html
 """
 
+# Listing 3
 from timeit import Timer
 
 def test1():
@@ -31,3 +32,15 @@ print(f"list comprehension: {t3.timeit(number=1000): 10.2f} milliseconds")
 
 t4 = Timer("test4()", "from __main__ import test4")
 print(f"list range: {t4.timeit(number=1000):18.2f} milliseconds")
+
+print("======")
+# Listing 4
+pop_zero = Timer("x.pop(0)", "from __main__ import x")
+pop_end = Timer("x.pop()", "from __main__ import x")
+
+x = list(range(2000000))
+print(f"pop(0): {pop_zero.timeit(number=1000):10.5f} milliseconds")
+
+x = list(range(2000000))
+print(f"pop(): {pop_end.timeit(1000):11.5f} milliseconds")
+
