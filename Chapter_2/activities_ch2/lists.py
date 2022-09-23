@@ -21,6 +21,14 @@ def test3():
 def test4():
     l = list(range(1000))
 
+    """
+        Ranking of fastest performance:
+            test 4
+            test 3
+            test 2
+            test 1 (longest by a large margin)
+    """
+
 t1 = Timer("test1()", "from __main__ import test1")
 print(f"concatenation: {t1.timeit(number=1000):15.2f} milliseconds ")
 
@@ -44,3 +52,13 @@ print(f"pop(0): {pop_zero.timeit(number=1000):10.5f} milliseconds")
 x = list(range(2000000))
 print(f"pop(): {pop_end.timeit(1000):11.5f} milliseconds")
 
+print("======")
+# Listings 5
+print(f"{'n':10s}{'pop(0)':>15s}{'pop()':>15s}")
+for i in range(1_000_000, 100_000_001, 1_000_000):
+    x = list(range(i))
+    pop_zero_t = pop_zero.timeit(number=1000)
+    x = list(range(i))
+    pop_end_t = pop_end.timeit(number=1000)
+    
+    print(f"{i:<10d}{pop_zero_t:>15.5f}{pop_end_t:>15.5f}")
