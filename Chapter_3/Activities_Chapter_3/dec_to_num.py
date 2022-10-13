@@ -16,8 +16,8 @@ class convert:
             print(f"decimal value after '//': {decimal_num}")
             print("======")
         
-        bin_strin:str = ""
+        bin_string:str = ""
         while not rem_stack.is_empty():
             bin_string = bin_string + (str(rem_stack.pop()))
         
-        # return bin_string
+        return bin_string
