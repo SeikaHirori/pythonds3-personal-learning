@@ -429,7 +429,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 13-Oct-2022 at 15:56:21 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 13-Oct-2022 at 16:08:30 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -448,8 +448,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.9.13</td></tr></table>
     <h2>Summary</h2>
-    <p>0 tests ran in 0.11 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>60 tests ran in 1.31 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">59 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -459,4 +459,568 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable" col="duration">Duration</th>
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
-          <th colspan="4">No results found. Try to check the filters</th></tr></thead></table></body></html>
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_dec_to_num.py::test_converting</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/><br/>    def test_converting():<br/>        conversion:convert = convert()<br/>        decimal_num:int = 42<br/>&gt;       assert conversion.divide_by_2(decimal_num) == &quot;101010&quot;<br/><br/>conversion = &lt;dec_to_num.convert object at 0x107693100&gt;<br/>decimal_num = 42<br/><br/>Chapter_3/Activities_Chapter_3/test_dec_to_num.py:7: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;dec_to_num.convert object at 0x107693100&gt;<br/>decimal_num = 0<br/><br/>    def divide_by_2(self, decimal_num) -&gt; str:<br/>        rem_stack = Stack()<br/>    <br/>        while decimal_num &gt; 0:<br/>            print(f&quot;Decimal Value: {decimal_num}&quot;)<br/>    <br/>            rem = decimal_num % 2<br/>            print(f&quot;rem value: {rem}&quot;)<br/>    <br/>            rem_stack.push(rem)<br/>    <br/>            decimal_num = decimal_num // 2<br/>            print(f&quot;decimal value after &#x27;//&#x27;: {decimal_num}&quot;)<br/>            print(&quot;======&quot;)<br/>    <br/>        bin_strin:str = &quot;&quot;<br/>        while not rem_stack.is_empty():<br/>&gt;           bin_string = bin_string + (str(rem_stack.pop()))<br/><span class="error">E           UnboundLocalError: local variable &#x27;bin_string&#x27; referenced before assignment</span><br/><br/>bin_strin  = &#x27;&#x27;<br/>decimal_num = 0<br/>rem        = 1<br/>rem_stack  = &lt;pythonds3.basic.stack.Stack object at 0x107693070&gt;<br/>self       = &lt;dec_to_num.convert object at 0x107693100&gt;<br/><br/>Chapter_3/Activities_Chapter_3/dec_to_num.py:21: UnboundLocalError[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/> ------------------------------Captured stdout call------------------------------ <br/>Decimal Value: 42
+rem value: 0
+decimal value after &#x27;//&#x27;: 21
+======
+Decimal Value: 21
+rem value: 1
+decimal value after &#x27;//&#x27;: 10
+======
+Decimal Value: 10
+rem value: 0
+decimal value after &#x27;//&#x27;: 5
+======
+Decimal Value: 5
+rem value: 1
+decimal value after &#x27;//&#x27;: 2
+======
+Decimal Value: 2
+rem value: 0
+decimal value after &#x27;//&#x27;: 1
+======
+Decimal Value: 1
+rem value: 1
+decimal value after &#x27;//&#x27;: 0
+======
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1.py::test___eq__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_12_12.py::test_hello</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1.py::test_gcd</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1.py::test_show</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1.py::test_simplified_sum</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1.py::test__str___by_printing</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1_3.py::test__truediv__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1_3.py::test__mul__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1_3.py::test__lt__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_2.py::test_AndGate_PyTest_Mocker</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1_3.py::test__gt__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_1_3.py::test__sub__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_2.py::test_OrGate_equals_1</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_2.py::test_runtime_code_from_lecture</td>
+          <td class="col-duration">0.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_2.py::test_NotGate</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_2.py::test_OrGate_equals_0</td>
+          <td class="col-duration">0.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_activity_1_10_2.py::test_stdout</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_2_2.py::test_NorGate_Either_Are_One</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_2_2.py::test_NandGate_Either_Are_Zero</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test__XOR__return_0</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_activity_1_10_4.py::test_no_duplicate_in_list</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_2_2.py::test_NandGate_Both_One</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test__XNOR__return_0</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test__XOR__return_1</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_act_1_13_2_2.py::test_NorGate_Both_Zero</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test__HalfAdder_carry_bit_0</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test__XNOR__return_1</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test__HalfAdder_Sum_bit_0</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test__HalfAdder_carry_bit_1</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_activity_1_10_4.py::test_comp_list</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test_HalfAdder_sum_bit_1</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test_FullAdder_carry_out_1</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test__gt__with_refactored_function</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_Gates.py::test__FullAdder_carry_out_0</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_getNum</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_getDen</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_getDecimalVersion</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/Activities_Chapter_1/test_activity_1_10_2.py::test_problem_list</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_GCD_is_used_immediately</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_GCD_with_trueDiv</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test__le__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_GCD_with_addition</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test__ge__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_constructor_check_den_valid</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test__ne__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_GCD_with_subtraction</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_GCD_with_mul</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test__radd__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_negative_denominator</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test_constructor_check_num_valid_integers</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_parentheses.py::test_set_2</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test__iadd__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_parentheses.py::test_set_1</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_2/activities_ch2/test_findmin.py::test_findmin</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_symbols.py::test_balance_checker</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_parentheses.py::test_set_3</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_1/proexer_1_17/test_act_1_17_fraction.py::test__repr__</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_parentheses.py::test_set_4</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_stacks.py::test_Stack</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.13 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody></table></body></html>
