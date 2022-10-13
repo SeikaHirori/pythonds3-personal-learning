@@ -1,3 +1,10 @@
+""" Activity: 3.8.1 Converting from Decimal to Binary (divby2)
+    Section: 3.8. Converting Decimal Numbers to Binary Numbers¶ 
+
+Link: https://runestone.academy/ns/books/published/pythonds3/BasicDS/ConvertingDecimalNumberstoBinaryNumbers.html#lst-binconverter
+
+"""
+
 from pythonds3.basic import Stack
 
 class convert:
