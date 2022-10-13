@@ -28,3 +28,7 @@ class convert:
             bin_string = bin_string + (str(rem_stack.pop()))
         
         return bin_string
+
+class activity_3_8_2:
+    def base_converter(self, decimal_num, base):
+        
