@@ -20,6 +20,6 @@ class balance_checker:
 
     def matches(self, sym_left, sym_right):
         all_lefts:str = "([{"
-        all_rights:str = "}])"
+        all_rights:str = ")]}" # This has to be in this order. If it's anything else like (i.e.: "]})"), it will return incorrect results.
 
         return all_lefts.index(sym_left) == all_rights.index(sym_right)
