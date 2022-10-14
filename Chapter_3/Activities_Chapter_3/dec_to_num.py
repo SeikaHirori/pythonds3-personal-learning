@@ -31,4 +31,4 @@ class convert:
 
 class activity_3_8_2:
     def base_converter(self, decimal_num, base):
-        
+        pass
