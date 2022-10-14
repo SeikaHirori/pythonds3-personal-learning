@@ -31,4 +31,24 @@ class convert:
 
 class activity_3_8_2:
     def base_converter(self, decimal_num, base):
-        pass
+        digits:str = "0123456789ABCDEF"
+        rem_stack:Stack = Stack()
+
+        while decimal_num > 0:
+            print(f"Decimal value: {decimal_num}")
+
+            rem = decimal_num % base
+            print(f"Rem value:{rem}")
+
+            rem_stack.push(rem)
+            decimal_num = decimal_num // base
+            print(f"Decimal_num value: {decimal_num}")
+            print("======")
+        
+        new_string:str = ""
+        while not rem_stack.is_empty():
+            new_string = new_string + digits[rem_stack.pop()]
+            print(new_string)
+            print("======")
+        
+        return new_string

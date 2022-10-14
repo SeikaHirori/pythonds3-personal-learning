@@ -14,8 +14,8 @@ def test_activity_3_8_2():
 
 	decimal_num:int = 25
 	base:int = 2
-	assert class_activity_3_8_2.base_converter(decimal_num, base) == 11001
+	assert class_activity_3_8_2.base_converter(decimal_num, base) == '11001'
 
 	decimal_num:int = 25
 	base:int = 16
-	assert class_activity_3_8_2.base_converter(decimal_num, base) == 19
+	assert class_activity_3_8_2.base_converter(decimal_num, base) == '19'
