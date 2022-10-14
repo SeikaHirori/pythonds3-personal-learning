@@ -55,17 +55,38 @@ class activity_3_8_2:
         
         return new_string
 
+import sys
+def run_program():
+    while True:
+        
+        # input_decimal_num = input("Decimal input please:")
+        
+        # if input_decimal_num == "exit()":
+        #     print("Ending program")
+        #     sys.exit()
+    
+        input_decimal_num = input("Decimal input please: ")
+        if input_decimal_num == "exit()":
+            print("Ending program")
+            sys.exit()
+
+        try:
+            input_decimal_num = int(input_decimal_num)
+        except:
+            print("That wasn't a valid number. Try again.")
+            continue
+        while True:
+            try:
+                input_base:int = int(input("Base value please: "))
+                break
+            except:
+                print("That wasn't valid; try again")
+                continue
+        
+        print(f"Result: {activity_3_8_2().base_converter(input_decimal_num, input_base)}")
+
 if __name__ == "__main__":
-    decimal_num:int = 25
-    base:int = 2
     
-    results = activity_3_8_2().base_converter(decimal_num, base)
-
-    print(f"Final results: {results}")
-
-    decimal_num:int = 233
-    base:int = 8
+    run_program()
     
-    results = activity_3_8_2().base_converter(decimal_num, base)
-
-    print(f"Final results: {results}")
+    
