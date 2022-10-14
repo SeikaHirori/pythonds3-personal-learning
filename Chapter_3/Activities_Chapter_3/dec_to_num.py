@@ -31,7 +31,9 @@ class convert:
 
 class activity_3_8_2:
     def base_converter(self, decimal_num, base):
-        digits:str = "0123456789ABCDEF"
+        digits = "0123456789ABCDEF"
+        digits = list("0123456789ABCDEF")
+
         rem_stack:Stack = Stack()
 
         while decimal_num > 0:
@@ -52,3 +54,11 @@ class activity_3_8_2:
             print("======")
         
         return new_string
+
+if __name__ == "__main__":
+    decimal_num:int = 25
+    base:int = 2
+    
+    results = activity_3_8_2().base_converter(decimal_num, base)
+
+    print(f"Final results: {results}")
