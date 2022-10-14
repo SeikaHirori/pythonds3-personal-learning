@@ -62,3 +62,10 @@ if __name__ == "__main__":
     results = activity_3_8_2().base_converter(decimal_num, base)
 
     print(f"Final results: {results}")
+
+    decimal_num:int = 233
+    base:int = 8
+    
+    results = activity_3_8_2().base_converter(decimal_num, base)
+
+    print(f"Final results: {results}")
