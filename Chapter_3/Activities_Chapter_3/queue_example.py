@@ -11,7 +11,7 @@ class Queue_example:
         return len(self._items)
 
     def enqueue(self, value) -> None:
-        self._items.append(value)
+        self._items.insert(0, value)
     
     def dequeue(self):
-        return self._items.pop(0)
+        return self._items.pop()
