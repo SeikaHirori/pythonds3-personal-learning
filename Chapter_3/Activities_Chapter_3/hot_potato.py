@@ -14,7 +14,10 @@ class potato:
             for i in range(num):
                 out_for = sim_queue.dequeue()
                 sim_queue.enqueue(out_for)
+                print(f"{out_for} was requeued")
             out_while = sim_queue.dequeue()
+            print(f"{out_while} is out!")
+            print("======")
         
         return sim_queue.dequeue()
 

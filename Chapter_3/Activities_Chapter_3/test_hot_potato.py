@@ -8,3 +8,11 @@ def test_1():
     output = p().hot_potato(name_list=name_list, num=num)
 
     assert output == "Susan"
+
+def test_2():
+    name_list:list[str] = ["Bill", "David", "Susan", "Jane", "Kent", "Brad"]
+    num:int = 4
+
+    output = p().hot_potato(name_list=name_list, num=num)
+
+    assert output == "Bill"
