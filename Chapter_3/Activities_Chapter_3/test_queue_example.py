@@ -10,7 +10,6 @@ def test_enqueue_and_dequeue():
     q.enqueue(test_input_2)
     q.enqueue(test_input_3)
 
-
     assert q.dequeue() == test_input_1
     assert q.dequeue() == test_input_2
     assert q.dequeue() == test_input_3
