@@ -5,3 +5,11 @@ Link: https://runestone.academy/ns/books/published/pythonds3/BasicDS/SimulationP
 class Printer:
     def __init__(self) -> None:
         pass
+
+class Task:
+    def __init__(self) -> None:
+        pass
+
+class PrintQueue:
+    def __init__(self) -> None:
+        pass
