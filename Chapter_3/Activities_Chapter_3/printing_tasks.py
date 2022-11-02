@@ -39,9 +39,19 @@ class Task:
 
 class PrintQueue:
     
-    def simulation(num_seconds, pages_per_minute):
+    def simulation(self, num_seconds, pages_per_minute) -> None:
         lab_printer:Printer = Printer(pages_per_minute)
         print_queue:Queue = Queue()
         waiting_times = []
 
-        
+        for current_second in range(num_seconds):
+            if self.new_print_task():
+                
+    
+    def new_print_task(self) -> bool:
+        num = random.randrange(1,181)
+        return num == 180
+
+if __name__ == "__main__":
+    for i in range(10):
+        PrintQueue().simulation(3600, 5)
