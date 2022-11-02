@@ -1,7 +1,8 @@
 """ 3.14. Queue Simulation: Printing Tasks¶
 Link: https://runestone.academy/ns/books/published/pythonds3/BasicDS/SimulationPrintingTasks.html
 """
-
+import random
+from pythonds3.basic.queue import Queue
 class Printer:
     def __init__(self, ppm) -> None:
         self.page_rate = ppm
@@ -24,8 +25,23 @@ class Printer:
 class Task:
     def __init__(self, time) -> None:
         self.timestamp = time
+        self.pages = random.randrange(1, 21)
+    
+    def get_stamp(self):
+        return self.timestamp
+    
+    def get_pages(self):
+        return self.pages
+    
+    def wait_time(self, current_time):
+        return current_time - self.timestamp
 
 
 class PrintQueue:
-    def __init__(self) -> None:
-        pass
+    
+    def simulation(num_seconds, pages_per_minute):
+        lab_printer:Printer = Printer(pages_per_minute)
+        print_queue:Queue = Queue()
+        waiting_times = []
+
+        
