@@ -46,7 +46,21 @@ class PrintQueue:
 
         for current_second in range(num_seconds):
             if self.new_print_task():
-                
+                task = Task(time=current_second)
+                print_queue.enqueue(task)
+            
+            if (not lab_printer.busy()) and (not print_queue.is_empty()):
+                nexttask:Task = print_queue.dequeue()
+                waiting_times.append(nexttask.wait_time(current_time=current_second))
+                lab_printer.start_next(new_task=nexttask)
+            
+            lab_printer.tick()
+
+        average_wait = sum(waiting_times) / len(waiting_times)
+        print(
+            f"Average Wait {average_wait:6.2f} secs" \
+            + f"{print_queue.size():3d} tasks remaining."
+        )
     
     def new_print_task(self) -> bool:
         num = random.randrange(1,181)
