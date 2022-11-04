@@ -15,4 +15,4 @@ def test_1():
     d.add_rear(8.4)
     assert d.remove_rear() == 8.4
     assert d.remove_front() == True
-    assert d.peek_list() == ['cat', 4, 'dog']
+    assert d.peek_list() == ['dog', 4, 'cat']
