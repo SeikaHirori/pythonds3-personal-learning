@@ -34,11 +34,12 @@ def test_search_true():
     u = UnorderedList()
     request_item:int = 20
 
-    output:bool = u.search(request_item)
+    output:bool = u.search(item=request_item)
     assert output == False
 
     u.add(20)
-    output == u.search(request_item)
+    u.add(30)
+    output = u.search(item=request_item)
     assert output == True
 
     
