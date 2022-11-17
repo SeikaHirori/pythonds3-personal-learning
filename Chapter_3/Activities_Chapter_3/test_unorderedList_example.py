@@ -9,6 +9,23 @@ from node_example import Node
 def finish_your_test():
     assert "Finish writing your test!" == "You got this :3"
 
+def debug_print_list_of_nodes(item):
+    debug_previous_node:Node = Node(-1)
+    debug_current_node:Node = item
+    count:int = 1
+    while debug_current_node is not None:
+        print(f"\n===Counter: {count}===")
+        print(f"Previous: {debug_previous_node.data}")
+        print(f"Current head's item: {debug_current_node.data}")
+        debug_previous_node = debug_current_node
+        debug_current_node = debug_current_node.next
+
+        if debug_current_node != None:
+            print(f"New head: {debug_current_node.data}")
+        count += 1
+    print(f"\n :3 | Finished printing Nodes | :3")
+    print("___ next step :3 ___")
+
 def test_is_empty():
     u = UnorderedList()
     assert u.is_empty() == True
@@ -85,11 +102,25 @@ def test_append(): # TODO
     u:UnorderedList = UnorderedList()    
     u.append(item=21)
     assert u.search(item=21) == True
+    debug_print_list_of_nodes(u.head)
 
-    requested_item:int = 910
+    u.append(item=310)
+    debug_print_list_of_nodes(u.head)
+
     u.append(item=910)
-    output = u.search(item=requested_item)
+    requested_item_1:int = 910
+    output = u.search(item=requested_item_1)
     assert output == True
+
+
+    requested_item_2:int = 21
+    output = u.search(item=requested_item_2)
+    assert output == True
+
+    debug_print_list_of_nodes(u.head)
+
+    finish_your_test()
+
 
 
 def test_insert(): # TODO

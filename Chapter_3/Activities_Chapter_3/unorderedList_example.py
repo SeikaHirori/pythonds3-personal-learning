@@ -70,8 +70,11 @@ class UnorderedList:
             current = current.next
         
         current = Node(item)
-        previous.set_next(current)
-        self.head = current
+        # self.head = current # NOTE: This isn't needed I think since it fails the test when it's included in code.
+        if previous is None:
+            self.head = current.next
+        else:
+            previous.next = current
     
     # Self-check #2 
     def insert(self, item, pos:int=0) -> None: # TODO
