@@ -37,6 +37,7 @@ def test_search_true():
     output:bool = u.search(item=request_item)
     assert output == False
 
+    u.add(41)
     u.add(20)
     u.add(30)
     output = u.search(item=request_item)
