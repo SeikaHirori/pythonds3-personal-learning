@@ -56,12 +56,22 @@ class UnorderedList:
     
     # Self-check #1 
     def append(self, item) -> None: # TODO
+        if self.head == None:
+            self.add(item)
+            return
+        
         current:Node = self.head
-        previous = None
+        previous:Node = None
 
         """ Use for loop to get to the last Node of list
-            - Then, set last Node's 
         """
+        while current is not None:
+            previous = current
+            current = current.next
+        
+        current = Node(item)
+        previous.set_next(current)
+        self.head = current
     
     # Self-check #2 
     def insert(self, item, pos:int=0) -> None: # TODO

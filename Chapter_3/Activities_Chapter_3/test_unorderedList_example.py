@@ -82,17 +82,28 @@ def test_remove_raise_Value_error(): #
 
 def test_append(): # TODO
     """# Self-check #1"""
-    finish_your_test()
-    
+    u:UnorderedList = UnorderedList()    
+    u.append(item=21)
+    assert u.search(item=21) == True
+
+    requested_item:int = 910
+    u.append(item=910)
+    output = u.search(item=requested_item)
+    assert output == True
+
 
 def test_insert(): # TODO
     """# Self-check #2"""
+    u:UnorderedList = UnorderedList()
+
     finish_your_test()
 
 def test_index(): # TODO
-    
+    u:UnorderedList = UnorderedList()
+
     finish_your_test()
 
 def test_pop(): # TODO
-    
+    u:UnorderedList = UnorderedList()
+
     finish_your_test()
