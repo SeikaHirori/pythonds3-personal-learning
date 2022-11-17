@@ -36,3 +36,6 @@ class UnorderedList:
             current = current.next
 
         return False
+    
+    def remove(self, item):
+        pass

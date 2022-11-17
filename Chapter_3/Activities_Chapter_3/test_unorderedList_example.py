@@ -30,7 +30,7 @@ def test_size():
 
     assert u.size() == 4
 
-def test_search_true():
+def test_search():
     u = UnorderedList()
     request_item:int = 20
 
@@ -43,4 +43,19 @@ def test_search_true():
     output = u.search(item=request_item)
     assert output == True
 
-    
+def test_remove():
+    u:UnorderedList = UnorderedList()
+    added_item:int = 141
+    requested_item:int = 141
+    remove_item:int = 141
+
+    assert u.search(item=requested_item) == False
+
+    u.add(item=12)
+    u.add(item=added_item)
+    u.add(item=123)
+    assert u.search(item=requested_item) == True
+
+    u.remove(remove_item)
+    assert u.search(item=requested_item) == False
+
