@@ -6,6 +6,7 @@ from node_example import Node
 class UnorderedList:
     def __init__(self) -> None:
         self.head = None
+        self._count = 0
     
     def is_empty(self) -> bool:
         return self.head == None
@@ -14,6 +15,8 @@ class UnorderedList:
         temp = Node(item)
         temp.set_next(self.head)
         self.head = temp
+
+        self._count += 1
 
     def size(self) -> int:
         current = self.head
@@ -53,9 +56,12 @@ class UnorderedList:
             self.head = current.next
         else:
             previous.next = current.next
+        
+        self._count -= 1
+
     
     # Self-check #1 
-    def append(self, item) -> None: # TODO
+    def append(self, item) -> None:
         if self.head == None:
             self.add(item)
             return
@@ -75,9 +81,15 @@ class UnorderedList:
             self.head = current.next
         else:
             previous.next = current
+
+        self._count += 1
+
     
     # Self-check #2 
     def insert(self, item, pos:int=0) -> None: # TODO
+
+
+        self._count += 1
         pass
 
     
@@ -85,4 +97,9 @@ class UnorderedList:
         pass
 
     def pop(self, pop:int=-1) -> Node: # TODO
+
+        self._count -= 1
         pass
+
+    def size(self) -> int:
+        return self._count

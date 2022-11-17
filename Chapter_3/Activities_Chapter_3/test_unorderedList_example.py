@@ -138,3 +138,8 @@ def test_pop(): # TODO
     u:UnorderedList = UnorderedList()
 
     finish_your_test()
+
+def test_size():
+    u:UnorderedList = UnorderedList()
+
+    finish_your_test()
