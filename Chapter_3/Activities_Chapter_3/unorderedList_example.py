@@ -38,4 +38,18 @@ class UnorderedList:
         return False
     
     def remove(self, item):
-        pass
+        current = self.head
+        previous = None
+
+        while current is not None:
+            if current.data == item:
+                break
+            previous = current
+            current = current.next
+        
+        if current is None:
+            raise ValueError(f"{item} is not in the list")
+        if previous is None:
+            self.head = current.next
+        else:
+            previous.next = current.next

@@ -1,6 +1,7 @@
 """ 3.21.2. The UnorderedList Class
 - Link: https://runestone.academy/ns/books/published/pythonds3/BasicDS/ImplementinganUnorderedListLinkedLists.html#the-unorderedlist-class
 """
+import pytest
 
 from unorderedList_example import UnorderedList
 from node_example import Node
@@ -49,13 +50,29 @@ def test_remove():
     requested_item:int = 141
     remove_item:int = 141
 
+    # When the list is initalized, it's empty. The target item isn't there when searched.
     assert u.search(item=requested_item) == False
 
+    # When the list adds items, the targeted item existed when searched.
     u.add(item=12)
     u.add(item=added_item)
     u.add(item=123)
     assert u.search(item=requested_item) == True
 
+    # Remove the targeted item from the UL
     u.remove(remove_item)
     assert u.search(item=requested_item) == False
 
+def test_remove_raise_Value_error(): # 
+    u:UnorderedList = UnorderedList()
+    remove_item:int = 121
+    
+    # When the Unordered List (UL) is empty
+    with pytest.raises(Exception) as e_info:
+        u.remove(remove_item)
+    
+    # When UL has some entries, but the targeted item is still not in the list.
+    u.add(131)
+    u.add(2910)
+    with pytest.raises(Exception) as e_info:
+        u.remove(remove_item)

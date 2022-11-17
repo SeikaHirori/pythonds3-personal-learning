@@ -1,4 +1,11 @@
 
+
+
+
+# RFER 2
+- Pytest and exception/raises
+    - https://stackoverflow.com/a/29855337
+
 # RFER 1
 - Python library's Timeit: Fast way to test duration of functions/methods
 >> https://docs.python.org/3/library/timeit.html
