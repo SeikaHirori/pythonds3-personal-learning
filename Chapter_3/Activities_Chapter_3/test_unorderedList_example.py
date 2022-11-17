@@ -30,4 +30,15 @@ def test_size():
 
     assert u.size() == 4
 
+def test_search_true():
+    u = UnorderedList()
+    request_item:int = 20
 
+    output:bool = u.search(request_item)
+    assert output == False
+
+    u.add(20)
+    output == u.search(request_item)
+    assert output == True
+
+    

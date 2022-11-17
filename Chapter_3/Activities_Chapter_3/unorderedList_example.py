@@ -27,4 +27,9 @@ class UnorderedList:
             current = current.next
         return count
 
-    
+    def search(self, item):
+        current = self.head
+        
+        
+
+        return False
