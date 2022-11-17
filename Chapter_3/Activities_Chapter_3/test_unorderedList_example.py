@@ -6,6 +6,9 @@ import pytest
 from unorderedList_example import UnorderedList
 from node_example import Node
 
+def finish_your_test():
+    assert "Finish writing your test!" == "You got this :3"
+
 def test_is_empty():
     u = UnorderedList()
     assert u.is_empty() == True
@@ -76,3 +79,20 @@ def test_remove_raise_Value_error(): #
     u.add(2910)
     with pytest.raises(Exception) as e_info:
         u.remove(remove_item)
+
+def test_append(): # TODO
+    """# Self-check #1"""
+    finish_your_test()
+    
+
+def test_insert(): # TODO
+    """# Self-check #2"""
+    finish_your_test()
+
+def test_index(): # TODO
+    
+    finish_your_test()
+
+def test_pop(): # TODO
+    
+    finish_your_test()

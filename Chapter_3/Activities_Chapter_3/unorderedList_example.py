@@ -53,3 +53,23 @@ class UnorderedList:
             self.head = current.next
         else:
             previous.next = current.next
+    
+    # Self-check #1 
+    def append(self, item) -> None: # TODO
+        current:Node = self.head
+        previous = None
+
+        """ Use for loop to get to the last Node of list
+            - Then, set last Node's 
+        """
+    
+    # Self-check #2 
+    def insert(self, item, pos:int=0) -> None: # TODO
+        pass
+
+    
+    def index(self, item) -> int: # TODO
+        pass
+
+    def pop(self, pop:int=-1) -> Node: # TODO
+        pass
