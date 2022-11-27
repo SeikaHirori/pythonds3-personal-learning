@@ -133,6 +133,13 @@ def test_append_O_1():
     
     u.append_O_1(2)
     assert u.tail.data == 2
+    assert u._count == 2
+
+    u.append_O_1(3)
+    u.append_O_1(4)
+
+    result = u.search(3)
+    assert result == True
 
 
 
@@ -155,5 +162,24 @@ def test_pop(): # TODO
 
 def test_size():
     u:UnorderedList = UnorderedList()
+    assert u.size() == 0
 
-    finish_your_test()
+    u.add(1)
+    assert u.size() == 1
+
+    u.append_O_1(2)
+    u.append_O_1(3)
+    u.append_O_1(4)
+    u.append_O_1(5)
+    assert u.size() == 5
+
+def test_is_empty():
+    u:UnorderedList = UnorderedList()
+    
+    assert u.is_empty() == True
+
+    u.add(1)
+    assert u.is_empty() == False
+
+    u.remove(1)
+    assert u.is_empty() == True

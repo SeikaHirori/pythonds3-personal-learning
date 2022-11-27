@@ -90,14 +90,23 @@ class UnorderedList:
 
     # Self-check #2 
     def append_O_1(self, item):
+        new_node:Node = Node(item)
+
         if self.head is None:
-            self.head = Node(item)
-            self._count += 1
-        if self.tail is None: # If tail is None, loop until you get to the last Node. Assign the last Node as tail.
-            current = self.head
-            while current.next is not None:
-                current = current.next
-            self.tail = current
+            self.head = new_node
+            self.tail = new_node
+        else:
+            if self.tail is None: # If tail is None, loop until you get to the last Node. Assign the last Node as tail.
+                current = self.head
+                while current.next is not None:
+                    current = current.next
+                self.tail = current
+            
+            self.tail.set_next(new_node)
+            self.tail = new_node
+        
+        self._count += 1
+
                 
                 
 
@@ -119,3 +128,6 @@ class UnorderedList:
 
     def size(self) -> int:
         return self._count
+    
+    def is_empty(self) -> bool:
+        return self._count == 0
