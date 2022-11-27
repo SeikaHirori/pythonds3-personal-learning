@@ -136,9 +136,31 @@ class UnorderedList:
         return output
 
     def pop(self, pop:int=-1) -> Node: # TODO
+        
+        if pop > self.size() - 1:
+            print(f"Value of pop ({pop}) exceeded the amount of items stored in linked list.")
+            return
+        if pop <= -1:
+            pop += self.size()
+        pop += 1 # Adding since the "indexing" for LinkedList technically starts at 1 if there's any value
+
+        output = None
+
+        current = self.head
+        prev = None
+        next = None
+
+        index = 0
+        while index < pop: # Loop until the index meets pop;
+            prev = current
+            current = current.next
+            pop += 1
+
+    
 
         self._count -= 1
-        pass
+        
+        return output
 
     def size(self) -> int:
         return self._count
