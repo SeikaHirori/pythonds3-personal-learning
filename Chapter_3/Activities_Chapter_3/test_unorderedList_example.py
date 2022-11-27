@@ -35,11 +35,13 @@ def test_add():
     u = UnorderedList()
     u.add(1)
     assert u.head.data == 1
+    assert u.tail.data == 1
 
     u.add(31)
     assert u.head.data == 31
     next_item:Node = u.head.next
     assert next_item.data == 1
+    assert u.tail.data == 1
 
 
 def test_size():
@@ -153,7 +155,15 @@ def test_insert(): # TODO
 def test_index(): # TODO
     u:UnorderedList = UnorderedList()
 
-    finish_your_test()
+    u.add(1)
+    u.add(2)
+    u.add(3)
+
+    assert u.index(1) == 2
+    assert u.index(2) == 1
+    assert u.index(3) == 0
+
+
 
 def test_pop(): # TODO
     u:UnorderedList = UnorderedList()

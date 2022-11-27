@@ -18,7 +18,7 @@ class UnorderedList:
         self.head = temp
 
         if self.tail is None:
-            self.tail = self.head
+            self.tail = temp
 
         self._count += 1
 
@@ -119,7 +119,21 @@ class UnorderedList:
 
     
     def index(self, item) -> int: # TODO
-        pass
+        if self.head is None:
+            return
+
+        output:int = None
+        
+        current = self.head
+        index = 0
+        while current is not None:
+            if current.get_data() == item:
+                output = index
+                break
+            current = current.next
+            index += 1
+
+        return output
 
     def pop(self, pop:int=-1) -> Node: # TODO
 
