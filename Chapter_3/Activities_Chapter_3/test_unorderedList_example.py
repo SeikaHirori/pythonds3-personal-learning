@@ -97,17 +97,17 @@ def test_remove_raise_Value_error(): #
     with pytest.raises(Exception) as e_info:
         u.remove(remove_item)
 
-def test_append(): # TODO
+def test_append_O_n(): # TODO
     """# Self-check #1"""
     u:UnorderedList = UnorderedList()    
-    u.append(item=21)
+    u.append_O_n(item=21)
     assert u.search(item=21) == True
     debug_print_list_of_nodes(u.head)
 
-    u.append(item=310)
+    u.append_O_n(item=310)
     debug_print_list_of_nodes(u.head)
 
-    u.append(item=910)
+    u.append_O_n(item=910)
     requested_item_1:int = 910
     output = u.search(item=requested_item_1)
     assert output == True
@@ -119,13 +119,27 @@ def test_append(): # TODO
 
     debug_print_list_of_nodes(u.head)
 
-    finish_your_test()
+
+def test_append_O_1():
+    """# Self-check #2
+    
+    - Add instance variable that is the last variable
+    """
+    u:UnorderedList = UnorderedList()
+    u.append_O_1(1)
+    assert u.head.data == 1
+    assert u.tail.data == 1
+    assert u._count == 1
+    
+    u.append_O_1(2)
+    assert u.tail.data == 2
 
 
 
 def test_insert(): # TODO
-    """# Self-check #2"""
     u:UnorderedList = UnorderedList()
+    
+
 
     finish_your_test()
 

@@ -5,7 +5,8 @@ from node_example import Node
 
 class UnorderedList:
     def __init__(self) -> None:
-        self.head = None
+        self.head:Node = None
+        self.tail:Node = None # RFER 3
         self._count = 0
     
     def is_empty(self) -> bool:
@@ -15,6 +16,9 @@ class UnorderedList:
         temp = Node(item)
         temp.set_next(self.head)
         self.head = temp
+
+        if self.tail is None:
+            self.tail = self.head
 
         self._count += 1
 
@@ -61,7 +65,7 @@ class UnorderedList:
 
     
     # Self-check #1 
-    def append(self, item) -> None:
+    def append_O_n(self, item) -> None:
         if self.head == None:
             self.add(item)
             return
@@ -84,8 +88,20 @@ class UnorderedList:
 
         self._count += 1
 
-    
     # Self-check #2 
+    def append_O_1(self, item):
+        if self.head is None:
+            self.head = Node(item)
+            self._count += 1
+        if self.tail is None: # If tail is None, loop until you get to the last Node. Assign the last Node as tail.
+            current = self.head
+            while current.next is not None:
+                current = current.next
+            self.tail = current
+                
+                
+
+
     def insert(self, item, pos:int=0) -> None: # TODO
 
 

@@ -1,6 +1,8 @@
 
 
-
+# RFER 3
+- Using tail for append in Linked List
+    - https://www.youtube.com/watch?v=YQ4mo6yWMMQ
 
 # RFER 2
 - Pytest and exception/raises

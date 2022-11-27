@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>report.html</title>
+    <title>Test Report</title>
     <style>body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -256,19 +256,9 @@ function hideExtras(colresultElem) {
 }
 
 function showFilters() {
-    let visibleString = getQueryParameter('visible') || 'all';
-    visibleString = visibleString.toLowerCase();
-    const checkedItems = visibleString.split(',');
-
     const filterItems = document.getElementsByClassName('filter');
-    for (let i = 0; i < filterItems.length; i++) {
+    for (let i = 0; i < filterItems.length; i++)
         filterItems[i].hidden = false;
-
-        if (visibleString != 'all') {
-            filterItems[i].checked = checkedItems.includes(filterItems[i].getAttribute('data-test-result'));
-            filterTable(filterItems[i]);
-        }
-    }
 }
 
 function addCollapse() {
@@ -439,24 +429,27 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 31-Oct-2022 at 00:02:08 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 27-Nov-2022 at 14:33:42 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
+      <tr>
+        <td>Base URL</td>
+        <td></td></tr>
       <tr>
         <td>Packages</td>
         <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "7.1.3"}</td></tr>
       <tr>
         <td>Platform</td>
-        <td>macOS-12.6-arm64-arm-64bit</td></tr>
+        <td>macOS-13.0.1-arm64-arm-64bit</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"custom-exit-code": "0.3.0", "forked": "1.4.0", "html": "3.2.0", "metadata": "2.0.2", "mock": "3.8.2", "socket": "0.5.1", "xdist": "2.5.0"}</td></tr>
+        <td>{"asyncio": "0.19.0", "base-url": "2.0.0", "custom-exit-code": "0.3.0", "django": "4.5.2", "forked": "1.4.0", "html": "3.1.1", "metadata": "2.0.2", "mock": "3.8.2", "playwright": "0.3.0", "timeout": "2.1.0", "xdist": "2.5.0"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.10.8</td></tr></table>
+        <td>3.9.15</td></tr></table>
     <h2>Summary</h2>
-    <p>14 tests ran in 0.83 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">14 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>11 tests ran in 1.30 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">5 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -467,217 +460,138 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_dec_to_num.py::test_converting</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_size</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw5] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw5] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw5] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw5] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/> ------------------------------Captured stdout call------------------------------ <br/>Decimal Value: 42
-rem value: 0
-decimal value after &#x27;//&#x27;: 21
-======
-Decimal Value: 21
-rem value: 1
-decimal value after &#x27;//&#x27;: 10
-======
-Decimal Value: 10
-rem value: 0
-decimal value after &#x27;//&#x27;: 5
-======
-Decimal Value: 5
-rem value: 1
-decimal value after &#x27;//&#x27;: 2
-======
-Decimal Value: 2
-rem value: 0
-decimal value after &#x27;//&#x27;: 1
-======
-Decimal Value: 1
-rem value: 1
-decimal value after &#x27;//&#x27;: 0
-======
-Decimal Value: 31
-rem value: 1
-decimal value after &#x27;//&#x27;: 15
-======
-Decimal Value: 15
-rem value: 1
-decimal value after &#x27;//&#x27;: 7
-======
-Decimal Value: 7
-rem value: 1
-decimal value after &#x27;//&#x27;: 3
-======
-Decimal Value: 3
-rem value: 1
-decimal value after &#x27;//&#x27;: 1
-======
-Decimal Value: 1
-rem value: 1
-decimal value after &#x27;//&#x27;: 0
-======
+            <div class="log">[gw2] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/><br/>    def test_size():<br/>        u:UnorderedList = UnorderedList()<br/>    <br/>&gt;       finish_your_test()<br/><br/>u          = &lt;unorderedList_example.UnorderedList object at 0x104f046a0&gt;<br/><br/>test_unorderedList_example.py:159: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>    def finish_your_test():<br/>&gt;       assert &quot;Finish writing your test!&quot; == &quot;You got this :3&quot;<br/><span class="error">E       AssertionError: assert &#x27;Finish writing your test!&#x27; == &#x27;You got this :3&#x27;</span><br/><span class="error">E         - You got this :3</span><br/><span class="error">E         + Finish writing your test!</span><br/><br/><br/>test_unorderedList_example.py:10: AssertionError[gw2] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_insert</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/><br/>    def test_insert(): # TODO<br/>        u:UnorderedList = UnorderedList()<br/>    <br/>    <br/>    <br/>&gt;       finish_your_test()<br/><br/>u          = &lt;unorderedList_example.UnorderedList object at 0x102a867c0&gt;<br/><br/>test_unorderedList_example.py:144: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>    def finish_your_test():<br/>&gt;       assert &quot;Finish writing your test!&quot; == &quot;You got this :3&quot;<br/><span class="error">E       AssertionError: assert &#x27;Finish writing your test!&#x27; == &#x27;You got this :3&#x27;</span><br/><span class="error">E         - You got this :3</span><br/><span class="error">E         + Finish writing your test!</span><br/><br/><br/>test_unorderedList_example.py:10: AssertionError[gw0] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_append_O_1</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw7] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw7] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw7] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/><br/>    def test_append_O_1():<br/>        &quot;&quot;&quot;# Self-check #2<br/>    <br/>        - Add instance variable that is the last variable<br/>        &quot;&quot;&quot;<br/>        u:UnorderedList = UnorderedList()<br/>        u.append_O_1(1)<br/>        assert u.head.data == 1<br/>        assert u.tail.data == 1<br/>        assert u._count == 1<br/>    <br/>        u.append_O_1(2)<br/>&gt;       assert u.tail.data == 2<br/><span class="error">E       assert 1 == 2</span><br/><span class="error">E        +  where 1 = &lt;node_example.Node object at 0x107d38700&gt;.data</span><br/><span class="error">E        +    where &lt;node_example.Node object at 0x107d38700&gt; = &lt;unorderedList_example.UnorderedList object at 0x107d38af0&gt;.tail</span><br/><br/>u          = &lt;unorderedList_example.UnorderedList object at 0x107d38af0&gt;<br/><br/>test_unorderedList_example.py:135: AssertionError[gw7] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_index</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/><br/>    def test_index(): # TODO<br/>        u:UnorderedList = UnorderedList()<br/>    <br/>&gt;       finish_your_test()<br/><br/>u          = &lt;unorderedList_example.UnorderedList object at 0x104ea2700&gt;<br/><br/>test_unorderedList_example.py:149: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>    def finish_your_test():<br/>&gt;       assert &quot;Finish writing your test!&quot; == &quot;You got this :3&quot;<br/><span class="error">E       AssertionError: assert &#x27;Finish writing your test!&#x27; == &#x27;You got this :3&#x27;</span><br/><span class="error">E         - You got this :3</span><br/><span class="error">E         + Finish writing your test!</span><br/><br/><br/>test_unorderedList_example.py:10: AssertionError[gw1] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_pop</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw2] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw2] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw2] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/><br/>    def test_pop(): # TODO<br/>        u:UnorderedList = UnorderedList()<br/>    <br/>&gt;       finish_your_test()<br/><br/>u          = &lt;unorderedList_example.UnorderedList object at 0x104f426a0&gt;<br/><br/>test_unorderedList_example.py:154: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>    def finish_your_test():<br/>&gt;       assert &quot;Finish writing your test!&quot; == &quot;You got this :3&quot;<br/><span class="error">E       AssertionError: assert &#x27;Finish writing your test!&#x27; == &#x27;You got this :3&#x27;</span><br/><span class="error">E         - You got this :3</span><br/><span class="error">E         + Finish writing your test!</span><br/><br/><br/>test_unorderedList_example.py:10: AssertionError[gw2] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_is_empty</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw0] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw0] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_remove</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw4] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw4] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw4] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_append_O_n</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw6] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw6] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw6] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/> ------------------------------Captured stdout call------------------------------ <br/>
+===Counter: 1===
+Previous: -1
+Current head&#x27;s item: 21
+
+ :3 | Finished printing Nodes | :3
+___ next step :3 ___
+
+===Counter: 1===
+Previous: -1
+Current head&#x27;s item: 21
+New head: 310
+
+===Counter: 2===
+Previous: 21
+Current head&#x27;s item: 310
+
+ :3 | Finished printing Nodes | :3
+___ next step :3 ___
+
+===Counter: 1===
+Previous: -1
+Current head&#x27;s item: 21
+New head: 310
+
+===Counter: 2===
+Previous: 21
+Current head&#x27;s item: 310
+New head: 910
+
+===Counter: 3===
+Previous: 310
+Current head&#x27;s item: 910
+
+ :3 | Finished printing Nodes | :3
+___ next step :3 ___
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_dec_to_num.py::test_activity_3_8_2</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_search</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw6] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw6] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw6] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw6] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/> ------------------------------Captured stdout call------------------------------ <br/>Decimal value: 25
-Rem value:1
-Decimal_num value: 12
-======
-Decimal value: 12
-Rem value:0
-Decimal_num value: 6
-======
-Decimal value: 6
-Rem value:0
-Decimal_num value: 3
-======
-Decimal value: 3
-Rem value:1
-Decimal_num value: 1
-======
-Decimal value: 1
-Rem value:1
-Decimal_num value: 0
-======
-1
-======
-11
-======
-110
-======
-1100
-======
-11001
-======
-Decimal value: 25
-Rem value:9
-Decimal_num value: 1
-======
-Decimal value: 1
-Rem value:1
-Decimal_num value: 0
-======
-1
-======
-19
-======
-<br/></div></td></tr></tbody>
+            <div class="log">[gw3] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw3] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw3] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_parentheses.py::test_set_3</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_add</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw2] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw2] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw2] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw2] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody>
+            <div class="log">[gw1] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw1] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw1] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_infix_to_postfix.py::test_set_2</td>
+          <td class="col-name">Chapter_3/Activities_Chapter_3/test_unorderedList_example.py::test_remove_raise_Value_error</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw2] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw2] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw2] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw2] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;(&#x27;, &#x27;A&#x27;, &#x27;+&#x27;, &#x27;B&#x27;, &#x27;)&#x27;, &#x27;*&#x27;, &#x27;C&#x27;, &#x27;-&#x27;, &#x27;(&#x27;, &#x27;D&#x27;, &#x27;-&#x27;, &#x27;E&#x27;, &#x27;)&#x27;, &#x27;*&#x27;, &#x27;(&#x27;, &#x27;F&#x27;, &#x27;+&#x27;, &#x27;G&#x27;, &#x27;)&#x27;]
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_stacks.py::test_Stack</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw5] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw5] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw5] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw5] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_hot_potato.py::test_1</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw7] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw7] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw7] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw7] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_symbols.py::test_balance_checker</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw4] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw4] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw4] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw4] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_queue_example.py::test_is_empty_and_size</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw4] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw4] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw4] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw4] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_parentheses.py::test_set_1</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw0] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw0] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw0] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw0] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_hot_potato.py::test_2</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw0] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw0] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw0] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw0] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_parentheses.py::test_set_2</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw1] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw1] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw1] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw1] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_infix_to_postfix.py::test_set_1</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw1] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw1] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw1] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw1] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;A&#x27;, &#x27;*&#x27;, &#x27;B&#x27;, &#x27;+&#x27;, &#x27;C&#x27;, &#x27;*&#x27;, &#x27;D&#x27;]
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_balanced_parentheses.py::test_set_4</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw3] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw3] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw3] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw3] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Chapter_3/Activities_Chapter_3/test_queue_example.py::test_enqueue_and_dequeue</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw3] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/>[gw3] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw3] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10[gw3] darwin -- Python 3.10.8 /opt/homebrew/opt/python@3.10/bin/python3.10<br/></div></td></tr></tbody></table></body></html>
+            <div class="log">[gw5] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/>[gw5] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9[gw5] darwin -- Python 3.9.15 /Users/watoart/VSCode/pythonds3/venv/bin/python3.9<br/></div></td></tr></tbody></table></body></html>
