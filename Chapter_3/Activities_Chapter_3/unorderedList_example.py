@@ -118,7 +118,7 @@ class UnorderedList:
         pass
 
     
-    def index(self, item) -> int: # TODO
+    def index(self, item) -> int: 
         if self.head is None:
             return
 
@@ -135,28 +135,39 @@ class UnorderedList:
 
         return output
 
-    def pop(self, pop:int=-1) -> Node: # TODO
-        
-        if pop > self.size() - 1:
-            print(f"Value of pop ({pop}) exceeded the amount of items stored in linked list.")
+    def pop(self, index_pop:int=-1) -> Node: # TODO
+        # The value from index_pop should be based on index starting at 0 for the first element
+        # Default value for index_pop is last variable
+
+        if index_pop > self.size() - 1:
+            print(f"Value of index_pop ({index_pop}) exceeded the amount of items stored in linked list.")
             return
-        if pop <= -1:
-            pop += self.size()
-        pop += 1 # Adding since the "indexing" for LinkedList technically starts at 1 if there's any value
+        elif index_pop <= -1:
+            while index_pop < 0:
+                index_pop += self.size()
+        else:
+            index_pop += 1 # Adding since the "indexing" for LinkedList technically starts at 1 if there's any value
 
         output = None
 
         current = self.head
         prev = None
-        next = None
 
         index = 0
-        while index < pop: # Loop until the index meets pop;
+        while index < index_pop: # Loop until the index meets index_pop;
+            print(f"Current index:{index}")
             prev = current
             current = current.next
-            pop += 1
+            index += 1
+        print(f"chosen node: {current.get_data()}")
+        output = current
 
-    
+        next_node:Node = None
+        if current.next != None:
+            next_node:Node = current.next
+            print(f"next node: {next_node.get_data()}")
+        
+        prev.set_next(next_node)
 
         self._count -= 1
         
@@ -167,3 +178,13 @@ class UnorderedList:
     
     def is_empty(self) -> bool:
         return self._count == 0
+    
+    def print_all_nodes(self):
+        current = self.head
+
+        list_nodes:list = []
+
+        while current is not None:
+            list_nodes.append(current.get_data())
+            current = current.next
+        print(f"{list_nodes}")

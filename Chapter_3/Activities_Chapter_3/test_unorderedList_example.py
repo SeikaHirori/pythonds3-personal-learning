@@ -152,9 +152,10 @@ def test_insert(): # TODO
 
     finish_your_test()
 
-def test_index(): # TODO
+def test_index():
     u:UnorderedList = UnorderedList()
 
+    u.add(1)
     u.add(1)
     u.add(2)
     u.add(3)
@@ -168,7 +169,24 @@ def test_index(): # TODO
 def test_pop(): # TODO
     u:UnorderedList = UnorderedList()
 
-    finish_your_test()
+    u.add(1)
+    u.add(4)
+    u.add(9)
+    u.add(12)
+    u.add(20)
+
+    assert u.head.get_data() == 20
+
+    output_pop:Node = u.pop()
+    output_size:int = u.size()
+    output_index:int = u.index(4)
+
+    assert output_size == 4, f'Size was {output_size}. The size should be 4 after using pop()'
+    assert output_index == 3, f'Index of element 1 was {output_index}. The index should be 3 after using pop().'
+    u.print_all_nodes()
+    assert output_pop.get_data() == 1 # FIXME
+
+    
 
 def test_size():
     u:UnorderedList = UnorderedList()
