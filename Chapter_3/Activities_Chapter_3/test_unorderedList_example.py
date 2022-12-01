@@ -147,7 +147,7 @@ def test_append_O_1():
 
 def test_insert(): # TODO
     u:UnorderedList = UnorderedList()
-    
+    u.add
 
 
     finish_your_test()
@@ -166,7 +166,7 @@ def test_index():
 
 
 
-def test_pop(): # TODO
+def test_pop():
     u:UnorderedList = UnorderedList()
 
     u.add(1)
@@ -185,15 +185,20 @@ def test_pop(): # TODO
     assert u.all_nodes() == [20, 12, 9, 4]
     assert output_pop.get_data() == 1 # FIXME
 
-    
+    # Index should be less than 0
     output_pop = u.pop(index_pop=-2)
     assert u.all_nodes() == [20, 12, 4]
     assert output_pop.get_data() == 9
 
-
+    # Index should be greater than or equal to 0
     output_pop = u.pop(2)
+    assert u.all_nodes() == [20, 12]
     assert output_pop.get_data() == 4
 
+    # Empty out the list
+    u.pop()
+    u.pop()
+    assert u.is_empty() == True
 
 
 

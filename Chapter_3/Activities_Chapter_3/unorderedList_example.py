@@ -135,7 +135,7 @@ class UnorderedList:
 
         return output
 
-    def pop(self, index_pop:int=-1) -> Node: # TODO
+    def pop(self, index_pop:int=-1) -> Node:
         # The value from index_pop should be based on index starting at 0 for the first element
         # Default value for index_pop is last variable
 
@@ -151,7 +151,6 @@ class UnorderedList:
         prev:Node = None
         index:int = 0
         while index < index_pop: # Loop until the index meets index_pop;
-            print(f"Current index:{index}")
             prev = current
             current = current.next
             index += 1
@@ -160,7 +159,8 @@ class UnorderedList:
         next_node:Node = None
         if current.next != None:
             next_node:Node = current.next
-        prev.set_next(next_node)
+        if prev is not None:
+            prev.set_next(next_node)
 
         self._count -= 1
         
