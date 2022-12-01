@@ -180,13 +180,22 @@ def test_pop(): # TODO
     output_pop:Node = u.pop()
     output_size:int = u.size()
     output_index:int = u.index(4)
-
     assert output_size == 4, f'Size was {output_size}. The size should be 4 after using pop()'
     assert output_index == 3, f'Index of element 1 was {output_index}. The index should be 3 after using pop().'
-    u.print_all_nodes()
+    assert u.all_nodes() == [20, 12, 9, 4]
     assert output_pop.get_data() == 1 # FIXME
 
     
+    output_pop = u.pop(index_pop=-2)
+    assert u.all_nodes() == [20, 12, 4]
+    assert output_pop.get_data() == 9
+
+
+    output_pop = u.pop(2)
+    assert output_pop.get_data() == 4
+
+
+
 
 def test_size():
     u:UnorderedList = UnorderedList()

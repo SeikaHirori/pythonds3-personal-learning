@@ -145,8 +145,8 @@ class UnorderedList:
         elif index_pop <= -1:
             while index_pop < 0:
                 index_pop += self.size()
-        else:
-            index_pop += 1 # Adding since the "indexing" for LinkedList technically starts at 1 if there's any value
+        # else: #NOTE: THIS IS NOT NEEDED
+        #     index_pop += 1 # Adding since the "indexing" for LinkedList technically starts at 1 if there's any value
 
         output = None
 
@@ -159,14 +159,12 @@ class UnorderedList:
             prev = current
             current = current.next
             index += 1
-        print(f"chosen node: {current.get_data()}")
         output = current
 
         next_node:Node = None
-        if current.next != None:
-            next_node:Node = current.next
-            print(f"next node: {next_node.get_data()}")
-        
+        if current is not None:
+            if current.next != None:
+                next_node:Node = current.next
         prev.set_next(next_node)
 
         self._count -= 1
@@ -179,7 +177,7 @@ class UnorderedList:
     def is_empty(self) -> bool:
         return self._count == 0
     
-    def print_all_nodes(self):
+    def all_nodes(self):
         current = self.head
 
         list_nodes:list = []
@@ -187,4 +185,4 @@ class UnorderedList:
         while current is not None:
             list_nodes.append(current.get_data())
             current = current.next
-        print(f"{list_nodes}")
+        return list_nodes
