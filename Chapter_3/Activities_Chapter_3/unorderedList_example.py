@@ -145,15 +145,11 @@ class UnorderedList:
         elif index_pop <= -1:
             while index_pop < 0:
                 index_pop += self.size()
-        # else: #NOTE: THIS IS NOT NEEDED
-        #     index_pop += 1 # Adding since the "indexing" for LinkedList technically starts at 1 if there's any value
+        output:Node = None
 
-        output = None
-
-        current = self.head
-        prev = None
-
-        index = 0
+        current:Node = self.head
+        prev:Node = None
+        index:int = 0
         while index < index_pop: # Loop until the index meets index_pop;
             print(f"Current index:{index}")
             prev = current
@@ -162,9 +158,8 @@ class UnorderedList:
         output = current
 
         next_node:Node = None
-        if current is not None:
-            if current.next != None:
-                next_node:Node = current.next
+        if current.next != None:
+            next_node:Node = current.next
         prev.set_next(next_node)
 
         self._count -= 1
