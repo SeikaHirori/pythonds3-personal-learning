@@ -147,10 +147,14 @@ def test_append_O_1():
 
 def test_insert(): # TODO
     u:UnorderedList = UnorderedList()
-    u.add
+    u.add(1)
+    u.add(20)
+    assert u.all_nodes() == [20, 1]
 
+    u.insert(item=300, pos=1)
+    assert u.size() == 3
+    assert u.index(300) == 1
 
-    finish_your_test()
 
 def test_index():
     u:UnorderedList = UnorderedList()
@@ -198,7 +202,8 @@ def test_pop():
     # Empty out the list
     u.pop()
     u.pop()
-    assert u.is_empty() == True
+    assert u.all_nodes() == []
+    assert u.is_empty() == True, f"There are still entries in the linked list. They are:\n {u.all_nodes()}"
 
 
 

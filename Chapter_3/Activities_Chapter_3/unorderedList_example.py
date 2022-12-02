@@ -10,7 +10,7 @@ class UnorderedList:
         self._count = 0
     
     def is_empty(self) -> bool:
-        return self.head == None
+        return self._count == 0
 
     def add(self, item) -> None:
         temp = Node(item)
@@ -27,9 +27,9 @@ class UnorderedList:
         count:int = 0
 
         while current is not None:
-            print(current)
-            print(f'Next: {current.next}')
-            print()
+            # print(current)
+            # print(f'Next: {current.next}')
+            # print()
             count = count + 1
             current = current.next
         return count
@@ -107,22 +107,41 @@ class UnorderedList:
         
         self._count += 1
 
-                
-                
 
+    def insert(self, item, pos:int=0) -> None: # Assume that the index/pos of an element starts at 0, which would be similar to Array/List # TODO
+        if pos >= 0:
+            pos += 1 # Add 1 to adjust the value to be in 
+        else:
+            while pos < 0:
+                pos += self.size()
+        
+        if pos > self.size(): # If pos is bigger than size()/ is out of bounds, exit immediately.
+            print(f"pos ({pos}) is out of bounds")
+            return 
 
-    def insert(self, item, pos:int=0) -> None: # TODO
+        new_node:Node = Node(item)
 
+        if self.head is None: # If list is empty
+            self.head = new_node
+            return
+
+        prev_node:Node = None
+        current_node:Node = self.head
+        next_node:Node = None
+
+        index:int = 0
+        while index < pos:
+            pass
+        
 
         self._count += 1
-        pass
 
     
     def index(self, item) -> int: 
         if self.head is None:
             return
 
-        output:int = None
+        output:int = -1 
         
         current = self.head
         index = 0
@@ -133,17 +152,22 @@ class UnorderedList:
             current = current.next
             index += 1
 
+        if output <= -1:
+            print(f"Index of targeted item was not found. Index was: {output}")
         return output
 
     def pop(self, index_pop:int=-1) -> Node:
         # The value from index_pop should be based on index starting at 0 for the first element
         # Default value for index_pop is last variable
+        if self.is_empty():
+            print(f"ERROR: The list is empty. Nothing was popped")
+            return None
 
         if index_pop > self.size() - 1:
-            print(f"Value of index_pop ({index_pop}) exceeded the amount of items stored in linked list.")
-            return
+            # print(f"Value of index_pop ({index_pop}) exceeded the amount of items stored in linked list.")
+            return None
         elif index_pop <= -1:
-            while index_pop < 0:
+            while index_pop <= -1:
                 index_pop += self.size()
         output:Node = None
 
@@ -158,24 +182,22 @@ class UnorderedList:
 
         next_node:Node = None
         if current.next != None:
-            next_node:Node = current.next
+            next_node = current.next
         if prev is not None:
             prev.set_next(next_node)
+        if self._count == 1:
+            self.head = None
 
         self._count -= 1
         
         return output
-
-    def size(self) -> int:
-        return self._count
-    
-    def is_empty(self) -> bool:
-        return self._count == 0
     
     def all_nodes(self):
         current = self.head
 
         list_nodes:list = []
+        if current is None:
+            return []
 
         while current is not None:
             list_nodes.append(current.get_data())
