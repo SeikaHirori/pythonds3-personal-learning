@@ -147,9 +147,12 @@ def test_append_O_1():
 
 def test_insert(): # TODO
     u:UnorderedList = UnorderedList()
+    u.insert(item=30, pos=0)
+    assert u.search(30) == True
+
     u.add(1)
     u.add(20)
-    assert u.all_nodes() == [20, 1]
+    assert u.all_nodes() == [20, 1, 30]
 
     u.insert(item=300, pos=1)
     assert u.size() == 3
