@@ -23,16 +23,17 @@ class UnorderedList:
         self._count += 1
 
     def size(self) -> int:
-        current = self.head
-        count:int = 0
+        # current = self.head
+        # count:int = 0
 
-        while current is not None:
-            # print(current)
-            # print(f'Next: {current.next}')
-            # print()
-            count = count + 1
-            current = current.next
-        return count
+        # while current is not None:
+        #     # print(current)
+        #     # print(f'Next: {current.next}')
+        #     # print()
+        #     count = count + 1
+        #     current = current.next
+        # return count
+        return self._count
 
     def search(self, item):
         current = self.head
@@ -132,6 +133,7 @@ class UnorderedList:
         index:int = 0
         while index < pos:
             pass
+            index += 1
         
 
         self._count += 1
@@ -185,7 +187,7 @@ class UnorderedList:
             next_node = current.next
         if prev is not None:
             prev.set_next(next_node)
-        if self._count == 1:
+        if self.size() == 1:
             self.head = None
 
         self._count -= 1
