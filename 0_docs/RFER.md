@@ -1,5 +1,8 @@
 
 
+# RFER 4
+- Assigning type for pytest's capsys
+
 # RFER 3
 - Using tail for append in Linked List
     - https://www.youtube.com/watch?v=YQ4mo6yWMMQ

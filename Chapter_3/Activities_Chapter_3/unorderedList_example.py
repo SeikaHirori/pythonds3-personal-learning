@@ -115,16 +115,16 @@ class UnorderedList:
         else:
             while pos < 0:
                 pos += self.size()
-        
-        # if pos > self.size(): # If pos is bigger than size()/ is out of bounds, exit immediately.
-        #     print(f"pos ({pos}) is out of bounds")
-        #     return 
 
         new_node:Node = Node(item)
 
-        if self.head is None and pos == 1: # If list is empty
+        if self.is_empty(): # If list is empty
             self.head = new_node
         else:
+            if pos > self.size(): # If pos is bigger than size()/ is out of bounds, exit immediately.
+                print(f"pos ({pos}) is out of bounds")
+                return 
+
             prev_node:Node = None
             current_node:Node = self.head
             next_node:Node = None

@@ -2,7 +2,7 @@
 - Link: https://runestone.academy/ns/books/published/pythonds3/BasicDS/ImplementinganUnorderedListLinkedLists.html#the-unorderedlist-class
 """
 import pytest
-
+import _pytest.capture as pycap
 from unorderedList_example import UnorderedList
 from node_example import Node
 
@@ -145,10 +145,15 @@ def test_append_O_1():
 
 
 
-def test_insert(): # TODO
+def test_insert(capsys:pycap.CaptureFixture): # TODO
+    # RFER 4 | assigning type for capsys
     u:UnorderedList = UnorderedList()
     u.insert(item=30, pos=0)
     assert u.search(30) == True
+
+    u.insert(item=999, pos=999)
+    captured = capsys.readouterr()
+    assert captured.out == "pos (1000) is out of bounds\n", "After adding 1 to pos in the function, pos should be 1000."
 
     u.add(1)
     u.add(20)
@@ -170,7 +175,6 @@ def test_index():
     assert u.index(1) == 2
     assert u.index(2) == 1
     assert u.index(3) == 0
-
 
 
 def test_pop():
