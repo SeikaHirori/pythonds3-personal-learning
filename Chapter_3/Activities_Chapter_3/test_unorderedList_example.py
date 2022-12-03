@@ -148,8 +148,9 @@ def test_append_O_1():
 def test_insert(capsys:pycap.CaptureFixture): # TODO
     # RFER 4 | assigning type for capsys
     u:UnorderedList = UnorderedList()
-    u.insert(item=30, pos=0)
-    assert u.search(30) == True
+    u.insert(item=300, pos=0)
+    result:bool = u.search(300)
+    assert result == True
 
     u.insert(item=999, pos=999)
     captured = capsys.readouterr()
@@ -157,11 +158,20 @@ def test_insert(capsys:pycap.CaptureFixture): # TODO
 
     u.add(1)
     u.add(20)
-    assert u.all_nodes() == [20, 1, 30]
+    result = u.all_nodes()
+    assert result == [20, 1, 300]
 
-    u.insert(item=300, pos=1)
-    assert u.size() == 3
-    assert u.index(300) == 1
+    u.insert(item=4000, pos=1)
+    result = u.size()
+    assert result == 4
+    result = u.index(4000)
+    output_all_nodes = u.all_nodes()
+    assert result == 1, f"The int value (4000) was not found in the list. The list has: {output_all_nodes}"
+    assert output_all_nodes == [20, 4000, 1, 300], f"The list has: {output_all_nodes}"
+
+    u.insert(item=50000, pos=-2)
+    result = u.search(item=50000)
+    assert result == False
 
 
 def test_index():

@@ -112,9 +112,8 @@ class UnorderedList:
     def insert(self, item, pos:int=0) -> None: # Assume that the index/pos of an element starts at 0, which would be similar to Array/List # TODO
         if pos >= 0:
             pos += 1 # Add 1 to adjust the value to be in 
-        else:
-            while pos < 0:
-                pos += self.size()
+        else: # Insert doesn't take negative index
+            return
 
         new_node:Node = Node(item)
 
@@ -127,12 +126,17 @@ class UnorderedList:
 
             prev_node:Node = None
             current_node:Node = self.head
-            next_node:Node = None
 
-            index:int = 0
+            index:int = 1
             while index < pos:
+                prev_node = current_node
+                current_node = current_node.next
+
                 index += 1
-        
+                        
+            new_node.set_next(current_node)
+            prev_node.set_next(new_node)
+
         self._count += 1
 
     
