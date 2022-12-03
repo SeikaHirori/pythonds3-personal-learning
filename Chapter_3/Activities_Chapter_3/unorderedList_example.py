@@ -133,12 +133,12 @@ class UnorderedList:
                 prev_node = current_node
                 current_node = current_node.next
 
-                index += 1
+                index += 1 
+            print(f"Index: {index}")
                         
             new_node.set_next(current_node)
             prev_node.set_next(new_node)
 
-            self.new_tail_check(index=index, new_node=new_node)
         self._count += 1
 
     
@@ -200,7 +200,6 @@ class UnorderedList:
         return output
     
     def new_tail_check(self, index:int,new_node:Node) -> None: # TODO - Add check if the current node is the same object as the instance tail node. If so, set up a new tail from new node. 
-        
         if index == self._count:
             self.tail = new_node
     
