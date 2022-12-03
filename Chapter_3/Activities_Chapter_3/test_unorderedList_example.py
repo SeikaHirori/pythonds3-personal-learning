@@ -173,6 +173,25 @@ def test_insert(capsys:pycap.CaptureFixture): # TODO
     result = u.search(item=50000)
     assert result == False
 
+def test_new_tail():
+    u:UnorderedList = UnorderedList()
+
+    # Test insert() when list is empty
+    u.insert(pos=0, item=0)
+    assert u.tail.data == 0
+
+    u.add(20)
+    # Test insert()
+    u.insert(pos=2, item = 300)
+    assert u.tail.data == 300
+
+    # Test append()
+    u.append_O_1(item=4000)
+    assert u.tail.data == 4000
+
+    # Test pop()
+    
+
 
 def test_index():
     u:UnorderedList = UnorderedList()

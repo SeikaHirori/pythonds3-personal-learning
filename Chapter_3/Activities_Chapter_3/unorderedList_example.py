@@ -119,6 +119,7 @@ class UnorderedList:
 
         if self.is_empty(): # If list is empty
             self.head = new_node
+            self.tail = new_node
         else:
             if pos > self.size(): # If pos is bigger than size()/ is out of bounds, exit immediately.
                 print(f"pos ({pos}) is out of bounds")
@@ -137,6 +138,7 @@ class UnorderedList:
             new_node.set_next(current_node)
             prev_node.set_next(new_node)
 
+            self.new_tail_check(index=index, new_node=new_node)
         self._count += 1
 
     
@@ -191,9 +193,16 @@ class UnorderedList:
         if self.size() == 1:
             self.head = None
 
+        # self.new_tail_check(current_node=current, new_node=next_node) # FIXME
+
         self._count -= 1
         
         return output
+    
+    def new_tail_check(self, index:int,new_node:Node) -> None: # TODO - Add check if the current node is the same object as the instance tail node. If so, set up a new tail from new node. 
+        
+        if index == self._count:
+            self.tail = new_node
     
     def all_nodes(self):
         current = self.head
