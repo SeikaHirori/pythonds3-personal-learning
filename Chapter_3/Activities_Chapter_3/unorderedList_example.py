@@ -7,7 +7,7 @@ class UnorderedList:
     def __init__(self) -> None:
         self.head:Node = None
         self.tail:Node = None # RFER 3
-        self._count = 0
+        self._count:int = 0
     
     def is_empty(self) -> bool:
         return self._count == 0
