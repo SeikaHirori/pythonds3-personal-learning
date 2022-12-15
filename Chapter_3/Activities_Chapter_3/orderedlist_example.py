@@ -72,3 +72,15 @@ class OrderList:
 
     def pop(self, pos=-1) -> Node: # TODO
         pass
+
+    def debug_all_node_values(self) -> list:
+        output:list = []
+        if self._count == 0:
+            return []
+
+        current = self._head
+        while current is not None:
+            output.append(current.data)
+            current = current.next
+
+        return output
