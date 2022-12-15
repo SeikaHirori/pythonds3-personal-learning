@@ -3,6 +3,7 @@
 """
 import pytest
 from orderedlist_example import OrderList as odl
+from node_example import Node
 
 def finish_your_test():
     assert 'finish your test' == 'ガンベリ！'
@@ -43,10 +44,30 @@ def test_size():
     o.add(2)
     assert o.size() == 1
 
+    o.remove(2)
+    assert o.size() == 0
+
 def test_index():
     o:odl = odl()
-    finish_your_test()
+    
+    o.add(1)
+    o.add(20)
+    o.add(300)
+
+    assert o.index(1) == 0
+    assert o.index(20) == 1
+    assert o.index(300) == 2
+
+    o.remove(20)
+    assert o.index(20) == -1, "Value 20 should not be in the list."
+
 
 def test_pop():
     o:odl = odl()
-    finish_your_test()
+
+    o.add(1)
+    o.add(20)
+    o.add(300)
+    o.add(4000)
+    output:Node = o.pop()
+    assert output.data == 4000, "Default pop should be the the last Node"
