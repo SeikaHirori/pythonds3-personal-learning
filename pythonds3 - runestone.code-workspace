@@ -2,6 +2,9 @@
     "folders": [
         {
             "path": "../pythonds3"
+        },
+        {
+            "path": "chapter_4"
         }
     ]
 }
