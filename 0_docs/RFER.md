@@ -1,4 +1,7 @@
 
+# RFER 5
+- Removing special characters
+    - https://stackoverflow.com/questions/5843518/remove-all-special-characters-punctuation-and-spaces-from-string
 
 # RFER 4
 - Assigning type for pytest's capsys
