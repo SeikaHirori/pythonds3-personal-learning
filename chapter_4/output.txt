@@ -1,0 +1,190 @@
+Starting program 
+
+=== new recursive call. Current branch_len: 75 ===
+phase 1: 75
+=== new recursive call. Current branch_len: 60 ===
+phase 1: 60
+=== new recursive call. Current branch_len: 45 ===
+phase 1: 45
+=== new recursive call. Current branch_len: 30 ===
+phase 1: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 2 after subtracting by -15: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 3 after subtracting by 15 again: 30
+last call of branch_len: 30
+Phase 2 after subtracting by -15: 45
+=== new recursive call. Current branch_len: 30 ===
+phase 1: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 2 after subtracting by -15: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 3 after subtracting by 15 again: 30
+last call of branch_len: 30
+Phase 3 after subtracting by 15 again: 45
+last call of branch_len: 45
+Phase 2 after subtracting by -15: 60
+=== new recursive call. Current branch_len: 45 ===
+phase 1: 45
+=== new recursive call. Current branch_len: 30 ===
+phase 1: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 2 after subtracting by -15: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 3 after subtracting by 15 again: 30
+last call of branch_len: 30
+Phase 2 after subtracting by -15: 45
+=== new recursive call. Current branch_len: 30 ===
+phase 1: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 2 after subtracting by -15: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 3 after subtracting by 15 again: 30
+last call of branch_len: 30
+Phase 3 after subtracting by 15 again: 45
+last call of branch_len: 45
+Phase 3 after subtracting by 15 again: 60
+last call of branch_len: 60
+Phase 2 after subtracting by -15: 75
+=== new recursive call. Current branch_len: 60 ===
+phase 1: 60
+=== new recursive call. Current branch_len: 45 ===
+phase 1: 45
+=== new recursive call. Current branch_len: 30 ===
+phase 1: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 2 after subtracting by -15: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 3 after subtracting by 15 again: 30
+last call of branch_len: 30
+Phase 2 after subtracting by -15: 45
+=== new recursive call. Current branch_len: 30 ===
+phase 1: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 2 after subtracting by -15: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 3 after subtracting by 15 again: 30
+last call of branch_len: 30
+Phase 3 after subtracting by 15 again: 45
+last call of branch_len: 45
+Phase 2 after subtracting by -15: 60
+=== new recursive call. Current branch_len: 45 ===
+phase 1: 45
+=== new recursive call. Current branch_len: 30 ===
+phase 1: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 2 after subtracting by -15: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 3 after subtracting by 15 again: 30
+last call of branch_len: 30
+Phase 2 after subtracting by -15: 45
+=== new recursive call. Current branch_len: 30 ===
+phase 1: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 2 after subtracting by -15: 30
+=== new recursive call. Current branch_len: 15 ===
+phase 1: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 2 after subtracting by -15: 15
+=== new recursive call. Current branch_len: 0 ===
+Phase 3 after subtracting by 15 again: 15
+last call of branch_len: 15
+Phase 3 after subtracting by 15 again: 30
+last call of branch_len: 30
+Phase 3 after subtracting by 15 again: 45
+last call of branch_len: 45
+Phase 3 after subtracting by 15 again: 60
+last call of branch_len: 60
+Phase 3 after subtracting by 15 again: 75
+last call of branch_len: 75
+Ending program
